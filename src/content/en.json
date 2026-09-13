@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "Silivri Ultra Trail",
+    "description": "Silivri Ultra Trail — 4 April 2027, Danamandıra Nature Park, Silivri / Istanbul. 8K, 18K and 38K trail courses."
+  },
+  "brand": {
+    "abbr": "SUT",
+    "name": "Silivri Ultra Trail"
+  },
+  "nav": {
+    "openLabel": "Open menu",
+    "closeLabel": "Close menu",
+    "soonBadge": "Soon",
+    "items": [
+      { "label": "Home", "href": "#ust" },
+      { "label": "Courses", "href": "#parkurlar" },
+      { "label": "Why Silivri Ultra Trail?", "href": "#ozellikler" },
+      { "label": "Registration", "href": "#kayit" },
+      { "label": "Schedule", "href": null },
+      { "label": "Runner Info", "href": null },
+      { "label": "FAQ", "href": null },
+      { "label": "Contact", "href": "#iletisim" }
+    ]
+  },
+  "hero": {
+    "titleTop": "Silivri",
+    "titleBottom": "Ultra Trail",
+    "tagline": "Push your limits, reach the summit!",
+    "date": "04 April 2027",
+    "weekday": "Sunday",
+    "venue": "Danamandıra Nature Park",
+    "city": "Silivri / Istanbul",
+    "imageCredit": null
+  },
+  "courses": {
+    "title": "Courses",
+    "elevationLabel": "Total ascent",
+    "trailLabel": "Trail share",
+    "items": [
+      {
+        "id": "8k",
+        "distance": "8K",
+        "name": "Lake Trail",
+        "elevation": "150 m+",
+        "trailShare": "75% trail",
+        "accent": "cyan"
+      },
+      {
+        "id": "18k",
+        "distance": "18K",
+        "name": "Forest Trail",
+        "elevation": "450 m+",
+        "trailShare": "80% trail",
+        "accent": "green"
+      },
+      {
+        "id": "38k",
+        "distance": "38K",
+        "name": "Ultra Trail",
+        "elevation": "1100 m+",
+        "trailShare": "85% trail",
+        "accent": "orange"
+      }
+    ]
+  },
+  "features": {
+    "title": "Why Silivri Ultra Trail?",
+    "items": [
+      { "icon": "mountain", "label": "Technical trails" },
+      { "icon": "nature", "label": "Unique nature" },
+      { "icon": "shield", "label": "Safety first" },
+      { "icon": "timer", "label": "Professional organisation" },
+      { "icon": "rescue", "label": "Search and rescue support" },
+      { "icon": "medal", "label": "Medal and finisher certificate" }
+    ]
+  },
+  "registration": {
+    "title": "Registration",
+    "ctaLabel": "Register now",
+    "open": false,
+    "href": null,
+    "status": "Registration opens soon",
+    "note": "Quota and entry fees will be published here once registration opens. Follow our social accounts so you don't miss the announcement."
+  },
+  "pastEdition": {
+    "label": "2025 Edition",
+    "href": null
+  },
+  "contact": {
+    "title": "Contact",
+    "note": "Get in touch with your questions.",
+    "email": "info@silivriultratrail.com",
+    "bubbleLabel": "Contact us",
+    "socials": [
+      { "label": "Instagram", "href": "https://instagram.com/" },
+      { "label": "Strava", "href": "https://strava.com/" }
+    ]
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "backToTop": "Back to top",
+    "languageLabel": "Language"
+  }
+}

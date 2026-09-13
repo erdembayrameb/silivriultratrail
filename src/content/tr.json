@@ -1,0 +1,104 @@
+{
+  "meta": {
+    "title": "Silivri Ultra Trail",
+    "description": "Silivri Ultra Trail — 4 Nisan 2027, Danamandıra Tabiat Parkı, Silivri / İstanbul. 8K, 18K ve 38K patika parkurları."
+  },
+  "brand": {
+    "abbr": "SUT",
+    "name": "Silivri Ultra Trail"
+  },
+  "nav": {
+    "openLabel": "Menüyü aç",
+    "closeLabel": "Menüyü kapat",
+    "soonBadge": "Yakında",
+    "items": [
+      { "label": "Ana Sayfa", "href": "#ust" },
+      { "label": "Parkurlar", "href": "#parkurlar" },
+      { "label": "Neden Silivri Ultra Trail?", "href": "#ozellikler" },
+      { "label": "Kayıt", "href": "#kayit" },
+      { "label": "Program", "href": null },
+      { "label": "Yarışçı Bilgileri", "href": null },
+      { "label": "S.S.S.", "href": null },
+      { "label": "İletişim", "href": "#iletisim" }
+    ]
+  },
+  "hero": {
+    "titleTop": "Silivri",
+    "titleBottom": "Ultra Trail",
+    "tagline": "Sınırlarını zorla, zirveye ulaş!",
+    "date": "04 Nisan 2027",
+    "weekday": "Pazar",
+    "venue": "Danamandıra Tabiat Parkı",
+    "city": "Silivri / İstanbul",
+    "imageCredit": null
+  },
+  "courses": {
+    "title": "Parkurlar",
+    "elevationLabel": "Toplam tırmanış",
+    "trailLabel": "Patika oranı",
+    "items": [
+      {
+        "id": "8k",
+        "distance": "8K",
+        "name": "Gölet Trail",
+        "elevation": "150 m+",
+        "trailShare": "%75 patika",
+        "accent": "cyan"
+      },
+      {
+        "id": "18k",
+        "distance": "18K",
+        "name": "Orman Trail",
+        "elevation": "450 m+",
+        "trailShare": "%80 patika",
+        "accent": "green"
+      },
+      {
+        "id": "38k",
+        "distance": "38K",
+        "name": "Ultra Trail",
+        "elevation": "1100 m+",
+        "trailShare": "%85 patika",
+        "accent": "orange"
+      }
+    ]
+  },
+  "features": {
+    "title": "Neden Silivri Ultra Trail?",
+    "items": [
+      { "icon": "mountain", "label": "Teknik patikalar" },
+      { "icon": "nature", "label": "Eşsiz doğa" },
+      { "icon": "shield", "label": "Güvenlik önceliği" },
+      { "icon": "timer", "label": "Profesyonel organizasyon" },
+      { "icon": "rescue", "label": "Arama kurtarma desteği" },
+      { "icon": "medal", "label": "Madalya ve katılım belgesi" }
+    ]
+  },
+  "registration": {
+    "title": "Kayıt",
+    "ctaLabel": "Hemen kayıt ol",
+    "open": false,
+    "href": null,
+    "status": "Kayıtlar yakında açılıyor",
+    "note": "Kontenjan ve ücret bilgileri kayıtların açılmasıyla birlikte burada yayınlanacak. Duyuruları kaçırmamak için sosyal medya hesaplarımızı takip edebilirsin."
+  },
+  "pastEdition": {
+    "label": "2025 Sayfası",
+    "href": null
+  },
+  "contact": {
+    "title": "İletişim",
+    "note": "Soruların için bize ulaş.",
+    "email": "info@silivriultratrail.com",
+    "bubbleLabel": "Bize ulaşın",
+    "socials": [
+      { "label": "Instagram", "href": "https://instagram.com/" },
+      { "label": "Strava", "href": "https://strava.com/" }
+    ]
+  },
+  "footer": {
+    "rights": "Tüm hakları saklıdır.",
+    "backToTop": "Başa dön",
+    "languageLabel": "Dil"
+  }
+}

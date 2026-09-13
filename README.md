@@ -1,0 +1,75 @@
+# Silivri Ultra Trail
+
+4 Nisan 2027 · Danamandıra Tabiat Parkı, Silivri / İstanbul
+
+Mobil öncelikli tanıtım sitesi. Next.js 16 (App Router) + Tailwind v4, tamamen
+statik çıktı üretir; GitHub Pages'te yayınlanmak üzere kurulmuştur.
+
+## Komutlar
+
+| Komut               | Ne yapar                                     |
+| ------------------- | -------------------------------------------- |
+| `npm run dev`       | Geliştirme sunucusu — http://localhost:3000  |
+| `npm run build`     | `out/` klasörüne statik site üretir          |
+| `npm run lint`      | ESLint                                       |
+| `npm run typecheck` | TypeScript kontrolü                          |
+
+## İçerik nasıl güncellenir
+
+Sitedeki tüm metinler iki dosyada:
+
+- `src/content/tr.json`
+- `src/content/en.json`
+
+İki dosya da aynı anahtarları taşımak zorunda; biri eksik kalırsa
+`npm run typecheck` hata verir. Şema `src/i18n/dictionary.ts` içinde tanımlı.
+
+Sık değişecek alanlar:
+
+| Ne                    | Nerede                                            |
+| --------------------- | ------------------------------------------------- |
+| Tarih, yer, slogan    | `hero`                                            |
+| Parkur bilgileri      | `courses.items`                                   |
+| Kayıt durumu          | `registration` — `open: true` + `href` ile açılır |
+| Menü maddeleri        | `nav.items` — `href: null` olanlar "yakında"      |
+| 2025 sayfası butonu   | `pastEdition.href`                                |
+| E-posta, sosyal medya | `contact`                                         |
+
+## Tasarım
+
+Marka renkleri tek yerde: `src/app/globals.css` içindeki `@theme` bloğu
+(`--color-sut-*`, `--color-ink-*`, `--color-sand`). Gerçek logo geldiğinde
+`src/components/logo.tsx` değiştirilir.
+
+Hero arka planı `src/assets/hero.jpg`. Fotoğrafı değiştirmek için aynı yola
+yeni dosyayı yazmak yeterli — statik import olduğu için adres öneki ve cache
+sürümü otomatik güncellenir. `src` verilmezse `HeroBackdrop` yedek olarak
+vektör bir sahne çizer. Fotoğraf telifi gerekiyorsa içerik dosyasındaki
+`hero.imageCredit` alanı doldurulunca hero'nun altında küçük punto görünür.
+
+## Dil
+
+Türkçe birincil dil: kök adreste (`/`) yayınlanır, İngilizce `/en` altında.
+Her dilin kendi kök layout'u var (`src/app/(tr)`, `src/app/(en)`) — bu sayede
+`<html lang>` doğru basılır. Ortak iskelet `src/components/root-html.tsx`,
+ortak sayfa gövdesi `src/components/home-screen.tsx` içinde.
+
+## Yayın
+
+`main` dalına her push'ta `.github/workflows/deploy.yml` siteyi derleyip GitHub
+Pages'e yayınlar. Depo ayarlarında **Settings → Pages → Source: GitHub Actions**
+seçili olmalı.
+
+Adres öneki otomatik: proje sayfasında (`kullanici.github.io/depo-adi`)
+workflow `NEXT_PUBLIC_BASE_PATH` değerini GitHub'dan alıp build'e geçirir, özel
+domain bağlıyken boş kalır. Elle test etmek için:
+
+```powershell
+$env:NEXT_PUBLIC_BASE_PATH = "/depo-adi"; npm run build; $env:NEXT_PUBLIC_BASE_PATH = $null
+```
+
+Özel domain (`www.silivriultratrail.com`) bağlanırken `public/CNAME` dosyası
+eklenecek; içinde tek satır olarak domain yazar.
+
+`npm run build` çıktısı olan `out/` klasörü ayrıca herhangi bir statik hostinge
+elle de yüklenebilir.

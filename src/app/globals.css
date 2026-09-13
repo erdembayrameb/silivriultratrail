@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+/*
+ * Marka paleti taslaktan alındı. Gerçek logo dosyası geldiğinde renkler
+ * yalnızca buradan güncellenir; tüm bileşenler bu token'ları kullanıyor.
+ */
+@theme {
+  /* Koyu zeminler — 950 en derin, 700 kenarlık tonu */
+  --color-ink-950: #05161e;
+  --color-ink-900: #0a2029;
+  --color-ink-850: #0c2531;
+  --color-ink-800: #103040;
+  --color-ink-700: #1a4254;
+
+  /* Vurgu renkleri */
+  --color-sut-cyan: #23a5d8;
+  --color-sut-cyan-soft: #6ac6ea;
+  --color-sut-green: #8cc63f;
+  --color-sut-orange: #ef8b3c;
+
+  /* Krem buton / footer zemini */
+  --color-sand: #ece7dc;
+  --color-sand-dim: #d8d2c4;
+
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-heading), "Arial Narrow", ui-sans-serif, system-ui,
+    sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  /* Sabit başlık altında kalan bölüm başlıkları için pay bırakılıyor. */
+  scroll-padding-top: 4.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  /* Mobil öncelikli: sayfa yatayda asla kaymasın. */
+  overflow-x: hidden;
+}
+
+/* iOS çentik / gesture bar güvenli alanları. */
+@utility pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+
+@utility pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@utility px-safe {
+  padding-left: max(1.25rem, env(safe-area-inset-left));
+  padding-right: max(1.25rem, env(safe-area-inset-right));
+}
+
+/*
+ * Taslaktaki fırça darbeli, eğik başlık görünümü: Anton + hafif yatay eğim.
+ * Skew yalnızca görsel; metin seçilebilir ve okunabilir kalıyor.
+ */
+@utility font-brush {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  transform: skewX(-7deg);
+  transform-origin: center;
+}
+
+/* Bölüm başlıklarının iki yanındaki ince çizgiler. */
+@utility rule-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
