@@ -14,6 +14,13 @@ export type FeatureIcon =
   | "rescue"
   | "medal";
 
+/**
+ * Sayfa anahtarları. Dil değiştirici, aynı sayfanın diğer dildeki adresini
+ * `routes` üzerinden bulur — böylece alt sayfada dil değiştirince ana sayfaya
+ * düşmek yerine karşılığına gidilir.
+ */
+export type PageKey = "home" | "schedule" | "faq" | "runnerInfo";
+
 export interface NavItem {
   label: string;
   /** null ise sayfa henüz yok; menüde "yakında" rozetiyle pasif görünür. */
@@ -26,6 +33,7 @@ export interface Course {
   name: string;
   elevation: string;
   trailShare: string;
+  start: string;
   accent: CourseAccent;
 }
 
@@ -39,6 +47,44 @@ export interface SocialLink {
   href: string;
 }
 
+/** Kayıt bölümündeki kısa bilgi satırları (kontenjan, son kayıt vb.). */
+export interface Highlight {
+  label: string;
+  value: string;
+}
+
+export interface ScheduleItem {
+  time: string;
+  title: string;
+  detail: string | null;
+}
+
+export interface ScheduleDay {
+  date: string;
+  weekday: string;
+  label: string;
+  items: ScheduleItem[];
+  note: string | null;
+}
+
+export interface FaqItem {
+  question: string;
+  /** Her eleman ayrı bir paragraf olarak basılır. */
+  answer: string[];
+}
+
+export interface InfoSection {
+  title: string;
+  body: string[];
+  items: string[];
+}
+
+export interface FeeRow {
+  course: string;
+  /** `fees.periods` ile aynı sırada ve aynı uzunlukta olmalı. */
+  prices: string[];
+}
+
 export interface Dictionary {
   meta: {
     title: string;
@@ -48,6 +94,7 @@ export interface Dictionary {
     abbr: string;
     name: string;
   };
+  routes: Record<PageKey, string>;
   nav: {
     openLabel: string;
     closeLabel: string;
@@ -68,6 +115,7 @@ export interface Dictionary {
     title: string;
     elevationLabel: string;
     trailLabel: string;
+    startLabel: string;
     items: Course[];
   };
   features: {
@@ -82,6 +130,8 @@ export interface Dictionary {
     href: string | null;
     status: string;
     note: string;
+    highlights: Highlight[];
+    detailsLabel: string;
   };
   pastEdition: {
     label: string;
@@ -98,6 +148,41 @@ export interface Dictionary {
     rights: string;
     backToTop: string;
     languageLabel: string;
+  };
+  schedule: {
+    title: string;
+    description: string;
+    intro: string;
+    days: ScheduleDay[];
+    footnote: string;
+  };
+  faq: {
+    title: string;
+    description: string;
+    intro: string;
+    items: FaqItem[];
+    footnote: string;
+  };
+  runnerInfo: {
+    title: string;
+    description: string;
+    intro: string;
+    fees: {
+      title: string;
+      courseLabel: string;
+      periods: string[];
+      rows: FeeRow[];
+      note: string;
+    };
+    gear: {
+      title: string;
+      intro: string;
+      items: string[];
+      shortCourse: string;
+      checks: string;
+    };
+    sections: InfoSection[];
+    disclaimer: string;
   };
 }
 

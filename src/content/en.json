@@ -7,19 +7,25 @@
     "abbr": "SUT",
     "name": "Silivri Ultra Trail"
   },
+  "routes": {
+    "home": "/en/",
+    "schedule": "/en/schedule/",
+    "faq": "/en/faq/",
+    "runnerInfo": "/en/runner-info/"
+  },
   "nav": {
     "openLabel": "Open menu",
     "closeLabel": "Close menu",
     "soonBadge": "Soon",
     "items": [
-      { "label": "Home", "href": "#ust" },
-      { "label": "Courses", "href": "#parkurlar" },
-      { "label": "Why Silivri Ultra Trail?", "href": "#ozellikler" },
-      { "label": "Registration", "href": "#kayit" },
-      { "label": "Schedule", "href": null },
-      { "label": "Runner Info", "href": null },
-      { "label": "FAQ", "href": null },
-      { "label": "Contact", "href": "#iletisim" }
+      { "label": "Home", "href": "/en/" },
+      { "label": "Courses", "href": "/en/#parkurlar" },
+      { "label": "Why Silivri Ultra Trail?", "href": "/en/#ozellikler" },
+      { "label": "Registration", "href": "/en/#kayit" },
+      { "label": "Schedule", "href": "/en/schedule/" },
+      { "label": "Runner Info", "href": "/en/runner-info/" },
+      { "label": "FAQ", "href": "/en/faq/" },
+      { "label": "Contact", "href": "/en/#iletisim" }
     ]
   },
   "hero": {
@@ -36,29 +42,33 @@
     "title": "Courses",
     "elevationLabel": "Total ascent",
     "trailLabel": "Trail share",
+    "startLabel": "Start time",
     "items": [
       {
         "id": "8k",
         "distance": "8K",
         "name": "Lake Trail",
-        "elevation": "150 m+",
-        "trailShare": "75% trail",
+        "elevation": "55 m+",
+        "trailShare": "95% trail",
+        "start": "10:00",
         "accent": "cyan"
       },
       {
         "id": "18k",
         "distance": "18K",
         "name": "Forest Trail",
-        "elevation": "450 m+",
-        "trailShare": "80% trail",
+        "elevation": "123 m+",
+        "trailShare": "93% trail",
+        "start": "08:30",
         "accent": "green"
       },
       {
         "id": "38k",
         "distance": "38K",
         "name": "Ultra Trail",
-        "elevation": "1100 m+",
-        "trailShare": "85% trail",
+        "elevation": "328 m+",
+        "trailShare": "92% trail",
+        "start": "07:00",
         "accent": "orange"
       }
     ]
@@ -79,8 +89,17 @@
     "ctaLabel": "Register now",
     "open": false,
     "href": null,
-    "status": "Registration opens soon",
-    "note": "Quota and entry fees will be published here once registration opens. Follow our social accounts so you don't miss the announcement."
+    "status": "Early registration opens on 5 October 2026",
+    "note": "Entries are accepted online only through the official registration system of the Turkish Athletics Federation (TAF); no registration is taken at the venue on race day. The registration link will be published in this section once it goes live.",
+    "highlights": [
+      {
+        "label": "Registration channel",
+        "value": "Turkish Athletics Federation (TAF)"
+      },
+      { "label": "Quota", "value": "1500 runners" },
+      { "label": "Entries close", "value": "28 March 2027, 23:59" }
+    ],
+    "detailsLabel": "Fees and entry requirements"
   },
   "pastEdition": {
     "label": "2025 Edition",
@@ -92,7 +111,10 @@
     "email": "info@silivriultratrail.com",
     "bubbleLabel": "Contact us",
     "socials": [
-      { "label": "Instagram", "href": "https://instagram.com/" },
+      {
+        "label": "Instagram",
+        "href": "https://www.instagram.com/silivriultratrail/"
+      },
       { "label": "Strava", "href": "https://strava.com/" }
     ]
   },
@@ -100,5 +122,344 @@
     "rights": "All rights reserved.",
     "backToTop": "Back to top",
     "languageLabel": "Language"
+  },
+  "schedule": {
+    "title": "Schedule",
+    "description": "Silivri Ultra Trail event schedule — technical briefing, kit collection and race times on 1, 3 and 4 April 2027.",
+    "intro": "The event runs across three days: a digital technical briefing, kit collection and race day. The venues for kit collection and the pasta party will be announced in the coming weeks.",
+    "days": [
+      {
+        "date": "01 April 2027",
+        "weekday": "Thursday",
+        "label": "Digital Briefing",
+        "items": [
+          {
+            "time": "20:00",
+            "title": "Official Race Briefing & Technical Meeting",
+            "detail": "Trail conditions, course marking, weather and critical safety rules are streamed live on our official Instagram account. All runners are advised to attend."
+          }
+        ],
+        "note": null
+      },
+      {
+        "date": "03 April 2027",
+        "weekday": "Saturday",
+        "label": "Kit Collection & Preparation",
+        "items": [
+          {
+            "time": "10:00 – 19:00",
+            "title": "Official Kit Collection & Mandatory Gear Check",
+            "detail": null
+          },
+          {
+            "time": "19:00 – 20:00",
+            "title": "Traditional Pasta Party",
+            "detail": "Free of charge for all registered runners."
+          }
+        ],
+        "note": "The official venues for kit collection and the pasta party will be published on the website and our social media accounts."
+      },
+      {
+        "date": "04 April 2027",
+        "weekday": "Sunday",
+        "label": "Race Day",
+        "items": [
+          {
+            "time": "05:30 – 09:30",
+            "title": "Late Kit Collection & Mandatory Gear Check",
+            "detail": "Desks in the start area stay open continuously until the start time of each course."
+          },
+          {
+            "time": "07:00",
+            "title": "38K Ultra Trail — Start",
+            "detail": null
+          },
+          {
+            "time": "08:30",
+            "title": "18K Trail — Start",
+            "detail": null
+          },
+          {
+            "time": "10:00",
+            "title": "8K Trail — Start",
+            "detail": null
+          },
+          {
+            "time": "14:00",
+            "title": "Official Award Ceremony & Closing",
+            "detail": "Overall and age-category podium ceremonies take place in the start/finish area."
+          },
+          {
+            "time": "15:00 – 15:30",
+            "title": "Return shuttles to Silivri centre",
+            "detail": "Departing from the start/finish area, timed around the final 38K cut-off (14:30)."
+          }
+        ],
+        "note": "Shuttle departure points and times, plus details of partner hotels, will be published on the website and official social media accounts in the coming weeks."
+      }
+    ],
+    "footnote": "The Race Committee may update the schedule due to weather conditions affecting runner safety or other force majeure events."
+  },
+  "faq": {
+    "title": "FAQ",
+    "description": "Frequently asked questions about Silivri Ultra Trail — registration, transport, mandatory gear, bag drop and course safety.",
+    "intro": "The questions we get most often. If you cannot find what you are looking for, send us an email.",
+    "items": [
+      {
+        "question": "Where do I register? Can I sign up on race day?",
+        "answer": [
+          "Entries are accepted online only through the official website of the Turkish Athletics Federation (TAF). The quota is limited to 1500 runners and entries close on 28 March 2027.",
+          "No new registrations will be taken at the venue on race day."
+        ]
+      },
+      {
+        "question": "Is there an entrance fee for Danamandıra Nature Park?",
+        "answer": [
+          "Yes. Under the regulations of the General Directorate of Nature Conservation and National Parks, nature park entrance fees (per person or vehicle) are payable by runners and their companions. These fees are not included in the race entry fee."
+        ]
+      },
+      {
+        "question": "How will I navigate the course? Is there a risk of getting lost?",
+        "answer": [
+          "All courses are carefully marked with tape, direction flags and reflectors at critical turns. Professional sweeper teams follow the last runner on each course, collecting the markers and securing the course.",
+          "Watching the live technical briefing on 1 April is mandatory so that you know what to expect."
+        ]
+      },
+      {
+        "question": "Will there be plastic cups at the aid stations (check-points)?",
+        "answer": [
+          "No. This is a cupless race: to protect the environment and maintain the zero-waste policy inside the nature park, no plastic cups are provided at the stations.",
+          "Every runner must carry a water container or flask with a capacity of at least 1000 ml."
+        ]
+      },
+      {
+        "question": "Is food and drink provided during and after the race?",
+        "answer": [
+          "Water, sweet and salty snacks and fruit are available at the check-points (CP) along the course.",
+          "At the finish, a \"Finisher Buffet\" is served for 8K and 18K runners and a hot \"Finisher Meal\" for 38K runners. A free pasta party is also held for all runners on Saturday 3 April."
+        ]
+      },
+      {
+        "question": "Is there a safe place to leave my belongings on race day?",
+        "answer": [
+          "Yes. A bag drop tent operates in the start area from 06:00 on Sunday 4 April.",
+          "Hand in a spare bag containing no valuables (cash, phone, wallet) with your race number attached to it, and collect it by 15:30 at the latest."
+        ]
+      },
+      {
+        "question": "I cannot take part due to injury or illness — can I get a refund?",
+        "answer": [
+          "Refunds are granted only on presentation of a medical report issued by an official health institution, explicitly stating that you are unable to run on the race date.",
+          "No refunds are given for personal schedule changes or weather. Transferring your race number to another runner is strictly prohibited."
+        ]
+      },
+      {
+        "question": "Will there be a shuttle from Silivri centre on race day? Is it paid?",
+        "answer": [
+          "Yes. Free shuttle buses run between Silivri centre and the race venue on the morning of Sunday 4 April, in both directions.",
+          "Exact departure points and times will be announced on our website and social media accounts during race week."
+        ]
+      },
+      {
+        "question": "Is there parking if I drive to the venue?",
+        "answer": [
+          "Yes. Parking areas are available inside Danamandıra Nature Park for participants and their companions.",
+          "To avoid queues at the park gates in the early morning, please arrive at least 1.5 hours before your own start time."
+        ]
+      },
+      {
+        "question": "What should I do if I get lost on the trail?",
+        "answer": [
+          "If you have not seen a marker (tape or flag) for 200 consecutive metres, you may have left the route. Stay calm, retrace your steps and return to the last marker you saw.",
+          "If you have lost your bearings completely, do not leave the trail or forest road under any circumstances. Call the emergency line printed on the back of your race number (+90 530 642 33 76), report your location, stay where you are and wait for the search and rescue or sweeper team. Remember to use your whistle."
+        ]
+      },
+      {
+        "question": "Can I use poles on the courses?",
+        "answer": [
+          "Yes, poles are permitted on all three courses (8K, 18K and 38K). However, a runner who starts with poles must finish with them; leaving poles with a support crew, losing them or picking up new ones along the course (including at aid stations) is prohibited.",
+          "If you use poles, please keep the tips covered for the safety of runners behind you."
+        ]
+      },
+      {
+        "question": "Will the race be cancelled if the weather is very bad?",
+        "answer": [
+          "Rain, mud and fog are part of trail running and the race will not be cancelled because of them — the waterproof jacket and long-sleeve base layer on the mandatory gear list exist precisely for these conditions.",
+          "However, in extreme weather that threatens runner safety (storms, severe flood risk and similar), the Race Committee reserves the right to shorten or reroute the courses, or to stop the race."
+        ]
+      },
+      {
+        "question": "When do the shuttles leave the finish area after the award ceremony?",
+        "answer": [
+          "Return shuttles to Silivri centre depart from the start/finish area between 15:00 and 15:30, after the official award ceremony at 14:00 and taking the final 38K cut-off (14:30) into account.",
+          "Runners using the shuttle must collect their bags from the bag drop before then."
+        ]
+      }
+    ],
+    "footnote": "This page summarises the official documents; the binding texts are the General Race Rules and the Participant Waiver."
+  },
+  "runnerInfo": {
+    "title": "Runner Info",
+    "description": "Silivri Ultra Trail entry fees, participation requirements, mandatory gear list, kit collection and race rules.",
+    "intro": "Everything you need to know before the start: fees, medical documents, mandatory gear and course rules.",
+    "fees": {
+      "title": "Entry fees",
+      "courseLabel": "Course",
+      "periods": [
+        "Early entry (1 Oct – 30 Nov 2026)",
+        "Standard entry (1 Dec 2026 – 31 Jan 2027)",
+        "Late entry (1 Feb – 28 Mar 2027)"
+      ],
+      "rows": [
+        { "course": "8K Trail", "prices": ["2,000 TL", "2,400 TL", "2,800 TL"] },
+        { "course": "18K Trail", "prices": ["2,400 TL", "2,900 TL", "3,400 TL"] },
+        { "course": "38K Ultra", "prices": ["2,700 TL", "3,200 TL", "3,700 TL"] }
+      ],
+      "note": "Entries are accepted through the official TAF registration system only. The quota is limited to 1500 runners across all courses combined; the system closes automatically once it is full. Entries, course changes and document uploads all close on 28 March 2027 at 23:59."
+    },
+    "gear": {
+      "title": "Mandatory gear",
+      "intro": "Equipment you must carry on you or in your pack throughout the race on the 18K and 38K courses:",
+      "items": [
+        "Water container with a total capacity of at least one litre (bladder, bottle, flask)",
+        "Race number, visibly attached to your body",
+        "Mobile phone (with the organisation and emergency numbers saved)",
+        "Emergency blanket (foil)",
+        "Whistle",
+        "Waterproof jacket",
+        "Long-sleeve base layer",
+        "Beanie or buff",
+        "Cup (no plastic cups are provided at the aid stations)",
+        "Timing chip (provided by the organisation)"
+      ],
+      "shortCourse": "For 8K runners, no mandatory gear check is carried out beyond the race number and timing chip.",
+      "checks": "The primary check takes place at kit collection; runners with incomplete equipment are not given a race number. Officials may also run random checks at the check-points along the course — depending on the severity of the breach this results in a time penalty of +10/30 minutes or immediate disqualification."
+    },
+    "sections": [
+      {
+        "title": "Entry requirements and medical documents",
+        "body": [
+          "The race is open to runners who turn 18 in 2027, that is, everyone born in 2009 or earlier. In line with TAF standards, age is calculated from the year of birth relative to the year of the race, regardless of day and month."
+        ],
+        "items": [
+          "8K and 18K: a wet-signed Participant Waiver, or a medical report issued within the last 12 months, or a currently valid athlete licence in athletics, triathlon, mountaineering or orienteering.",
+          "38K Ultra Trail: a valid medical report issued within the last 6 months stating \"fit for running/athletics\", or a currently valid athlete licence. The waiver alone is not sufficient for this course."
+        ]
+      },
+      {
+        "title": "Kit collection",
+        "body": [
+          "Main kit collection takes place on Saturday 3 April 2027 between 10:00 and 19:00; the official venue will be announced in the coming weeks. Late kit collection is on Sunday 4 April 2027 between 05:30 and 09:30 in the start area at Danamandıra Nature Park.",
+          "Arriving at least 1 hour before your own start time makes the process much smoother. Runners must collect their kit before their start time; no kit is handed out or shipped after the event."
+        ],
+        "items": [
+          "Identification: national ID card, driving licence or passport.",
+          "The medical document required for your distance.",
+          "The mandatory gear check follows the document desk."
+        ]
+      },
+      {
+        "title": "Age categories and awards",
+        "body": [
+          "Silivri Ultra Trail is run in an amateur spirit; no prize money is awarded.",
+          "Every runner who completes the race within the official cut-off times and in line with the rules receives a finisher medal; podium finishers in each category also receive a category medal and/or trophy. All runners, regardless of course, receive the official commemorative shirt at kit collection."
+        ],
+        "items": [
+          "Categories (Men / Women): Overall, 30-, 30+, 40+, 50+, 60+.",
+          "No double podium: a runner who finishes in the overall top three cannot also take an age-category award; the next runner in that category is invited to the podium instead.",
+          "Categories with insufficient participation may be merged by decision of the referee panel."
+        ]
+      },
+      {
+        "title": "Course discipline and navigation",
+        "body": [
+          "Course markers (tape, flags or reflectors) are placed at intervals of 10 to 100 metres depending on the terrain, and must be followed."
+        ],
+        "items": [
+          "Leaving the marked route, taking shortcuts or joining the course at unofficial points results in immediate disqualification.",
+          "Runners who leave a check-point after its cut-off time, or who have no passage record at a CP, are considered withdrawn.",
+          "Zero waste: littering on the trails or in the forest is prohibited; a first offence carries a heavy time penalty and a repeat offence immediate disqualification.",
+          "Roughly 15% of the course runs on asphalt and farm roads that may not be fully closed to traffic; in these sections runners are responsible for observing traffic rules."
+        ]
+      },
+      {
+        "title": "Outside support, poles and sportsmanship",
+        "body": [],
+        "items": [
+          "On the 8K and 18K courses, pacing or nutrition/equipment support from outside (friends, family, coaches) is strictly prohibited.",
+          "On the 38K course, outside support is allowed only within the official check-point zones (200 metres before and after).",
+          "Poles are permitted; a runner who starts with poles must finish with them.",
+          "Any runner who encounters an injured athlete or one in need of urgent help must assist and report the situation to the nearest official. Time lost while helping is deducted from the runner's net time."
+        ]
+      },
+      {
+        "title": "Chip timing and check-points",
+        "body": [
+          "Timing is recorded by electronic chips, handed out together with the race number at kit collection."
+        ],
+        "items": [
+          "Registering your passage on the timing mat or at the officials' desk at every check-point is entirely the runner's responsibility.",
+          "A runner with a missing passage record at any CP is removed from the rankings even if they finish the race."
+        ]
+      },
+      {
+        "title": "Withdrawing from the race (DNF)",
+        "body": [
+          "A runner who wishes to withdraw must report it to an official at an official check-point; the official formally closes the race number and chip record."
+        ],
+        "items": [
+          "If leaving the race area without informing officials triggers a search and rescue operation, all resulting costs and legal responsibility fall on the runner.",
+          "Except for medical emergencies, transfers from a check-point to the start/finish area run at intervals depending on vehicle availability and the logistics plan."
+        ]
+      },
+      {
+        "title": "Bag drop",
+        "body": [
+          "A bag drop tent operates in the start area from 06:00 on Sunday 4 April 2027. Bags must be collected by 15:30 at the latest on presentation of the race number."
+        ],
+        "items": [
+          "Bags handed in must not contain cash, mobile phones, wallets, passports, credit cards, jewellery or valuable documents.",
+          "The organising committee accepts no legal or financial liability for loss, theft or damage."
+        ]
+      },
+      {
+        "title": "Medical intervention and authority to stop a runner",
+        "body": [
+          "The official medical teams on the course (doctors, paramedics, ambulance staff, UMKE) and the race director are authorised to examine any runner whose condition is considered critical, or for whom continuing poses a risk to life, and to remove them from the course.",
+          "A \"cannot continue\" decision taken in the interest of runner health is final and cannot be appealed."
+        ],
+        "items": []
+      },
+      {
+        "title": "Emergencies and communication",
+        "body": [
+          "The organisation's emergency line is +90 530 642 33 76 and it is printed in large type on the back of every race number."
+        ],
+        "items": [
+          "A runner who loses their bearings, is injured or needs urgent help must stay put without leaving the trail or forest road and call this number.",
+          "Mobile coverage can be weak in some deep forest and basin sections of the nature park. If you have no signal, move towards the nearest open area or hilltop without straying from the route, and blow your emergency whistle at intervals to signal the sweeper teams."
+        ]
+      },
+      {
+        "title": "Nature park rules",
+        "body": [
+          "The race takes place inside Silivri Danamandıra Nature Park, a protected area with special ecological status. Respect for the flora, fauna and the park itself is mandatory; aggressive behaviour, noise or damage that harms wildlife is grounds for immediate removal from the race."
+        ],
+        "items": [
+          "Entrance fees for people or vehicles at the nature park are payable by participants and their companions; they are not included in the entry fee."
+        ]
+      },
+      {
+        "title": "Appeals, force majeure and media rights",
+        "body": [],
+        "items": [
+          "Appeals against the results must be submitted in writing to the Race Committee within 2 hours of crossing the finish line.",
+          "In extreme weather or other force majeure events the Race Committee reserves the right to reroute or shorten the course, cancel check-points or stop the race; no compensation can be claimed for such changes.",
+          "If the race is cancelled entirely, the refund procedure is determined by a specific decision of the Race Committee.",
+          "Participants are deemed to consent to the use of photographs, video, drone and audio recordings taken at the event in promotional and advertising material without any claim to royalties. Publication of name, surname, age category and club in the results is also accepted."
+        ]
+      }
+    ],
+    "disclaimer": "This page summarises the official documents. The binding texts are the General Race Rules, the Participant Waiver and the Kit Collection Guide."
   }
 }

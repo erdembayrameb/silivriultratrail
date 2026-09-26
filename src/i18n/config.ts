@@ -16,9 +16,12 @@ export const localeLabels: Record<Locale, string> = {
   en: "EN",
 };
 
-/** Bir dilin ana sayfa adresi. */
+/**
+ * Bir dilin ana sayfa adresi. `trailingSlash: true` ile üretildiğimiz için
+ * sonda eğik çizgi var — canonical adresle gerçek adres birebir eşleşsin.
+ */
 export function localeHref(locale: Locale): string {
-  return locale === defaultLocale ? "/" : `/${locale}`;
+  return locale === defaultLocale ? "/" : `/${locale}/`;
 }
 
 export function isLocale(value: string): value is Locale {

@@ -1,4 +1,4 @@
-import { MapPin, Triangle } from "lucide-react";
+import { Clock, MapPin, Triangle } from "lucide-react";
 import { SectionHeading } from "@/components/section-heading";
 import type { CourseAccent, Dictionary } from "@/i18n/dictionary";
 
@@ -69,6 +69,20 @@ export function Courses({ dict }: { dict: Dictionary }) {
                   </dt>
                   <dd className="text-xs font-semibold text-white/90 sm:text-base">
                     {course.trailShare}
+                  </dd>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <dt className="shrink-0">
+                    <Clock
+                      className="h-4 w-4 text-white/70 sm:h-5 sm:w-5"
+                      strokeWidth={1.75}
+                      aria-hidden="true"
+                    />
+                    <span className="sr-only">{courses.startLabel}</span>
+                  </dt>
+                  <dd className="text-xs font-semibold text-white/90 sm:text-base">
+                    {course.start}
                   </dd>
                 </div>
               </dl>

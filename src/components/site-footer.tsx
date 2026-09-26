@@ -2,15 +2,18 @@ import { ArrowUp, Mail } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
 import type { Locale } from "@/i18n/config";
-import { localeHref, localeLabels, locales } from "@/i18n/config";
+import { localeLabels, locales } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionary";
 
 export function SiteFooter({
   dict,
   locale,
+  languageHrefs,
 }: {
   dict: Dictionary;
   locale: Locale;
+  /** Bulunulan sayfanın her dildeki adresi — PageShell hesaplıyor. */
+  languageHrefs: Record<Locale, string>;
 }) {
   const { brand, contact, footer, hero } = dict;
 
@@ -60,8 +63,8 @@ export function SiteFooter({
           {locales.map((code) => (
             <Link
               key={code}
-              href={localeHref(code)}
-              aria-current={code === locale ? "true" : undefined}
+              href={languageHrefs[code]}
+              aria-current={code === locale ? "page" : undefined}
               className={
                 code === locale
                   ? "rounded-md bg-ink-900 px-3 py-1.5 text-sm font-bold text-sand"

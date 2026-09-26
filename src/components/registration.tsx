@@ -1,8 +1,10 @@
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { SectionHeading } from "@/components/section-heading";
 import type { Dictionary } from "@/i18n/dictionary";
 
 export function Registration({ dict }: { dict: Dictionary }) {
-  const { registration } = dict;
+  const { registration, routes } = dict;
 
   return (
     <section id="kayit" className="bg-ink-900 py-14 sm:py-20">
@@ -13,7 +15,23 @@ export function Registration({ dict }: { dict: Dictionary }) {
           {registration.status}
         </p>
 
-        <p className="mt-4 max-w-prose text-sm leading-relaxed text-white/70 sm:text-base">
+        <dl className="mt-8 grid w-full gap-4 sm:grid-cols-3">
+          {registration.highlights.map((highlight) => (
+            <div
+              key={highlight.label}
+              className="rounded-lg border border-ink-700 bg-ink-950/50 px-4 py-4"
+            >
+              <dt className="text-[11px] font-bold tracking-[0.18em] text-white/50 uppercase">
+                {highlight.label}
+              </dt>
+              <dd className="mt-2 text-sm font-semibold text-balance text-white">
+                {highlight.value}
+              </dd>
+            </div>
+          ))}
+        </dl>
+
+        <p className="mt-6 max-w-prose text-sm leading-relaxed text-white/70 sm:text-base">
           {registration.note}
         </p>
 
@@ -27,6 +45,14 @@ export function Registration({ dict }: { dict: Dictionary }) {
             {registration.ctaLabel}
           </a>
         ) : null}
+
+        <Link
+          href={routes.runnerInfo}
+          className="mt-8 inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-sut-cyan uppercase underline underline-offset-4 hover:text-sut-cyan-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sut-cyan"
+        >
+          {registration.detailsLabel}
+          <ArrowRight className="h-4 w-4" strokeWidth={2.5} aria-hidden="true" />
+        </Link>
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import { Anton, Barlow } from "next/font/google";
 import "@/app/globals.css";
 import type { Locale } from "@/i18n/config";
 import { localeHref, locales } from "@/i18n/config";
+import type { PageKey } from "@/i18n/dictionary";
 import { getDictionary } from "@/i18n/dictionary";
 
 // next/font statik export'ta da fontları kendi sunucumuza gömer —
@@ -28,6 +29,7 @@ export const viewport: Viewport = {
   themeColor: "#0a2029",
 };
 
+/** Kök layout metadata'sı — başlık şablonu burada tanımlanıyor. */
 export function buildMetadata(locale: Locale): Metadata {
   const dict = getDictionary(locale);
 
@@ -47,6 +49,40 @@ export function buildMetadata(locale: Locale): Metadata {
       siteName: dict.meta.title,
       title: dict.meta.title,
       description: dict.meta.description,
+    },
+  };
+}
+
+/**
+ * Alt sayfa metadata'sı. Canonical ve hreflang adresleri içerik dosyasındaki
+ * `routes` alanından geliyor — böylece TR/EN karşılıkları birbirini gösteriyor.
+ */
+export function buildPageMetadata(locale: Locale, page: PageKey): Metadata {
+  const dict = getDictionary(locale);
+  const { title, description } =
+    page === "schedule"
+      ? dict.schedule
+      : page === "faq"
+        ? dict.faq
+        : page === "runnerInfo"
+          ? dict.runnerInfo
+          : dict.meta;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: dict.routes[page],
+      languages: Object.fromEntries(
+        locales.map((l) => [l, getDictionary(l).routes[page]]),
+      ),
+    },
+    openGraph: {
+      type: "website",
+      locale,
+      siteName: dict.meta.title,
+      title: `${title} | ${dict.meta.title}`,
+      description,
     },
   };
 }
