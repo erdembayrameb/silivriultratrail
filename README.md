@@ -29,11 +29,34 @@ Sık değişecek alanlar:
 | Ne                    | Nerede                                            |
 | --------------------- | ------------------------------------------------- |
 | Tarih, yer, slogan    | `hero`                                            |
-| Parkur bilgileri      | `courses.items`                                   |
+| Parkur bilgileri      | `courses.items` — mesafe, tırmanış, start saati   |
 | Kayıt durumu          | `registration` — `open: true` + `href` ile açılır |
 | Menü maddeleri        | `nav.items` — `href: null` olanlar "yakında"      |
-| 2025 sayfası butonu   | `pastEdition.href`                                |
+| Etkinlik programı     | `schedule.days`                                   |
+| S.S.S.                | `faq.items`                                       |
+| Ücretler, kurallar    | `runnerInfo`                                      |
+| 2025 sayfası butonu   | `pastEdition.href` — `null` iken bölüm gizlenir   |
 | E-posta, sosyal medya | `contact`                                         |
+
+`registration.status` tarihe bağlı bir cümle taşıyor ("Erken kayıt … açılıyor");
+kayıt dönemi değiştikçe elle güncellenmeli.
+
+## Sayfalar
+
+| Sayfa             | TR                    | EN                   |
+| ----------------- | --------------------- | -------------------- |
+| Ana sayfa         | `/`                   | `/en/`               |
+| Program           | `/program/`           | `/en/schedule/`      |
+| Yarışçı Bilgileri | `/yarisci-bilgileri/` | `/en/runner-info/`   |
+| S.S.S.            | `/sss/`               | `/en/faq/`           |
+
+Adresler içerik dosyalarındaki `routes` alanında duruyor. Dil değiştirici bu
+alanı kullanarak bulunduğun sayfanın diğer dildeki karşılığına gider; adres
+değiştirilirse hem `routes` hem `nav.items` hem de `src/app` altındaki klasör
+adı birlikte güncellenmeli.
+
+Ortak iskelet (header + footer + iletişim balonu) `src/components/page-shell.tsx`
+içinde; her sayfa kendi `PageKey`'i ile bunu sarmalıyor.
 
 ## Tasarım
 
@@ -51,8 +74,9 @@ vektör bir sahne çizer. Fotoğraf telifi gerekiyorsa içerik dosyasındaki
 
 Türkçe birincil dil: kök adreste (`/`) yayınlanır, İngilizce `/en` altında.
 Her dilin kendi kök layout'u var (`src/app/(tr)`, `src/app/(en)`) — bu sayede
-`<html lang>` doğru basılır. Ortak iskelet `src/components/root-html.tsx`,
-ortak sayfa gövdesi `src/components/home-screen.tsx` içinde.
+`<html lang>` doğru basılır. Ortak HTML iskeleti `src/components/root-html.tsx`
+içinde; sayfa başlıkları ve canonical/hreflang adresleri de oradaki
+`buildMetadata` / `buildPageMetadata` ile üretilir.
 
 ## Yayın
 
