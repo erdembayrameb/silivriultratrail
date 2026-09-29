@@ -270,7 +270,7 @@
         "label": "Registration channel",
         "value": "Turkish Athletics Federation (TAF)"
       },
-      { "label": "Quota", "value": "1000 runners" },
+      { "label": "Quota", "value": "1500 runners" },
       { "label": "Entries close", "value": "28 March 2027, 23:59" }
     ],
     "detailsLabel": "Fees and entry requirements"
@@ -395,7 +395,7 @@
       {
         "question": "Where do I register? Can I sign up on race day?",
         "answer": [
-          "Entries are accepted online only through the official website of the Turkish Athletics Federation (TAF). The quota is limited to 1000 runners and entries close on 28 March 2027. No new registrations will be taken at the venue on race day."
+          "Entries are accepted online only through the official website of the Turkish Athletics Federation (TAF). The quota is limited to 1500 runners and entries close on 28 March 2027. No new registrations will be taken at the venue on race day."
         ]
       },
       {
@@ -498,7 +498,7 @@
         { "course": "18K Oak Trail", "prices": ["2,400 TRY", "2,900 TRY", "3,400 TRY"] },
         { "course": "38K Forest Trail", "prices": ["2,700 TRY", "3,200 TRY", "3,700 TRY"] }
       ],
-      "note": "Entries are accepted online only through the official registration system of the Turkish Athletics Federation (TAF). The total quota is 1000 runners and the system closes to new entries as soon as it is full. Entries, course changes and document uploads close on 28 March 2027 at 23:59. Nature park entrance fees are not included in the entry fee."
+      "note": "Entries are accepted online only through the official registration system of the Turkish Athletics Federation (TAF). The total quota is 1500 runners and the system closes to new entries as soon as it is full. Entries, course changes and document uploads close on 28 March 2027 at 23:59. Nature park entrance fees are not included in the entry fee."
     },
     "gear": {
       "title": "Mandatory gear list",
@@ -721,7 +721,7 @@
         "body": [],
         "items": [
           "Official entry channel: entries are accepted online only through the official Turkish Athletics Federation (TAF) registration system. No alternative registration is taken at the venue on race day or through any other platform.",
-          "Participant limit (quota): to safeguard runner safety, protect the ecological balance and keep organisational quality at the highest level, the maximum total number of participants across all courses (8K, 18K and 38K) is limited to 1000. The system closes to new entries as soon as the quota is full.",
+          "Participant limit (quota): to safeguard runner safety, protect the ecological balance and keep organisational quality at the highest level, the maximum total number of participants across all courses (8K, 18K and 38K) is limited to 1500. The system closes to new entries as soon as the quota is full.",
           "Entry deadline: entries, course changes and document uploads close on 28 March 2027 at 23:59. No new runner may enter the system after that date.",
           "The current entry fee table is on the Runner Info page."
         ]

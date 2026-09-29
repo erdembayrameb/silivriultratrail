@@ -270,7 +270,7 @@
         "label": "Kayıt kanalı",
         "value": "Türkiye Atletizm Federasyonu (TAF)"
       },
-      { "label": "Kontenjan", "value": "1000 sporcu" },
+      { "label": "Kontenjan", "value": "1500 sporcu" },
       { "label": "Son kayıt", "value": "28 Mart 2027, 23:59" }
     ],
     "detailsLabel": "Ücretler ve katılım şartları"
@@ -395,7 +395,7 @@
       {
         "question": "Yarış kayıtları nereden yapılıyor? Yarış günü kayıt yaptırabilir miyim?",
         "answer": [
-          "Yarışma kayıtları yalnızca Türkiye Atletizm Federasyonu (TAF) resmi internet sitesi üzerinden online olarak yapılmaktadır. Kontenjanımız 1000 kişi ile sınırlıdır ve son kayıt tarihi 28 Mart 2027'dir. Yarış günü etkinlik alanında kesinlikle yeni kayıt alınmayacaktır."
+          "Yarışma kayıtları yalnızca Türkiye Atletizm Federasyonu (TAF) resmi internet sitesi üzerinden online olarak yapılmaktadır. Kontenjanımız 1500 kişi ile sınırlıdır ve son kayıt tarihi 28 Mart 2027'dir. Yarış günü etkinlik alanında kesinlikle yeni kayıt alınmayacaktır."
         ]
       },
       {
@@ -498,7 +498,7 @@
         { "course": "18K Meşe Trail", "prices": ["2.400 TL", "2.900 TL", "3.400 TL"] },
         { "course": "38K Orman Trail", "prices": ["2.700 TL", "3.200 TL", "3.700 TL"] }
       ],
-      "note": "Kayıtlar yalnızca Türkiye Atletizm Federasyonu (TAF) resmi kayıt sistemi üzerinden online alınır. Toplam kontenjan 1000 kişidir ve dolduğu an sistem yeni kayıtlara kapanır. Son kayıt, parkur değişikliği ve evrak yükleme işlemleri 28 Mart 2027 saat 23:59'da sona erer. Tabiat parkı giriş ücretleri kayıt ücretine dahil değildir."
+      "note": "Kayıtlar yalnızca Türkiye Atletizm Federasyonu (TAF) resmi kayıt sistemi üzerinden online alınır. Toplam kontenjan 1500 kişidir ve dolduğu an sistem yeni kayıtlara kapanır. Son kayıt, parkur değişikliği ve evrak yükleme işlemleri 28 Mart 2027 saat 23:59'da sona erer. Tabiat parkı giriş ücretleri kayıt ücretine dahil değildir."
     },
     "gear": {
       "title": "Zorunlu ekipman listesi",
@@ -721,7 +721,7 @@
         "body": [],
         "items": [
           "Resmi Kayıt Kanalı: Yarışma kayıtları yalnızca resmi Türkiye Atletizm Federasyonu (TAF) kayıt sistemi üzerinden çevrim içi (online) olarak kabul edilir. Yarış günü etkinlik alanında veya başka bir platform üzerinden kesinlikle alternatif kayıt alınmayacaktır.",
-          "Katılımcı Limiti (Kontenjan): Sporcu güvenliği, ekolojik dengenin korunması ve organizasyon kalitesini en üst düzeyde tutabilmek amacıyla tüm parkurların toplam (8K, 18K ve 38K) maksimum katılımcı sayısı 1000 kişi ile sınırlandırılmıştır. Kontenjan dolduğu an kayıt sistemi otomatik olarak yeni kayıtlara kapanır.",
+          "Katılımcı Limiti (Kontenjan): Sporcu güvenliği, ekolojik dengenin korunması ve organizasyon kalitesini en üst düzeyde tutabilmek amacıyla tüm parkurların toplam (8K, 18K ve 38K) maksimum katılımcı sayısı 1500 kişi ile sınırlandırılmıştır. Kontenjan dolduğu an kayıt sistemi otomatik olarak yeni kayıtlara kapanır.",
           "Son Kayıt Tarihi: Yarışma için son kayıt, parkur değişikliği ve evrak yükleme işlemleri 28 Mart 2027 saat 23:59 itibarıyla sona erer. Bu tarihten sonra kesinlikle sisteme yeni sporcu girişi yapılmayacaktır.",
           "Güncel kayıt ücreti tablosu Yarışçı Bilgileri sayfasında yer alır."
         ]
