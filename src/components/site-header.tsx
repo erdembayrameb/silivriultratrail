@@ -2,7 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { CasedText } from "@/components/cased-text";
 import { Logo } from "@/components/logo";
 import type { Locale } from "@/i18n/config";
@@ -25,27 +25,49 @@ export function SiteHeader({
   const [open, setOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const previousOverflow = useRef("");
+
+  const unlockScroll = useCallback(() => {
+    document.body.style.overflow = previousOverflow.current;
+  }, []);
+
+  /**
+   * Menüdeki bir bağlantıya basıldığında kaydırma kilidi, yönlendirmeden
+   * ÖNCE senkron olarak açılıyor.
+   *
+   * Aksi halde: kilit hâlâ kapalıyken Next yeni sayfaya geçip başa kaydırmak
+   * istiyor, ama `overflow: hidden` yüzünden sayfa kaydırılamıyor. Kilit
+   * sonradan kalkınca tarayıcı önceki kaydırma konumunu geri veriyor ve
+   * kullanıcı yeni sayfanın ortasında — kısa sayfalarda en altında — açılıyor.
+   */
+  const closeForNavigation = useCallback(() => {
+    unlockScroll();
+    setOpen(false);
+  }, [unlockScroll]);
+
+  /** Gezinme olmadan kapanış (kapat butonu / Escape): odak butona döner. */
+  const closeAndRestoreFocus = useCallback(() => {
+    setOpen(false);
+    toggleRef.current?.focus({ preventScroll: true });
+  }, []);
 
   useEffect(() => {
     const panel = panelRef.current;
     if (!open || !panel) return;
 
-    // Cleanup'ta okumak yerine şimdi yakalanıyor: buton header ile birlikte
-    // hep bağlı kaldığı için aynı düğüm, ama kural gereği kopyalıyoruz.
-    const toggle = toggleRef.current;
-
     // Menü açıkken arkadaki sayfa kaymasın; mobilde kritik.
-    const previousOverflow = document.body.style.overflow;
+    previousOverflow.current = document.body.style.overflow;
     document.body.style.overflow = "hidden";
 
     // Odak panele taşınıyor; header `inert` olduğu için tetikleyen buton
-    // bu noktada zaten odağı bırakmış oluyor.
+    // bu noktada zaten odağı bırakmış oluyor. `preventScroll`, odaklanmanın
+    // sayfayı kendi başına kaydırmasını engelliyor.
     const focusable = () => panel.querySelectorAll<HTMLElement>(FOCUSABLE);
-    focusable()[0]?.focus();
+    focusable()[0]?.focus({ preventScroll: true });
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
-        setOpen(false);
+        closeAndRestoreFocus();
         return;
       }
 
@@ -61,21 +83,20 @@ export function SiteHeader({
 
       if (event.shiftKey && document.activeElement === first) {
         event.preventDefault();
-        last.focus();
+        last.focus({ preventScroll: true });
       } else if (!event.shiftKey && document.activeElement === last) {
         event.preventDefault();
-        first.focus();
+        first.focus({ preventScroll: true });
       }
     };
     document.addEventListener("keydown", onKeyDown);
 
     return () => {
-      document.body.style.overflow = previousOverflow;
+      // Emniyet ağı: kilidi açmadan kapanan bir yol kalırsa burada açılır.
+      unlockScroll();
       document.removeEventListener("keydown", onKeyDown);
-      // Kapanışta odak menüyü açan butona geri döner.
-      toggle?.focus();
     };
-  }, [open]);
+  }, [open, unlockScroll, closeAndRestoreFocus]);
 
   return (
     <>
@@ -127,7 +148,7 @@ export function SiteHeader({
             </span>
             <button
               type="button"
-              onClick={() => setOpen(false)}
+              onClick={closeAndRestoreFocus}
               aria-label={dict.nav.closeLabel}
               className="-mr-2 inline-flex h-12 w-12 items-center justify-center rounded-lg text-white focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none"
             >
@@ -135,14 +156,16 @@ export function SiteHeader({
             </button>
           </div>
 
-          <nav className="px-safe w-full flex-1 overflow-y-auto py-4">
+          {/* `overscroll-contain`: menü listesinin sonuna gelindiğinde
+              kaydırma arkadaki sayfaya zincirlenmesin. */}
+          <nav className="px-safe w-full flex-1 overflow-y-auto overscroll-contain py-4">
             <ul className="flex flex-col">
               {dict.nav.items.map((item) =>
                 item.href ? (
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      onClick={() => setOpen(false)}
+                      onClick={closeForNavigation}
                       className={
                         item.emphasis
                           ? // Vurgulu madde (Gönüllü Ol) listeden ayrışsın.
@@ -177,7 +200,7 @@ export function SiteHeader({
                 <Link
                   key={code}
                   href={languageHrefs[code]}
-                  onClick={() => setOpen(false)}
+                  onClick={closeForNavigation}
                   aria-current={code === locale ? "page" : undefined}
                   className={
                     code === locale

@@ -5,6 +5,7 @@ import { ProseSections } from "@/components/prose-sections";
 import type { Locale } from "@/i18n/config";
 import type { PageKey } from "@/i18n/dictionary";
 import { getDictionary, getLegalDoc } from "@/i18n/dictionary";
+import { assetPath } from "@/lib/asset-path";
 
 /** Resmi belgelerin ortak sayfası — kurallar, taahhütname, KVKK, açık rıza. */
 export function DocumentScreen({
@@ -25,7 +26,7 @@ export function DocumentScreen({
         <div className="px-safe mx-auto flex w-full max-w-3xl flex-col gap-10">
           {doc.pdf ? (
             <a
-              href={doc.pdf}
+              href={assetPath(doc.pdf)}
               download
               className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border border-ink-700 bg-ink-900 px-5 text-sm font-bold tracking-wide text-white uppercase transition-colors hover:border-sut-cyan hover:text-sut-cyan focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none sm:w-auto sm:self-start"
             >

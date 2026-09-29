@@ -6,6 +6,7 @@ import type { Locale } from "@/i18n/config";
 import type { CourseAccent, PageKey } from "@/i18n/dictionary";
 import { getCourse, getDictionary } from "@/i18n/dictionary";
 import { readCourseProfile } from "@/lib/gpx";
+import { assetPath } from "@/lib/asset-path";
 
 // Tailwind sınıfları derleme sırasında taranabilmesi için tam yazılıyor.
 const accentText: Record<CourseAccent, string> = {
@@ -195,7 +196,7 @@ export function CourseDetailScreen({
               {courses.gpxNote}
             </p>
             <a
-              href={`/gpx/${course.gpx}`}
+              href={assetPath(`/gpx/${course.gpx}`)}
               download
               className="mt-5 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-ink-700 bg-ink-900 px-5 text-sm font-bold tracking-wide text-white uppercase transition-colors hover:border-sut-cyan hover:text-sut-cyan focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none"
             >

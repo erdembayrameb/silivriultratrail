@@ -4,6 +4,7 @@ import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import type { Locale } from "@/i18n/config";
 import { getDictionary, getLegalDoc } from "@/i18n/dictionary";
+import { assetPath } from "@/lib/asset-path";
 
 /** Resmi belgelerin listelendiği hub sayfası. */
 export function DocumentsScreen({ locale }: { locale: Locale }) {
@@ -51,7 +52,7 @@ export function DocumentsScreen({ locale }: { locale: Locale }) {
 
                   {doc.pdf ? (
                     <a
-                      href={doc.pdf}
+                      href={assetPath(doc.pdf)}
                       download
                       className="flex min-h-11 items-center gap-2 border-t border-ink-800 px-4 text-xs font-bold tracking-wide text-white/60 uppercase transition-colors hover:text-sut-cyan focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none"
                     >
