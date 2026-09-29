@@ -46,6 +46,7 @@ export function RunnerInfoScreen({ locale }: { locale: Locale }) {
                     <tr key={row.course} className="border-b border-white/10">
                       <th
                         scope="row"
+                        lang="en"
                         className="py-3 pr-4 font-bold tracking-wide text-sut-cyan uppercase"
                       >
                         {row.course}

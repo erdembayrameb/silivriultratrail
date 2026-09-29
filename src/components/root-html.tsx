@@ -4,7 +4,7 @@ import "@/app/globals.css";
 import type { Locale } from "@/i18n/config";
 import { localeHref, locales } from "@/i18n/config";
 import type { PageKey } from "@/i18n/dictionary";
-import { getDictionary } from "@/i18n/dictionary";
+import { getDictionary, getPageMeta } from "@/i18n/dictionary";
 
 // next/font statik export'ta da fontları kendi sunucumuza gömer —
 // Google'a çalışma anında istek gitmez.
@@ -59,14 +59,7 @@ export function buildMetadata(locale: Locale): Metadata {
  */
 export function buildPageMetadata(locale: Locale, page: PageKey): Metadata {
   const dict = getDictionary(locale);
-  const { title, description } =
-    page === "schedule"
-      ? dict.schedule
-      : page === "faq"
-        ? dict.faq
-        : page === "runnerInfo"
-          ? dict.runnerInfo
-          : dict.meta;
+  const { title, description } = getPageMeta(dict, page);
 
   return {
     title,

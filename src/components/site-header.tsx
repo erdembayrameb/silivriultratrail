@@ -3,6 +3,7 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
+import { CasedText } from "@/components/cased-text";
 import { Logo } from "@/components/logo";
 import type { Locale } from "@/i18n/config";
 import { localeLabels, locales } from "@/i18n/config";
@@ -142,9 +143,14 @@ export function SiteHeader({
                     <Link
                       href={item.href}
                       onClick={() => setOpen(false)}
-                      className="block border-b border-ink-800 py-4 font-display text-2xl tracking-wide text-white uppercase transition-colors hover:text-sut-cyan focus-visible:text-sut-cyan focus-visible:outline-none"
+                      className={
+                        item.emphasis
+                          ? // Vurgulu madde (Gönüllü Ol) listeden ayrışsın.
+                            "mt-6 flex min-h-13 items-center justify-center bg-sut-cyan px-5 font-display text-xl tracking-wide text-ink-950 uppercase transition-colors hover:bg-sut-cyan-soft focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
+                          : "block border-b border-ink-800 py-4 font-display text-2xl tracking-wide text-white uppercase transition-colors hover:text-sut-cyan focus-visible:text-sut-cyan focus-visible:outline-none"
+                      }
                     >
-                      {item.label}
+                      <CasedText>{item.label}</CasedText>
                     </Link>
                   </li>
                 ) : (
@@ -153,7 +159,7 @@ export function SiteHeader({
                     className="flex items-center justify-between border-b border-ink-800 py-4"
                   >
                     <span className="font-display text-2xl tracking-wide text-white/35 uppercase">
-                      {item.label}
+                      <CasedText>{item.label}</CasedText>
                     </span>
                     <span className="rounded-full border border-sut-cyan/40 px-2.5 py-1 text-[11px] font-semibold tracking-wider text-sut-cyan uppercase">
                       {dict.nav.soonBadge}

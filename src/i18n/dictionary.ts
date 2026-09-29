@@ -19,22 +19,66 @@ export type FeatureIcon =
  * `routes` üzerinden bulur — böylece alt sayfada dil değiştirince ana sayfaya
  * düşmek yerine karşılığına gidilir.
  */
-export type PageKey = "home" | "schedule" | "faq" | "runnerInfo";
+export type PageKey =
+  | "home"
+  | "schedule"
+  | "faq"
+  | "runnerInfo"
+  | "why"
+  | "transport"
+  | "accommodation"
+  | "volunteer"
+  | "rules"
+  | "documents"
+  | "docKvkk"
+  | "docConsent"
+  | "docWaiver"
+  | "course8k"
+  | "course18k"
+  | "course38k";
 
 export interface NavItem {
   label: string;
   /** null ise sayfa henüz yok; menüde "yakında" rozetiyle pasif görünür. */
   href: string | null;
+  /** true ise menüde vurgulu buton olarak basılır (ör. "Gönüllü Ol"). */
+  emphasis?: boolean;
+}
+
+/** Parkur detay sayfasındaki CP çizelgesinin bir satırı. */
+export interface Checkpoint {
+  cp: string;
+  station: string;
+  /** Start'tan itibaren toplam mesafe; veri yoksa "—". */
+  totalKm: string;
+  /** Sonraki istasyona mesafe; finişte "—". */
+  nextKm: string;
+  /** İstasyondaki ikram/hizmet; yoksa boş dize. */
+  services: string;
 }
 
 export interface Course {
   id: string;
   distance: string;
   name: string;
+  accent: CourseAccent;
+  /** Ana sayfadaki kartın ve menünün gittiği detay sayfası. */
+  href: string;
   elevation: string;
   trailShare: string;
   start: string;
-  accent: CourseAccent;
+  cutOff: string;
+  /** Detay sayfasının başlığı — "8K Gölet Trail Parkuru" gibi. */
+  title: string;
+  /** Parkurun tek cümlelik karakteri. */
+  tagline: string;
+  description: string;
+  /** Parkur anlatımı; her eleman ayrı paragraf. */
+  body: string[];
+  checkpoints: Checkpoint[];
+  /** `public/gpx/` altındaki dosya adı. */
+  gpx: string;
+  gearNote: string;
 }
 
 export interface Feature {
@@ -74,7 +118,8 @@ export interface FaqItem {
 }
 
 export interface InfoSection {
-  title: string;
+  /** null ise bölüm başlıksız basılır (ör. açık rıza metninin gövdesi). */
+  title: string | null;
   body: string[];
   items: string[];
 }
@@ -85,6 +130,37 @@ export interface FeeRow {
   prices: string[];
 }
 
+/**
+ * Resmi belge sayfası. `rules` da aynı yapıyı kullanıyor; tek fark hub
+ * listesinde görünüp görünmemesi.
+ */
+export interface LegalDoc {
+  title: string;
+  /** Belgeler listesindeki tek cümlelik özet. */
+  summary: string;
+  description: string;
+  intro: string;
+  sections: InfoSection[];
+  /** `public/belgeler/` altındaki PDF; yoksa null. */
+  pdf: string | null;
+  footnote: string | null;
+}
+
+/** Belgeler hub sayfasındaki kart — hangi sayfaya gittiğini `page` söyler. */
+export interface DocLink {
+  page: PageKey;
+}
+
+/** Düz metin içerikli tanıtım sayfaları (Neden SUT, Ulaşım, Konaklama). */
+export interface ContentPage {
+  title: string;
+  description: string;
+  intro: string;
+  body: string[];
+  sections: InfoSection[];
+  footnote: string | null;
+}
+
 export interface Dictionary {
   meta: {
     title: string;
@@ -93,6 +169,12 @@ export interface Dictionary {
   brand: {
     abbr: string;
     name: string;
+    /**
+     * Logodaki büyük harfli kilit. Hazır büyütülmüş tutuluyor çünkü metin
+     * karışık dilli: Türkçe büyütme kuralı "Trail" → "TRAİL", İngilizce kuralı
+     * ise "Silivri" → "SILIVRI" yapardı.
+     */
+    wordmark: string;
   };
   routes: Record<PageKey, string>;
   nav: {
@@ -113,9 +195,30 @@ export interface Dictionary {
   };
   courses: {
     title: string;
+    distanceLabel: string;
     elevationLabel: string;
     trailLabel: string;
     startLabel: string;
+    cutOffLabel: string;
+    detailLabel: string;
+    cpTitle: string;
+    cpIntro: string;
+    cpHeaders: {
+      cp: string;
+      station: string;
+      total: string;
+      next: string;
+      services: string;
+    };
+    profileTitle: string;
+    profileHint: string;
+    highestLabel: string;
+    lowestLabel: string;
+    profileNote: string;
+    gpxTitle: string;
+    gpxNote: string;
+    gpxLabel: string;
+    othersTitle: string;
     items: Course[];
   };
   features: {
@@ -141,13 +244,21 @@ export interface Dictionary {
     title: string;
     note: string;
     email: string;
+    emergencyLabel: string;
+    emergencyPhone: string;
     bubbleLabel: string;
     socials: SocialLink[];
+  };
+  partners: {
+    title: string;
+    sponsorNote: string;
+    items: { name: string; logo: string }[];
   };
   footer: {
     rights: string;
     backToTop: string;
     languageLabel: string;
+    legalLabel: string;
   };
   schedule: {
     title: string;
@@ -184,6 +295,28 @@ export interface Dictionary {
     sections: InfoSection[];
     disclaimer: string;
   };
+  why: ContentPage;
+  transport: ContentPage;
+  accommodation: ContentPage;
+  volunteer: ContentPage & {
+    formTitle: string;
+    formIntro: string;
+    fields: { label: string; options: string[] }[];
+    ctaLabel: string;
+    kvkkNote: string;
+  };
+  rules: LegalDoc;
+  documents: {
+    title: string;
+    description: string;
+    intro: string;
+    downloadLabel: string;
+    items: DocLink[];
+    footnote: string;
+  };
+  docKvkk: LegalDoc;
+  docConsent: LegalDoc;
+  docWaiver: LegalDoc;
 }
 
 /*
@@ -198,4 +331,82 @@ const dictionaries: Record<Locale, Dictionary> = {
 
 export function getDictionary(locale: Locale): Dictionary {
   return dictionaries[locale];
+}
+
+/** Parkur sayfası anahtarını parkur kaydına çevirir. */
+export function getCourse(dict: Dictionary, page: PageKey): Course {
+  const id = page.replace("course", "").toLowerCase();
+  const course = dict.courses.items.find((item) => item.id === id);
+  if (!course) throw new Error(`Parkur bulunamadı: ${page}`);
+  return course;
+}
+
+/**
+ * Bir sayfanın başlık ve açıklaması. Metadata üretimi ve belgeler hub'ı
+ * aynı kaynaktan beslensin diye tek yerde toplandı.
+ */
+export function getPageMeta(
+  dict: Dictionary,
+  page: PageKey,
+): { title: string; description: string } {
+  switch (page) {
+    case "home":
+      return dict.meta;
+    case "schedule":
+      return dict.schedule;
+    case "faq":
+      return dict.faq;
+    case "runnerInfo":
+      return dict.runnerInfo;
+    case "why":
+      return dict.why;
+    case "transport":
+      return dict.transport;
+    case "accommodation":
+      return dict.accommodation;
+    case "volunteer":
+      return dict.volunteer;
+    case "rules":
+      return dict.rules;
+    case "documents":
+      return dict.documents;
+    case "docKvkk":
+      return dict.docKvkk;
+    case "docConsent":
+      return dict.docConsent;
+    case "docWaiver":
+      return dict.docWaiver;
+    default:
+      return getCourse(dict, page);
+  }
+}
+
+/** Resmi belge sayfası anahtarını belge kaydına çevirir. */
+export function getLegalDoc(dict: Dictionary, page: PageKey): LegalDoc {
+  switch (page) {
+    case "rules":
+      return dict.rules;
+    case "docKvkk":
+      return dict.docKvkk;
+    case "docConsent":
+      return dict.docConsent;
+    case "docWaiver":
+      return dict.docWaiver;
+    default:
+      throw new Error(`Resmi belge sayfası değil: ${page}`);
+  }
+}
+
+/** Düz metin içerikli tanıtım sayfası anahtarını içeriğe çevirir. */
+export function getContentPage(dict: Dictionary, page: PageKey): ContentPage {
+  switch (page) {
+    case "why":
+      return dict.why;
+    case "transport":
+      return dict.transport;
+    case "accommodation":
+      return dict.accommodation;
+    default:
+      throw new Error(`Tanıtım sayfası değil: ${page}`);
+  }
 }

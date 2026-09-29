@@ -34,7 +34,10 @@ export function ScheduleScreen({ locale }: { locale: Locale }) {
                       {item.time}
                     </p>
                     <div>
-                      <h3 className="text-sm font-bold tracking-wide text-balance text-white uppercase sm:text-base">
+                      {/* Bilinçli olarak `uppercase` yok: başlıklar karışık dilli ("Orman Trail",
+                          "Kit Dağıtımı") ve Türkçe büyütme kuralı "Trail" kelimesini
+                          "TRAİL" yapıyor. */}
+                      <h3 className="text-sm font-bold tracking-wide text-balance text-white sm:text-base">
                         {item.title}
                       </h3>
                       {item.detail ? (

@@ -39,9 +39,9 @@ export function Logo({
       </span>
 
       <span
-        className={`mt-[0.15em] text-[0.52em] font-semibold tracking-[0.18em] uppercase ${nameColor}`}
+        className={`mt-[0.15em] text-[0.52em] font-semibold tracking-[0.18em] ${nameColor}`}
       >
-        {brand.name}
+        {brand.wordmark}
       </span>
     </span>
   );
