@@ -30,6 +30,18 @@ export function PageShell({
   return (
     <>
       <ScrollToTop />
+
+      {/*
+       * Klavye ve ekran okuyucu kullanıcıları her sayfada 14 maddelik menüyü
+       * geçmek zorunda kalmasın. Normalde görünmez, odaklanınca belirir.
+       */}
+      <a
+        href="#icerik"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:rounded-lg focus:bg-sut-cyan focus:px-4 focus:py-3 focus:text-sm focus:font-bold focus:text-ink-950"
+      >
+        {dict.nav.skipToContent}
+      </a>
+
       <SiteHeader
         brand={dict.brand}
         nav={dict.nav}
@@ -39,7 +51,7 @@ export function PageShell({
         languageHrefs={languageHrefs}
       />
 
-      <main>{children}</main>
+      <main id="icerik">{children}</main>
 
       <SiteFooter dict={dict} locale={locale} languageHrefs={languageHrefs} />
       <FloatingContact dict={dict} />

@@ -64,6 +64,15 @@ Marka renkleri tek yerde: `src/app/globals.css` içindeki `@theme` bloğu
 (`--color-sut-*`, `--color-ink-*`, `--color-sand`). Gerçek logo geldiğinde
 `src/components/logo.tsx` değiştirilir.
 
+`public/` altındaki dosyalara giden düz `<a href>` bağlantılarında
+`src/lib/asset-path.ts` içindeki `assetPath()` kullanılmalı: `next/link` ve
+`next/image` adres önekini kendileri ekler, ham `<a href>` eklemez.
+
+Sosyal medya önizleme görseli `public/og-image.png` (1200x630), uygulama ikonu
+`public/icon-512.png` ve `public/icon.svg`. Üçü de `next/og` ile bir kez
+üretilip depoya alındı — üretici rotalar uzantısız adres döndürdüğü için
+GitHub Pages bunları yanlış içerik tipiyle sunuyordu.
+
 Hero arka planı `src/assets/hero.jpg`. Fotoğrafı değiştirmek için aynı yola
 yeni dosyayı yazmak yeterli — statik import olduğu için adres öneki ve cache
 sürümü otomatik güncellenir. `src` verilmezse `HeroBackdrop` yedek olarak
@@ -83,6 +92,10 @@ içinde; sayfa başlıkları ve canonical/hreflang adresleri de oradaki
 `main` dalına her push'ta `.github/workflows/deploy.yml` siteyi derleyip GitHub
 Pages'e yayınlar. Depo ayarlarında **Settings → Pages → Source: GitHub Actions**
 seçili olmalı.
+
+Sitenin mutlak adresi (canonical, hreflang, og:image, sitemap, yapısal veri)
+`NEXT_PUBLIC_SITE_URL` üzerinden geliyor; workflow bu değeri GitHub'dan alır,
+özel domain bağlandığında kendiliğinden güncellenir.
 
 Adres öneki otomatik: proje sayfasında (`kullanici.github.io/depo-adi`)
 workflow `NEXT_PUBLIC_BASE_PATH` değerini GitHub'dan alıp build'e geçirir, özel

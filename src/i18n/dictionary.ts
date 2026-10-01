@@ -178,6 +178,7 @@ export interface Dictionary {
     openLabel: string;
     closeLabel: string;
     soonBadge: string;
+    skipToContent: string;
     items: NavItem[];
   };
   hero: {

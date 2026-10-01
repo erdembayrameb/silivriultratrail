@@ -20,7 +20,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
         <h1 className="flex flex-col items-center">
           <span className="font-brush text-5xl leading-[0.95] text-white uppercase drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] sm:text-7xl">
             {hero.titleTop}
-          </span>
+          </span>{" "}
           <span
             lang="en"
             className="font-brush mt-1 text-6xl leading-[0.95] text-sut-cyan drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] sm:text-8xl"

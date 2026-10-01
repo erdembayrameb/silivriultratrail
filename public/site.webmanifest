@@ -1,0 +1,15 @@
+{
+  "name": "Silivri Ultra Trail",
+  "short_name": "SUT",
+  "description": "Silivri Ultra Trail — 4 Nisan 2027, Danamandıra Tabiat Parkı",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#05161e",
+  "theme_color": "#0a2029",
+  "icons": [
+    { "src": "./icon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

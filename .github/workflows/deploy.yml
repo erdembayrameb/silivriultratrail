@@ -38,6 +38,10 @@ jobs:
       - run: npm run build
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          # base_url adres önekini de içerir; canonical, hreflang, og:image,
+          # sitemap ve yapısal veri bu adresten üretilir. Özel domain
+          # bağlandığında GitHub yeni adresi bildirir, kod değişmez.
+          NEXT_PUBLIC_SITE_URL: ${{ steps.pages.outputs.base_url }}
 
       - uses: actions/upload-pages-artifact@v3
         with:

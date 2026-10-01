@@ -5,6 +5,7 @@ import type { Locale } from "@/i18n/config";
 import { localeHref, locales } from "@/i18n/config";
 import type { PageKey } from "@/i18n/dictionary";
 import { getDictionary, getPageMeta } from "@/i18n/dictionary";
+import { absoluteUrl, SITE_URL } from "@/lib/site-url";
 
 // next/font statik export'ta da fontları kendi sunucumuza gömer —
 // Google'a çalışma anında istek gitmez.
@@ -21,6 +22,17 @@ const body = Barlow({
   variable: "--font-body",
   display: "swap",
 });
+
+/**
+ * Bağlantı paylaşıldığında görünen önizleme görseli. Sosyal platformlar
+ * mutlak adres ister; 1200x630 standart oran.
+ */
+const OG_IMAGE = {
+  url: absoluteUrl("/og-image.png"),
+  width: 1200,
+  height: 630,
+  alt: "Silivri Ultra Trail",
+};
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -39,16 +51,35 @@ export function buildMetadata(locale: Locale): Metadata {
       template: `%s | ${dict.meta.title}`,
     },
     description: dict.meta.description,
+    metadataBase: new URL(SITE_URL),
+    icons: {
+      icon: [
+        { url: absoluteUrl("/icon.svg"), type: "image/svg+xml" },
+        { url: absoluteUrl("/icon-512.png"), type: "image/png", sizes: "512x512" },
+      ],
+      apple: absoluteUrl("/icon-512.png"),
+    },
+    manifest: absoluteUrl("/site.webmanifest"),
     alternates: {
-      canonical: localeHref(locale),
-      languages: Object.fromEntries(locales.map((l) => [l, localeHref(l)])),
+      canonical: absoluteUrl(localeHref(locale)),
+      languages: Object.fromEntries(
+        locales.map((l) => [l, absoluteUrl(localeHref(l))]),
+      ),
     },
     openGraph: {
       type: "website",
       locale,
+      url: absoluteUrl(localeHref(locale)),
       siteName: dict.meta.title,
       title: dict.meta.title,
       description: dict.meta.description,
+      images: [OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.meta.title,
+      description: dict.meta.description,
+      images: [OG_IMAGE.url],
     },
   };
 }
@@ -65,17 +96,25 @@ export function buildPageMetadata(locale: Locale, page: PageKey): Metadata {
     title,
     description,
     alternates: {
-      canonical: dict.routes[page],
+      canonical: absoluteUrl(dict.routes[page]),
       languages: Object.fromEntries(
-        locales.map((l) => [l, getDictionary(l).routes[page]]),
+        locales.map((l) => [l, absoluteUrl(getDictionary(l).routes[page])]),
       ),
     },
     openGraph: {
       type: "website",
       locale,
+      url: absoluteUrl(dict.routes[page]),
       siteName: dict.meta.title,
       title: `${title} | ${dict.meta.title}`,
       description,
+      images: [OG_IMAGE],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${title} | ${dict.meta.title}`,
+      description,
+      images: [OG_IMAGE.url],
     },
   };
 }
