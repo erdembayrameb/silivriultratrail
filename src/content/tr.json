@@ -24,29 +24,71 @@
     "docWaiver": "/belgeler/taahhutname/",
     "course8k": "/parkurlar/8k/",
     "course18k": "/parkurlar/18k/",
-    "course38k": "/parkurlar/38k/"
+    "course38k": "/parkurlar/38k/",
+    "startList": "/yarismaci-listesi/"
   },
   "nav": {
     "openLabel": "Menüyü aç",
     "closeLabel": "Menüyü kapat",
     "soonBadge": "Yakında",
     "items": [
-      { "label": "Ana Sayfa", "href": "/" },
-      { "label": "Parkurlar", "href": "/#parkurlar" },
+      {
+        "label": "Ana Sayfa",
+        "href": "/"
+      },
+      {
+        "label": "Parkurlar",
+        "href": "/#parkurlar"
+      },
+      {
+        "label": "Yarışmacı Listesi",
+        "href": "/yarismaci-listesi/"
+      },
       {
         "label": "Neden Silivri Ultra Trail?",
         "href": "/neden-silivri-ultra-trail/"
       },
-      { "label": "Program", "href": "/program/" },
-      { "label": "Yarışçı Bilgileri", "href": "/yarisci-bilgileri/" },
-      { "label": "Yarış Kuralları", "href": "/yaris-kurallari/" },
-      { "label": "Ulaşım", "href": "/ulasim/" },
-      { "label": "Konaklama", "href": "/konaklama/" },
-      { "label": "S.S.S.", "href": "/sss/" },
-      { "label": "Belgeler", "href": "/belgeler/" },
-      { "label": "Kayıt", "href": "/#kayit" },
-      { "label": "İletişim", "href": "/#iletisim" },
-      { "label": "Gönüllü Ol", "href": "/gonullu-ol/", "emphasis": true }
+      {
+        "label": "Program",
+        "href": "/program/"
+      },
+      {
+        "label": "Yarışçı Bilgileri",
+        "href": "/yarisci-bilgileri/"
+      },
+      {
+        "label": "Yarış Kuralları",
+        "href": "/yaris-kurallari/"
+      },
+      {
+        "label": "Ulaşım",
+        "href": "/ulasim/"
+      },
+      {
+        "label": "Konaklama",
+        "href": "/konaklama/"
+      },
+      {
+        "label": "S.S.S.",
+        "href": "/sss/"
+      },
+      {
+        "label": "Belgeler",
+        "href": "/belgeler/"
+      },
+      {
+        "label": "Kayıt",
+        "href": "/#kayit"
+      },
+      {
+        "label": "İletişim",
+        "href": "/#iletisim"
+      },
+      {
+        "label": "Gönüllü Ol",
+        "href": "/gonullu-ol/",
+        "emphasis": true
+      }
     ]
   },
   "hero": {
@@ -247,31 +289,26 @@
       }
     ]
   },
-  "features": {
-    "title": "Neden Silivri Ultra Trail?",
-    "items": [
-      { "icon": "mountain", "label": "Teknik patikalar" },
-      { "icon": "nature", "label": "Eşsiz doğa" },
-      { "icon": "shield", "label": "Güvenlik önceliği" },
-      { "icon": "timer", "label": "Profesyonel organizasyon" },
-      { "icon": "rescue", "label": "Arama kurtarma desteği" },
-      { "icon": "medal", "label": "Madalya ve katılım belgesi" }
-    ]
-  },
   "registration": {
     "title": "Kayıt",
     "ctaLabel": "Hemen kayıt ol",
     "open": false,
     "href": null,
-    "status": "Erken kayıt 01 Ekim 2026'da açılıyor",
+    "status": "Erken kayıt 08 Ekim 2026'da açılıyor",
     "note": "Kayıtlar yalnızca Türkiye Atletizm Federasyonu'nun resmi kayıt sistemi üzerinden online alınır; yarış günü etkinlik alanında kayıt yapılmaz. Kayıt bağlantısı yayına alındığında bu bölümde duyurulacak.",
     "highlights": [
       {
         "label": "Kayıt kanalı",
         "value": "Türkiye Atletizm Federasyonu (TAF)"
       },
-      { "label": "Kontenjan", "value": "1500 sporcu" },
-      { "label": "Son kayıt", "value": "28 Mart 2027, 23:59" }
+      {
+        "label": "Kontenjan",
+        "value": "1500 sporcu"
+      },
+      {
+        "label": "Son kayıt",
+        "value": "28 Mart 2027, 23:59"
+      }
     ],
     "detailsLabel": "Ücretler ve katılım şartları"
   },
@@ -291,17 +328,32 @@
         "label": "Instagram",
         "href": "https://www.instagram.com/silivriultratrail/"
       },
-      { "label": "Strava", "href": "https://strava.com/" }
+      {
+        "label": "Strava",
+        "href": "https://strava.com/"
+      }
     ]
   },
   "partners": {
     "title": "Destekleyen kurumlar",
     "sponsorNote": "Sponsorluk iş birlikleri için bizimle iletişime geçebilirsiniz.",
     "items": [
-      { "name": "T.C. Gençlik ve Spor Bakanlığı", "logo": "gsb" },
-      { "name": "Türkiye Atletizm Federasyonu", "logo": "taf" },
-      { "name": "T.C. İstanbul Valiliği", "logo": "valilik" },
-      { "name": "T.C. Silivri Belediyesi", "logo": "silivri" }
+      {
+        "name": "T.C. Gençlik ve Spor Bakanlığı",
+        "logo": "gsb"
+      },
+      {
+        "name": "Türkiye Atletizm Federasyonu",
+        "logo": "taf"
+      },
+      {
+        "name": "T.C. İstanbul Valiliği",
+        "logo": "valilik"
+      },
+      {
+        "name": "T.C. Silivri Belediyesi",
+        "logo": "silivri"
+      }
     ]
   },
   "footer": {
@@ -313,7 +365,7 @@
   "schedule": {
     "title": "Program",
     "description": "Silivri Ultra Trail etkinlik programı — 01, 03 ve 04 Nisan 2027 tarihlerindeki teknik brifing, kit dağıtımı ve yarış saatleri.",
-    "intro": "Etkinlik üç güne yayılıyor: dijital teknik brifing, kit dağıtımı ve yarış günü. Kit dağıtımı ile makarna partisinin yapılacağı lokasyonlar ilerleyen günlerde duyurulacak.",
+    "intro": null,
     "days": [
       {
         "date": "01 Nisan 2027",
@@ -390,7 +442,7 @@
   "faq": {
     "title": "S.S.S.",
     "description": "Silivri Ultra Trail hakkında sıkça sorulan sorular — kayıt, ulaşım, zorunlu malzeme, emanet eşya ve parkur güvenliği.",
-    "intro": "En çok merak edilenleri derledik. Aradığını bulamazsan bize e-posta gönderebilirsin.",
+    "intro": null,
     "items": [
       {
         "question": "Yarış kayıtları nereden yapılıyor? Yarış günü kayıt yaptırabilir miyim?",
@@ -407,13 +459,14 @@
       {
         "question": "Parkurda yönümü nasıl bulacağım? Kaybolma riski var mı?",
         "answer": [
-          "Tüm parkurlar organizasyon ekibimiz tarafından şeritler, yön bayrakları ve kritik dönüşlerde reflektörler ile titizlikle işaretlenecektir. Ayrıca her parkurun en arkasından yön işaretlerini toplayarak gelecek profesyonel \"Süpürücü (Sweeper)\" ekiplerimiz parkur güvenliğini sağlayacaktır. Olası bir durumda yönü kaybetmemek için 01 Nisan'daki Canlı Yayın Teknik Brifingi'ni izlemeniz zorunludur."
+          "Tüm parkurlar organizasyon ekibimiz tarafından şeritler, yön bayrakları ve kritik dönüşlerde reflektörler ile titizlikle işaretlenecektir. Ayrıca her parkurun en arkasından yön işaretlerini toplayarak gelecek profesyonel \"Süpürücü (Sweeper)\" ekiplerimiz parkur güvenliğini sağlayacaktır. Olası bir durumda yönü kaybetmemek için 01 Nisan'daki Canlı Yayın Teknik Brifingi'ni izlemeniz zorunludur.",
+          "Patika koşularının doğasında kaybolmanın (yanlış yerde koşmanın) bir risk olduğu kabul edilir. Organizasyonlar parkuru belirli aralıklarla (genellikle arazi yapısına göre 10 ila 100 metrede bir) şeritler, bayraklar veya reflektörlerle işaretler. Eğer bir sporcu belirli bir mesafe boyunca (örneğin 200-300 metre) hiçbir işaret görmediyse, yolu kaybettiğini kabul etmek ve son gördüğü işarete geri dönmekle yükümlüdür. İşaretlerin yerinin değişmesinden veya kaybolmasından doğan zaman kayıplarından genellikle organizasyon sorumlu tutulamaz."
         ]
       },
       {
         "question": "İstasyonlarda (Check-Point) plastik bardak olacak mı?",
         "answer": [
-          "Hazırlanan organizasyon \"Bardaksız Yarış\" konseptine sahiptir. Doğayı korumak ve Danamandıra Tabiat Parkı'nda sıfır atık politikasını sürdürmek adına istasyonlarda plastik bardak bulundurulmayacaktır. 18K ve 38K parkurlarında zorunlu ekipman listesi gereği toplamda en az bir litre kapasiteli su kabı taşınması gerekir; 8K parkurunda da yanınızda bir matara bulundurmanız şarttır."
+          "Hazırlanan organizasyon \"Bardaksız Yarış\" konseptine sahiptir. Doğayı korumak ve Danamandıra Tabiat Parkı'nda sıfır atık politikasını sürdürmek adına istasyonlarda plastik bardak bulundurulmayacaktır. 18K ve 38K parkurlarında zorunlu ekipman listesi gereği toplamda en az bir litre kapasiteli su kabı taşınması gerekir. 8K parkurunda zorunlu malzeme kontrolü yapılmaz, ancak yanınızda katlanabilir bardak veya 500 ml kapasiteli bir su kabı taşımanız önerilir."
         ]
       },
       {
@@ -484,19 +537,40 @@
   "runnerInfo": {
     "title": "Yarışçı Bilgileri",
     "description": "Silivri Ultra Trail kayıt ücretleri, katılım şartları, zorunlu ekipman listesi, yaş kategorileri ve ödüller.",
-    "intro": "Kayıt ücretlerinden zorunlu ekipmana, yaş kategorilerinden emanet eşya prosedürüne kadar yarış öncesi bilmen gereken her şey. Kuralların tamamı için Yarış Kuralları sayfasına göz at.",
+    "intro": null,
     "fees": {
       "title": "Kayıt ücretleri",
       "courseLabel": "Parkur",
       "periods": [
-        "Erken Kayıt (01 Ekim – 30 Kasım)",
+        "Erken Kayıt (08 Ekim – 30 Kasım)",
         "Normal Kayıt (01 Aralık – 31 Ocak)",
         "Geç Kayıt (01 Şubat – 28 Mart)"
       ],
       "rows": [
-        { "course": "8K Gölet Trail", "prices": ["2.000 TL", "2.400 TL", "2.800 TL"] },
-        { "course": "18K Meşe Trail", "prices": ["2.400 TL", "2.900 TL", "3.400 TL"] },
-        { "course": "38K Orman Trail", "prices": ["2.700 TL", "3.200 TL", "3.700 TL"] }
+        {
+          "course": "8K Gölet Trail",
+          "prices": [
+            "2.000 TL",
+            "2.400 TL",
+            "2.800 TL"
+          ]
+        },
+        {
+          "course": "18K Meşe Trail",
+          "prices": [
+            "2.400 TL",
+            "2.900 TL",
+            "3.400 TL"
+          ]
+        },
+        {
+          "course": "38K Orman Trail",
+          "prices": [
+            "2.700 TL",
+            "3.200 TL",
+            "3.700 TL"
+          ]
+        }
       ],
       "note": "Kayıtlar yalnızca Türkiye Atletizm Federasyonu (TAF) resmi kayıt sistemi üzerinden online alınır. Toplam kontenjan 1500 kişidir ve dolduğu an sistem yeni kayıtlara kapanır. Son kayıt, parkur değişikliği ve evrak yükleme işlemleri 28 Mart 2027 saat 23:59'da sona erer. Tabiat parkı giriş ücretleri kayıt ücretine dahil değildir."
     },
@@ -504,10 +578,10 @@
       "title": "Zorunlu ekipman listesi",
       "intro": "Aşağıdaki liste 18K ve 38K parkurları için geçerlidir. Malzemeler görevliler tarafından kontrol edilir; eksik malzemesi olan sporculara kit teslim edilmez.",
       "items": [
+        "Malzemelerin taşınması için sırt veya bel çantası",
         "Toplamda en az bir litre kapasiteli su kabı (su torbası, şişe, matara vb.)",
-        "Malzemelerin taşınması için sırt veya bel çantası (Ekipmanı takip ve muhafaza için zorunludur.)",
         "Görülür biçimde vücuda iliştirilmiş göğüs numarası",
-        "Cep telefonu (organizasyon ve acil durum telefon numaraları kayıtlı olmalıdır)",
+        "Cep telefonu (organizasyon veya acil durum telefon numaraları kayıtlı olmalıdır)",
         "Acil durum battaniyesi (alüminyum)",
         "Düdük",
         "Yağmurluk",
@@ -516,8 +590,8 @@
         "Bardak (ara noktalarda plastik bardak bulunmayacaktır)",
         "Zamanlama çipi (Organizasyon tarafından verilecektir.)"
       ],
-      "shortCourse": "8K parkurunda koşacak yarışmacılar için göğüs numarası ve zamanlama çipi haricinde herhangi bir zorunlu malzeme kontrolü yapılmayacaktır.",
-      "checks": "Zorunlu malzeme kontrollerinin birincil ve temel aşaması kit dağıtımı esnasında yapılır; ekipmanı eksik olan yarışmacılara göğüs numarası teslim edilmez. Hakem heyeti ve organizasyon görevlileri parkur üzerindeki herhangi bir kontrol noktasında rastgele malzeme araması yapma hakkına sahiptir. Eksiklik durumunda ihlalin boyutuna göre zaman cezası (+10/30 dakika) veya doğrudan diskalifiye uygulanır."
+      "shortCourse": "8K parkurunda koşacak yarışmacılar için göğüs numarası ve zamanlama çipi haricinde herhangi bir zorunlu malzeme kontrolü yapılmayacaktır. Ancak CP'lerde plastik/karton bardak olmayacağı için yarışmacıların yanlarında katlanabilir bardak veya 500 ml kapasiteli su kabı (şişe, matara vs.) taşımaları önerilir.",
+      "checks": "Zorunlu malzeme kontrollerinin birincil ve temel aşaması kit dağıtımı esnasında yapılır; ekipmanı eksik olan yarışmacılara göğüs numarası teslim edilmez. Hakem heyeti ve organizasyon görevlileri parkur üzerindeki herhangi bir kontrol noktasında rastgele malzeme araması yapma hakkına sahiptir. Eksiklik durumunda ihlalin boyutuna göre zaman cezası (+10/30 dakika) veya doğrudan diskalifiye uygulanır. Katılımcılar, yarışa başlamak için start saatinden önce kitlerini teslim almakla yükümlüdür."
     },
     "sections": [
       {
@@ -572,7 +646,7 @@
       {
         "title": "Acil durum ve iletişim",
         "body": [
-          "Yarışma esnasında meydana gelebilecek ciddi sakatlanma, yaralanma, kaybolma veya acil tıbbi yardım gerektiren durumlar için bir Organizasyon Acil Durum Hattı kurulmuştur: 0530 642 33 76. Bu numara tüm katılımcıların göğüs numaralarının arka yüzüne büyük puntolarla basılacaktır."
+          "Yarışma esnasında meydana gelebilecek ciddi sakatlanma, yaralanma, kaybolma veya acil tıbbi yardım gerektiren durumlar için bir Organizasyon Acil Durum Hattı kurulmuştur: 0530 642 33 76. Bu numara tüm katılımcıların göğüs numaralarının arka veya ön yüzünde büyük puntolarla basılacaktır."
         ],
         "items": [
           "Parkurda yön duygusunu kaybeden, sakatlanan veya acil yardıma ihtiyacı olan sporcu, patika veya orman yolu hattını kesinlikle terk etmeden sabit kalmalı ve bu numarayı arayarak durumunu/konumunu bildirmelidir.",
@@ -635,9 +709,8 @@
   "accommodation": {
     "title": "Konaklama",
     "description": "Silivri Ultra Trail konaklama bilgileri — anlaşmalı oteller ve yarış haftası konaklama önerileri.",
-    "intro": "Yarış üç güne yayıldığı için şehir dışından gelen sporcular genellikle Silivri'de konaklamayı tercih ediyor.",
+    "intro": null,
     "body": [
-      "Yarışma merkezine ulaşımı sağlayacak olan servis kalkış noktaları, saatleri ve anlaşmalı konaklama otellerine ait detaylı kılavuz bilgiler ilerleyen günlerde web sitesi ve resmi sosyal medya hesapları üzerinden yayımlanacaktır.",
       "Anlaşmalı otel listesi ve sporculara özel indirim kodları netleştiğinde bu sayfada yayınlanacak. Planını yaparken 03 Nisan Cumartesi günkü kit dağıtımı ve makarna partisini, 04 Nisan Pazar günü ise start saatini göz önünde bulundurmanı öneririz."
     ],
     "sections": [],
@@ -654,7 +727,9 @@
     "sections": [
       {
         "title": "Görev alabileceğin alanlar",
-        "body": ["Başvuru formunda en fazla iki alan seçebilirsin."],
+        "body": [
+          "Başvuru formunda en fazla iki alan seçebilirsin."
+        ],
         "items": [
           "Kit Dağıtım Masası: Sporcuları karşılama, evrak kontrolü ve göğüs numarası teslimi.",
           "Beslenme İstasyonları (CP): Patika üzerindeki noktalarda sporculara yiyecek/içecek ve moral desteği.",
@@ -666,16 +741,32 @@
     "formTitle": "Gönüllü başvuru formu",
     "formIntro": "Gönüllü kontenjanımız sınırlıdır. Başvuru formu yayına alınana kadar aşağıdaki bilgileri e-posta ile de iletebilirsin.",
     "fields": [
-      { "label": "Adınız Soyadınız", "options": [] },
-      { "label": "Doğum Tarihiniz (Yıl)", "options": [] },
+      {
+        "label": "Adınız Soyadınız",
+        "options": []
+      },
+      {
+        "label": "Doğum Tarihiniz (Yıl)",
+        "options": []
+      },
       {
         "label": "Cep Telefonu Numaranız (yarış günü koordinasyon WhatsApp grubu için)",
         "options": []
       },
-      { "label": "E-Posta Adresiniz", "options": [] },
+      {
+        "label": "E-Posta Adresiniz",
+        "options": []
+      },
       {
         "label": "Tişört Bedeniniz",
-        "options": ["XS", "S", "M", "L", "XL", "XXL"]
+        "options": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ]
       },
       {
         "label": "Ulaşım Tercihiniz",
@@ -714,7 +805,7 @@
     "title": "Genel Yarış Kuralları",
     "summary": "Kayıt prosedüründen zorunlu malzemeye, cut-off sürelerinden itiraz usulüne kadar yarışın bağlayıcı kuralları.",
     "description": "Silivri Ultra Trail genel yarış kuralları — kayıt, sağlık evrakları, yaş kategorileri, zorunlu malzeme, parkur disiplini ve acil durum prosedürleri.",
-    "intro": "Aşağıdaki kurallar Silivri Ultra Trail'in tüm parkurları için bağlayıcıdır. Kayıt olan her sporcu bu kuralları okumuş ve kabul etmiş sayılır.",
+    "intro": null,
     "sections": [
       {
         "title": "1. Kayıt prosedürü, kontenjan ve son kayıt tarihi",
@@ -783,8 +874,8 @@
         "items": [
           "Kit Dağıtım Aşaması Kontrolü: Olası yığılmaları önlemek adına zorunlu malzeme kontrollerinin birincil ve temel aşaması kit dağıtımı esnasında yapılacaktır. Ekipmanı eksik olan yarışmacılara kesinlikle göğüs numarası teslim edilmez.",
           "Rastgele CP Kontrolleri: Hakem heyeti ve organizasyon görevlileri, parkur üzerindeki herhangi bir kontrol noktası (CP) istasyonunda rastgele zorunlu malzeme araması yapma hakkına sahiptir. Malzeme eksikliği durumunda ihlalin boyutuna göre zaman cezası (+10/30 dakika) veya doğrudan diskalifiye uygulanır.",
-          "Katılımcılar, yarış start saatinden önce kitlerini teslim almakla yükümlüdür.",
-          "8K parkurunda koşacak yarışmacılar için göğüs numarası ve zamanlama çipi haricinde herhangi bir zorunlu malzeme kontrolü yapılmayacaktır."
+          "Katılımcılar, yarışa başlamak için start saatinden önce kitlerini teslim almakla yükümlüdür.",
+          "8K parkurunda koşacak yarışmacılar için göğüs numarası ve zamanlama çipi haricinde herhangi bir zorunlu malzeme kontrolü yapılmayacaktır. Ancak CP'lerde plastik/karton bardak olmayacağı için yarışmacıların yanlarında katlanabilir bardak veya 500 ml kapasiteli su kabı (şişe, matara vs.) taşımaları önerilir."
         ]
       },
       {
@@ -792,7 +883,7 @@
         "body": [],
         "items": [
           "İşaret Takibi: Yarışmacılar, organizasyon tarafından yerleştirilen yön işaretlerini (şerit, bayrak veya reflektör) takip etmekle yükümlüdür. Doğal patikalarda işaretler arazi yapısına göre 10 ila 100 metre aralıklarla yerleştirilir.",
-          "Kestirme Yol Yasağı: İşaretlenmiş rotanın dışına çıkmak, kestirme yolları kullanmak veya resmi olmayan noktalardan parkura dahil olmak doğrudan diskalifiye nedenidir.",
+          "Kestirme Yol Yasağı ve Araç Kullanmak: İşaretlenmiş rotanın dışına çıkmak, kestirme yolları kullanmak veya resmi olmayan noktalardan parkura dahil olmak ve herhangi bir motorlu/motorsuz araç kullanmak doğrudan diskalifiye nedenidir.",
           "Zaman Sınırı (Cut-Off): Yarışmacıların her parkur için belirlenen maksimum tamamlama süresi içerisinde finiş çizgisini geçmesi gerekir. Belirlenen süre sınırından sonra kontrol noktasından çıkış yapan ya da bir CP'den geçiş kaydı bulunmayan sporcular yarıştan çekilmiş sayılır.",
           "Çevre Koruma ve Sıfır Atık Politikası: Parkur boyunca patikalara, ormanlık veya kırsal alana jel paketleri, pet şişeler dahil herhangi bir çöp atmak kesinlikle yasaktır. Çöp attığı tespit edilen sporcuya ilk seferde ağır zaman cezası, tekrarında ise doğrudan ihraç/diskalifiye cezası uygulanır.",
           "Ortak Trafik: Parkurun asfalt ve tarla yolu bağlantı içeren bölümleri (yaklaşık %15) trafiğe tamamen kapatılamayabilir. Bu açık alanlarda genel trafik kurallarına uymak sporcunun kendi sorumluluğundadır."
@@ -864,14 +955,14 @@
         "body": [],
         "items": [
           "Acil Durum Hattı: Yarışma esnasında meydana gelebilecek ciddi sakatlanma, yaralanma, kaybolma veya acil tıbbi yardım gerektiren durumlarda kullanılmak üzere bir Organizasyon Acil Durum Hattı (+90 530 642 33 76) kurulmuştur.",
-          "Göğüs Numarası Entegrasyonu: Bu acil durum telefon numarası, yarış esnasında sporcuların panik anında hızlıca ulaşabilmesi amacıyla tüm katılımcıların göğüs numaralarının arka yüzüne büyük puntolarla basılacaktır.",
+          "Göğüs Numarası Entegrasyonu: Bu acil durum telefon numarası, yarış esnasında sporcuların panik anında hızlıca ulaşabilmesi amacıyla tüm katılımcıların göğüs numaralarının (bib) arka veya ön yüzüne büyük puntolarla basılacaktır.",
           "Kaybolma ve Yardım Protokolü: Parkurda yön duygusunu kaybeden, sakatlanan veya acil yardıma ihtiyacı olan sporcu, patika veya orman yolu hattını kesinlikle terk etmeden sabit kalmalı ve bu numarayı arayarak durumunu/konumunu bildirmelidir.",
           "Hücresel Sinyal Yetersizliği: Danamandıra Tabiat Parkı'nın bazı derin orman ve havza bölgelerinde hücresel ağ sinyalinin zayıflayabileceği göz önünde bulundurulmalıdır. Telefonun çekmediği durumlarda sporcu, rotadan sapmadan sinyalin yakalanabileceği en yakın açık alana/tepeye doğru ilerlemeli ve zorunlu malzemeleri arasında yer alan acil durum düdüğünü kesikli aralıklarla çalarak arkadan gelen süpürücü (sweeper) veya kurtarma ekiplerine sesli işaret vermelidir."
         ]
       }
     ],
     "pdf": "/belgeler/genel-yaris-kurallari.pdf",
-    "footnote": "Yarış Komitesi, bu kuralları sporcu güvenliği veya mücbir sebeplerle güncelleme hakkını saklı tutar. Güncellemeler bu sayfadan duyurulur."
+    "footnote": "Yukarıdaki kurallar Silivri Ultra Trail'in tüm parkurları için bağlayıcıdır. Kayıt olan her sporcu bu kuralları okumuş ve kabul etmiş sayılır. Yarış Komitesi, bu kuralları sporcu güvenliği veya mücbir sebeplerle güncelleme hakkını saklı tutar; güncellemeler bu sayfadan duyurulur."
   },
   "documents": {
     "title": "Belgeler",
@@ -879,10 +970,18 @@
     "intro": "Yarışa kayıt olan her sporcunun okuması gereken resmi belgeler. Tamamı bu sayfadan okunabilir ve PDF olarak indirilebilir.",
     "downloadLabel": "PDF indir",
     "items": [
-      { "page": "rules" },
-      { "page": "docWaiver" },
-      { "page": "docKvkk" },
-      { "page": "docConsent" }
+      {
+        "page": "rules"
+      },
+      {
+        "page": "docWaiver"
+      },
+      {
+        "page": "docKvkk"
+      },
+      {
+        "page": "docConsent"
+      }
     ],
     "footnote": "Belgelerde geçen hükümler bağlayıcıdır. Bir çelişki durumunda PDF nüshası esas alınır."
   },
@@ -1052,5 +1151,42 @@
     ],
     "pdf": "/belgeler/acik-riza-metni.pdf",
     "footnote": "Belgenin ıslak imzalı nüshasında katılımcının adı soyadı, T.C. kimlik/pasaport numarası, tarih ve imza alanları yer alır."
+  },
+  "countdown": {
+    "label": "Yarışa kalan süre",
+    "days": "Gün",
+    "hours": "Saat",
+    "minutes": "Dakika",
+    "seconds": "Saniye",
+    "finishedLabel": "Silivri Ultra Trail başladı!",
+    "target": "2027-04-04T07:00:00+03:00"
+  },
+  "startList": {
+    "title": "Yarışmacı Listesi",
+    "description": "Silivri Ultra Trail yarışmacı listesi — 8K Gölet Trail, 18K Meşe Trail ve 38K Orman Trail parkurlarına kayıt yaptıran sporcular.",
+    "intro": null,
+    "emptyNote": "Kayıtlar 08 Ekim 2026'da açılıyor. Bu parkura kayıt yaptıran sporcular, kayıtlar başladıktan sonra burada listelenecek.",
+    "countLabel": "kayıtlı sporcu",
+    "columns": {
+      "no": "No",
+      "name": "Ad Soyad",
+      "club": "Kulüp / Takım",
+      "city": "Şehir"
+    },
+    "groups": [
+      {
+        "courseId": "8k",
+        "entries": []
+      },
+      {
+        "courseId": "18k",
+        "entries": []
+      },
+      {
+        "courseId": "38k",
+        "entries": []
+      }
+    ],
+    "footnote": "Liste, Türkiye Atletizm Federasyonu kayıt sisteminden düzenli aralıklarla güncellenir. Bilgilerinde hata görürsen bize e-posta gönder."
   }
 }

@@ -1,4 +1,5 @@
 import { FloatingContact } from "@/components/floating-contact";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import type { Locale } from "@/i18n/config";
@@ -28,7 +29,15 @@ export function PageShell({
 
   return (
     <>
-      <SiteHeader dict={dict} locale={locale} languageHrefs={languageHrefs} />
+      <ScrollToTop />
+      <SiteHeader
+        brand={dict.brand}
+        nav={dict.nav}
+        homeHref={dict.routes.home}
+        languageLabel={dict.footer.languageLabel}
+        locale={locale}
+        languageHrefs={languageHrefs}
+      />
 
       <main>{children}</main>
 

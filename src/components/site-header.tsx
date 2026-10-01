@@ -12,12 +12,24 @@ import type { Dictionary } from "@/i18n/dictionary";
 const FOCUSABLE =
   'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
 
+/*
+ * Bilinçli olarak tüm `Dictionary` değil, yalnızca kullanılan parçalar
+ * alınıyor: bu bir istemci bileşeni ve aldığı proplar her sayfanın HTML'ine
+ * serileştiriliyor. Sözlüğün tamamı geçilirse (~79 KB) sitedeki her metin,
+ * her sayfaya gereksiz yere gömülür.
+ */
 export function SiteHeader({
-  dict,
+  brand,
+  nav,
+  homeHref,
+  languageLabel,
   locale,
   languageHrefs,
 }: {
-  dict: Dictionary;
+  brand: Dictionary["brand"];
+  nav: Dictionary["nav"];
+  homeHref: string;
+  languageLabel: string;
   locale: Locale;
   /** Bulunulan sayfanın her dildeki adresi — PageShell hesaplıyor. */
   languageHrefs: Record<Locale, string>;
@@ -113,17 +125,17 @@ export function SiteHeader({
             olarak kenardan kenara — logo solda, menü butonu sağda durur. */}
         <div className="px-safe flex h-16 w-full items-center justify-between">
           <Link
-            href={dict.routes.home}
+            href={homeHref}
             className="text-[13px] focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none"
           >
-            <Logo brand={dict.brand} />
+            <Logo brand={brand} />
           </Link>
 
           <button
             ref={toggleRef}
             type="button"
             onClick={() => setOpen(true)}
-            aria-label={dict.nav.openLabel}
+            aria-label={nav.openLabel}
             aria-expanded={open}
             aria-controls="site-menu"
             className="-mr-2 inline-flex h-12 w-12 items-center justify-center rounded-lg text-white focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none"
@@ -140,16 +152,16 @@ export function SiteHeader({
           className="pt-safe pb-safe fixed inset-0 z-50 flex flex-col bg-ink-950/98 backdrop-blur-sm"
           role="dialog"
           aria-modal="true"
-          aria-label={dict.brand.name}
+          aria-label={brand.name}
         >
           <div className="px-safe flex h-16 w-full shrink-0 items-center justify-between">
             <span className="text-[13px]">
-              <Logo brand={dict.brand} />
+              <Logo brand={brand} />
             </span>
             <button
               type="button"
               onClick={closeAndRestoreFocus}
-              aria-label={dict.nav.closeLabel}
+              aria-label={nav.closeLabel}
               className="-mr-2 inline-flex h-12 w-12 items-center justify-center rounded-lg text-white focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none"
             >
               <X className="h-7 w-7" strokeWidth={2.5} />
@@ -160,7 +172,7 @@ export function SiteHeader({
               kaydırma arkadaki sayfaya zincirlenmesin. */}
           <nav className="px-safe w-full flex-1 overflow-y-auto overscroll-contain py-4">
             <ul className="flex flex-col">
-              {dict.nav.items.map((item) =>
+              {nav.items.map((item) =>
                 item.href ? (
                   <li key={item.label}>
                     <Link
@@ -185,7 +197,7 @@ export function SiteHeader({
                       <CasedText>{item.label}</CasedText>
                     </span>
                     <span className="rounded-full border border-sut-cyan/40 px-2.5 py-1 text-[11px] font-semibold tracking-wider text-sut-cyan uppercase">
-                      {dict.nav.soonBadge}
+                      {nav.soonBadge}
                     </span>
                   </li>
                 ),
@@ -194,7 +206,7 @@ export function SiteHeader({
 
             <div className="mt-8 flex items-center gap-3">
               <span className="text-xs font-semibold tracking-widest text-white/40 uppercase">
-                {dict.footer.languageLabel}
+                {languageLabel}
               </span>
               {locales.map((code) => (
                 <Link

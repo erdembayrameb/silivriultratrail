@@ -1,5 +1,5 @@
+import { Countdown } from "@/components/countdown";
 import { Courses } from "@/components/courses";
-import { Features } from "@/components/features";
 import { Hero } from "@/components/hero";
 import { PageShell } from "@/components/page-shell";
 import { PastEdition } from "@/components/past-edition";
@@ -14,8 +14,8 @@ export function HomeScreen({ locale }: { locale: Locale }) {
   return (
     <PageShell locale={locale} page="home">
       <Hero dict={dict} />
+      <Countdown countdown={dict.countdown} />
       <Courses dict={dict} />
-      <Features dict={dict} />
       <Registration dict={dict} />
       <PastEdition dict={dict} />
     </PageShell>

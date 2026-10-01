@@ -5,15 +5,6 @@ import type { Locale } from "./config";
 /** Parkur kartlarındaki renk vurgusu — Courses bileşeninde sınıfa çevrilir. */
 export type CourseAccent = "cyan" | "green" | "orange";
 
-/** Özellik şeridindeki ikon anahtarı — Features bileşeninde bileşene çevrilir. */
-export type FeatureIcon =
-  | "mountain"
-  | "nature"
-  | "shield"
-  | "timer"
-  | "rescue"
-  | "medal";
-
 /**
  * Sayfa anahtarları. Dil değiştirici, aynı sayfanın diğer dildeki adresini
  * `routes` üzerinden bulur — böylece alt sayfada dil değiştirince ana sayfaya
@@ -35,7 +26,8 @@ export type PageKey =
   | "docWaiver"
   | "course8k"
   | "course18k"
-  | "course38k";
+  | "course38k"
+  | "startList";
 
 export interface NavItem {
   label: string;
@@ -81,11 +73,6 @@ export interface Course {
   gearNote: string;
 }
 
-export interface Feature {
-  icon: FeatureIcon;
-  label: string;
-}
-
 export interface SocialLink {
   label: string;
   href: string;
@@ -124,6 +111,14 @@ export interface InfoSection {
   items: string[];
 }
 
+/** Yarışmacı listesindeki tek satır. */
+export interface StartListEntry {
+  no: string;
+  name: string;
+  club: string;
+  city: string;
+}
+
 export interface FeeRow {
   course: string;
   /** `fees.periods` ile aynı sırada ve aynı uzunlukta olmalı. */
@@ -139,7 +134,8 @@ export interface LegalDoc {
   /** Belgeler listesindeki tek cümlelik özet. */
   summary: string;
   description: string;
-  intro: string;
+  /** null ise başlığın altında giriş paragrafı basılmaz. */
+  intro: string | null;
   sections: InfoSection[];
   /** `public/belgeler/` altındaki PDF; yoksa null. */
   pdf: string | null;
@@ -155,7 +151,8 @@ export interface DocLink {
 export interface ContentPage {
   title: string;
   description: string;
-  intro: string;
+  /** null ise başlığın altında giriş paragrafı basılmaz. */
+  intro: string | null;
   body: string[];
   sections: InfoSection[];
   footnote: string | null;
@@ -221,10 +218,6 @@ export interface Dictionary {
     othersTitle: string;
     items: Course[];
   };
-  features: {
-    title: string;
-    items: Feature[];
-  };
   registration: {
     title: string;
     ctaLabel: string;
@@ -263,21 +256,21 @@ export interface Dictionary {
   schedule: {
     title: string;
     description: string;
-    intro: string;
+    intro: string | null;
     days: ScheduleDay[];
     footnote: string;
   };
   faq: {
     title: string;
     description: string;
-    intro: string;
+    intro: string | null;
     items: FaqItem[];
     footnote: string;
   };
   runnerInfo: {
     title: string;
     description: string;
-    intro: string;
+    intro: string | null;
     fees: {
       title: string;
       courseLabel: string;
@@ -317,6 +310,29 @@ export interface Dictionary {
   docKvkk: LegalDoc;
   docConsent: LegalDoc;
   docWaiver: LegalDoc;
+  countdown: {
+    label: string;
+    days: string;
+    hours: string;
+    minutes: string;
+    seconds: string;
+    /** Yarış başladıktan sonra sayacın yerine basılan metin. */
+    finishedLabel: string;
+    /** Hedef an, saat dilimi dahil ISO 8601 (38K startı). */
+    target: string;
+  };
+  startList: {
+    title: string;
+    description: string;
+    intro: string | null;
+    /** Kayıtlar açılana kadar her parkurun altında görünen not. */
+    emptyNote: string;
+    countLabel: string;
+    columns: { no: string; name: string; club: string; city: string };
+    /** Parkur kimliğine göre kayıtlı sporcular; kayıtlar açıldıkça dolar. */
+    groups: { courseId: string; entries: StartListEntry[] }[];
+    footnote: string;
+  };
 }
 
 /*
@@ -376,6 +392,8 @@ export function getPageMeta(
       return dict.docConsent;
     case "docWaiver":
       return dict.docWaiver;
+    case "startList":
+      return dict.startList;
     default:
       return getCourse(dict, page);
   }

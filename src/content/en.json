@@ -24,29 +24,71 @@
     "docWaiver": "/en/documents/waiver/",
     "course8k": "/en/courses/8k/",
     "course18k": "/en/courses/18k/",
-    "course38k": "/en/courses/38k/"
+    "course38k": "/en/courses/38k/",
+    "startList": "/en/start-list/"
   },
   "nav": {
     "openLabel": "Open menu",
     "closeLabel": "Close menu",
     "soonBadge": "Soon",
     "items": [
-      { "label": "Home", "href": "/en/" },
-      { "label": "Courses", "href": "/en/#parkurlar" },
+      {
+        "label": "Home",
+        "href": "/en/"
+      },
+      {
+        "label": "Courses",
+        "href": "/en/#parkurlar"
+      },
+      {
+        "label": "Start List",
+        "href": "/en/start-list/"
+      },
       {
         "label": "Why Silivri Ultra Trail?",
         "href": "/en/why-silivri-ultra-trail/"
       },
-      { "label": "Schedule", "href": "/en/schedule/" },
-      { "label": "Runner Info", "href": "/en/runner-info/" },
-      { "label": "Race Rules", "href": "/en/race-rules/" },
-      { "label": "Getting There", "href": "/en/getting-there/" },
-      { "label": "Accommodation", "href": "/en/accommodation/" },
-      { "label": "FAQ", "href": "/en/faq/" },
-      { "label": "Documents", "href": "/en/documents/" },
-      { "label": "Registration", "href": "/en/#kayit" },
-      { "label": "Contact", "href": "/en/#iletisim" },
-      { "label": "Volunteer", "href": "/en/volunteer/", "emphasis": true }
+      {
+        "label": "Schedule",
+        "href": "/en/schedule/"
+      },
+      {
+        "label": "Runner Info",
+        "href": "/en/runner-info/"
+      },
+      {
+        "label": "Race Rules",
+        "href": "/en/race-rules/"
+      },
+      {
+        "label": "Getting There",
+        "href": "/en/getting-there/"
+      },
+      {
+        "label": "Accommodation",
+        "href": "/en/accommodation/"
+      },
+      {
+        "label": "FAQ",
+        "href": "/en/faq/"
+      },
+      {
+        "label": "Documents",
+        "href": "/en/documents/"
+      },
+      {
+        "label": "Registration",
+        "href": "/en/#kayit"
+      },
+      {
+        "label": "Contact",
+        "href": "/en/#iletisim"
+      },
+      {
+        "label": "Volunteer",
+        "href": "/en/volunteer/",
+        "emphasis": true
+      }
     ]
   },
   "hero": {
@@ -247,31 +289,26 @@
       }
     ]
   },
-  "features": {
-    "title": "Why Silivri Ultra Trail?",
-    "items": [
-      { "icon": "mountain", "label": "Technical trails" },
-      { "icon": "nature", "label": "Unique nature" },
-      { "icon": "shield", "label": "Safety first" },
-      { "icon": "timer", "label": "Professional organisation" },
-      { "icon": "rescue", "label": "Search and rescue support" },
-      { "icon": "medal", "label": "Medal and finisher certificate" }
-    ]
-  },
   "registration": {
     "title": "Registration",
     "ctaLabel": "Register now",
     "open": false,
     "href": null,
-    "status": "Early registration opens on 1 October 2026",
+    "status": "Early registration opens on 8 October 2026",
     "note": "Entries are accepted online only through the official registration system of the Turkish Athletics Federation; no registration is taken at the venue on race day. The registration link will be announced in this section once it goes live.",
     "highlights": [
       {
         "label": "Registration channel",
         "value": "Turkish Athletics Federation (TAF)"
       },
-      { "label": "Quota", "value": "1500 runners" },
-      { "label": "Entries close", "value": "28 March 2027, 23:59" }
+      {
+        "label": "Quota",
+        "value": "1500 runners"
+      },
+      {
+        "label": "Entries close",
+        "value": "28 March 2027, 23:59"
+      }
     ],
     "detailsLabel": "Fees and entry requirements"
   },
@@ -291,17 +328,32 @@
         "label": "Instagram",
         "href": "https://www.instagram.com/silivriultratrail/"
       },
-      { "label": "Strava", "href": "https://strava.com/" }
+      {
+        "label": "Strava",
+        "href": "https://strava.com/"
+      }
     ]
   },
   "partners": {
     "title": "Supporting institutions",
     "sponsorNote": "Get in touch with us for sponsorship partnerships.",
     "items": [
-      { "name": "Ministry of Youth and Sports", "logo": "gsb" },
-      { "name": "Turkish Athletics Federation", "logo": "taf" },
-      { "name": "Governorship of Istanbul", "logo": "valilik" },
-      { "name": "Silivri Municipality", "logo": "silivri" }
+      {
+        "name": "Ministry of Youth and Sports",
+        "logo": "gsb"
+      },
+      {
+        "name": "Turkish Athletics Federation",
+        "logo": "taf"
+      },
+      {
+        "name": "Governorship of Istanbul",
+        "logo": "valilik"
+      },
+      {
+        "name": "Silivri Municipality",
+        "logo": "silivri"
+      }
     ]
   },
   "footer": {
@@ -313,7 +365,7 @@
   "schedule": {
     "title": "Schedule",
     "description": "Silivri Ultra Trail event schedule — technical briefing, kit collection and race times on 1, 3 and 4 April 2027.",
-    "intro": "The event runs across three days: a digital technical briefing, kit collection and race day. The venues for kit collection and the pasta party will be announced in the coming weeks.",
+    "intro": null,
     "days": [
       {
         "date": "01 April 2027",
@@ -390,7 +442,7 @@
   "faq": {
     "title": "FAQ",
     "description": "Frequently asked questions about Silivri Ultra Trail — registration, transport, mandatory gear, bag drop and course safety.",
-    "intro": "The questions we get most often. If you cannot find what you are looking for, send us an email.",
+    "intro": null,
     "items": [
       {
         "question": "Where do I register? Can I sign up on race day?",
@@ -407,13 +459,14 @@
       {
         "question": "How will I find my way on the course? Is there a risk of getting lost?",
         "answer": [
-          "All courses are marked meticulously by our team with tape, direction flags and reflectors at critical turns. In addition, professional sweeper teams follow at the back of each course, collecting the markers and keeping the course safe. To avoid losing your way, watching the live technical briefing on 1 April is mandatory."
+          "All courses are marked meticulously by our team with tape, direction flags and reflectors at critical turns. In addition, professional sweeper teams follow at the back of each course, collecting the markers and keeping the course safe. To avoid losing your way, watching the live technical briefing on 1 April is mandatory.",
+          "Getting lost — running off route — is an accepted risk in the nature of trail running. Organisers mark the course at intervals (typically every 10 to 100 metres, depending on the terrain) with tape, flags or reflectors. If a runner has seen no marker for a certain distance (for example 200–300 metres), they are responsible for accepting that they have lost the route and returning to the last marker they saw. The organisation generally cannot be held responsible for time lost because markers were moved or went missing."
         ]
       },
       {
         "question": "Will there be plastic cups at the checkpoints?",
         "answer": [
-          "The event follows a \"cupless race\" concept. To protect nature and maintain the zero-waste policy in Danamandıra Nature Park, no plastic cups will be provided at the stations. On the 18K and 38K courses the mandatory gear list requires carrying a water container with a total capacity of at least one litre; on the 8K course you must also carry a bottle of your own."
+          "The event follows a \"cupless race\" concept. To protect nature and maintain the zero-waste policy in Danamandıra Nature Park, no plastic cups will be provided at the stations. On the 18K and 38K courses the mandatory gear list requires carrying a water container with a total capacity of at least one litre. There is no gear check on the 8K course, but you are advised to carry a collapsible cup or a 500 ml water container."
         ]
       },
       {
@@ -484,19 +537,40 @@
   "runnerInfo": {
     "title": "Runner Info",
     "description": "Silivri Ultra Trail entry fees, entry requirements, mandatory gear list, age categories and awards.",
-    "intro": "Everything you need to know before the race, from entry fees and mandatory gear to age categories and the bag-drop procedure. For the full rules, see the Race Rules page.",
+    "intro": null,
     "fees": {
       "title": "Entry fees",
       "courseLabel": "Course",
       "periods": [
-        "Early entry (1 Oct – 30 Nov)",
+        "Early entry (8 Oct – 30 Nov)",
         "Standard entry (1 Dec – 31 Jan)",
         "Late entry (1 Feb – 28 Mar)"
       ],
       "rows": [
-        { "course": "8K Lake Trail", "prices": ["2,000 TRY", "2,400 TRY", "2,800 TRY"] },
-        { "course": "18K Oak Trail", "prices": ["2,400 TRY", "2,900 TRY", "3,400 TRY"] },
-        { "course": "38K Forest Trail", "prices": ["2,700 TRY", "3,200 TRY", "3,700 TRY"] }
+        {
+          "course": "8K Lake Trail",
+          "prices": [
+            "2,000 TRY",
+            "2,400 TRY",
+            "2,800 TRY"
+          ]
+        },
+        {
+          "course": "18K Oak Trail",
+          "prices": [
+            "2,400 TRY",
+            "2,900 TRY",
+            "3,400 TRY"
+          ]
+        },
+        {
+          "course": "38K Forest Trail",
+          "prices": [
+            "2,700 TRY",
+            "3,200 TRY",
+            "3,700 TRY"
+          ]
+        }
       ],
       "note": "Entries are accepted online only through the official registration system of the Turkish Athletics Federation (TAF). The total quota is 1500 runners and the system closes to new entries as soon as it is full. Entries, course changes and document uploads close on 28 March 2027 at 23:59. Nature park entrance fees are not included in the entry fee."
     },
@@ -504,10 +578,10 @@
       "title": "Mandatory gear list",
       "intro": "The list below applies to the 18K and 38K courses. Equipment is checked by marshals; runners with missing items are not given their kit.",
       "items": [
+        "A backpack or waist pack to carry the equipment",
         "A water container with a total capacity of at least one litre (bladder, bottle, flask and so on)",
-        "A backpack or waist pack to carry the equipment (required so that gear can be tracked and kept safe)",
         "Race bib attached visibly to the body",
-        "Mobile phone (with the organisation and emergency numbers saved)",
+        "Mobile phone (with the organisation or emergency numbers saved)",
         "Emergency blanket (aluminium)",
         "Whistle",
         "Waterproof jacket",
@@ -516,8 +590,8 @@
         "Cup (no plastic cups will be available at the stations)",
         "Timing chip (provided by the organisation)"
       ],
-      "shortCourse": "No mandatory gear check is carried out for 8K runners beyond the race bib and timing chip.",
-      "checks": "The primary stage of the mandatory gear check takes place during kit collection; runners with missing equipment are not given a race bib. The jury and organisation officials have the right to carry out random gear checks at any checkpoint on the course. Missing items lead to a time penalty (+10/30 minutes) or direct disqualification, depending on the scale of the breach."
+      "shortCourse": "No mandatory gear check is carried out for 8K runners beyond the race bib and timing chip. However, as no plastic or paper cups are provided at the checkpoints, runners are advised to carry a collapsible cup or a 500 ml water container (bottle, flask and so on).",
+      "checks": "The primary stage of the mandatory gear check takes place during kit collection; runners with missing equipment are not given a race bib. The jury and organisation officials have the right to carry out random gear checks at any checkpoint on the course. Missing items lead to a time penalty (+10/30 minutes) or direct disqualification, depending on the scale of the breach. Participants are responsible for collecting their kit before the start time of their race."
     },
     "sections": [
       {
@@ -572,7 +646,7 @@
       {
         "title": "Emergencies and contact",
         "body": [
-          "An organisation emergency line has been set up for serious injury, getting lost or situations requiring urgent medical help during the race: +90 530 642 33 76. This number will be printed in large type on the back of every participant's race bib."
+          "An organisation emergency line has been set up for serious injury, getting lost or situations requiring urgent medical help during the race: +90 530 642 33 76. This number will be printed in large type on the back or front of every participant's race bib."
         ],
         "items": [
           "A runner who loses their bearings, is injured or needs urgent help must stay put without leaving the trail or forest road, and call this number to report their situation and location.",
@@ -635,9 +709,8 @@
   "accommodation": {
     "title": "Accommodation",
     "description": "Silivri Ultra Trail accommodation information — partner hotels and race-week stay suggestions.",
-    "intro": "Because the event runs across three days, runners travelling from out of town usually choose to stay in Silivri.",
+    "intro": null,
     "body": [
-      "Shuttle departure points and times, plus detailed guidance on partner hotels, will be published on the website and official social media accounts in the coming weeks.",
       "The partner hotel list and runner discount codes will be published on this page once confirmed. When planning your stay, keep in mind kit collection and the pasta party on Saturday 3 April, and your start time on Sunday 4 April."
     ],
     "sections": [],
@@ -654,7 +727,9 @@
     "sections": [
       {
         "title": "Roles you can take on",
-        "body": ["You may choose up to two areas on the application form."],
+        "body": [
+          "You may choose up to two areas on the application form."
+        ],
         "items": [
           "Kit collection desk: welcoming runners, checking documents and handing out race bibs.",
           "Aid stations (CP): food, drink and moral support for runners at points along the trail.",
@@ -666,16 +741,32 @@
     "formTitle": "Volunteer application form",
     "formIntro": "Volunteer places are limited. Until the application form goes live, you can also send the details below by email.",
     "fields": [
-      { "label": "Full name", "options": [] },
-      { "label": "Year of birth", "options": [] },
+      {
+        "label": "Full name",
+        "options": []
+      },
+      {
+        "label": "Year of birth",
+        "options": []
+      },
       {
         "label": "Mobile number (for the race-day coordination WhatsApp group)",
         "options": []
       },
-      { "label": "Email address", "options": [] },
+      {
+        "label": "Email address",
+        "options": []
+      },
       {
         "label": "Shirt size",
-        "options": ["XS", "S", "M", "L", "XL", "XXL"]
+        "options": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL",
+          "XXL"
+        ]
       },
       {
         "label": "Travel preference",
@@ -714,7 +805,7 @@
     "title": "General Race Rules",
     "summary": "The binding rules of the race, from the entry procedure and mandatory gear to cut-off times and the appeals process.",
     "description": "Silivri Ultra Trail general race rules — registration, medical documents, age categories, mandatory gear, course discipline and emergency procedures.",
-    "intro": "The rules below are binding on all Silivri Ultra Trail courses. Every runner who registers is deemed to have read and accepted them.",
+    "intro": null,
     "sections": [
       {
         "title": "1. Entry procedure, quota and entry deadline",
@@ -777,12 +868,14 @@
       },
       {
         "title": "7. Mandatory gear and inspection procedures",
-        "body": ["The full mandatory gear list is on the Runner Info page."],
+        "body": [
+          "The full mandatory gear list is on the Runner Info page."
+        ],
         "items": [
           "Check at kit collection: to prevent queues, the primary and principal stage of the mandatory gear check takes place during kit collection. Runners with missing equipment are never given a race bib.",
           "Random CP checks: the jury and organisation officials have the right to carry out random mandatory gear searches at any checkpoint (CP) on the course. Missing items lead to a time penalty (+10/30 minutes) or direct disqualification, depending on the scale of the breach.",
           "Participants are responsible for collecting their kit before the start time of their race.",
-          "No mandatory gear check is carried out for runners on the 8K course beyond the race bib and timing chip."
+          "No mandatory gear check is carried out for runners on the 8K course beyond the race bib and timing chip. However, as no plastic or paper cups are provided at the checkpoints, runners are advised to carry a collapsible cup or a 500 ml water container (bottle, flask and so on)."
         ]
       },
       {
@@ -790,7 +883,7 @@
         "body": [],
         "items": [
           "Following the markers: runners must follow the direction markers placed by the organisation (tape, flags or reflectors). On natural trails markers are placed 10 to 100 metres apart depending on the terrain.",
-          "No short cuts: leaving the marked route, taking short cuts or joining the course at unofficial points is direct grounds for disqualification.",
+          "No short cuts, no vehicles: leaving the marked route, taking short cuts, joining the course at unofficial points or using any vehicle — motorised or not — is direct grounds for disqualification.",
           "Cut-off times: runners must cross the finish line within the maximum completion time set for each course. Runners leaving a checkpoint after the set time limit, or with no passage record at a CP, are deemed to have withdrawn.",
           "Environmental protection and zero waste: dropping any litter along the course — on the trails, in the forest or in rural areas, including gel wrappers and plastic bottles — is strictly prohibited. A runner found littering receives a heavy time penalty on the first occasion and direct disqualification on a repeat.",
           "Shared traffic: sections of the course with asphalt and field-road links (roughly 15%) may not be fully closed to traffic. In these open areas it is the runner's own responsibility to follow general traffic rules."
@@ -862,14 +955,14 @@
         "body": [],
         "items": [
           "Emergency line: an organisation emergency line (+90 530 642 33 76) has been set up for serious injury, getting lost or situations requiring urgent medical help during the race.",
-          "Race bib integration: this emergency number is printed in large type on the back of every participant's race bib so that runners can reach it quickly in a moment of panic.",
+          "Race bib integration: this emergency number is printed in large type on the back or front of every participant's race bib so that runners can reach it quickly in a moment of panic.",
           "Getting lost and assistance protocol: a runner who loses their bearings, is injured or needs urgent help must stay put without leaving the trail or forest road, and call this number to report their situation and location.",
           "Weak mobile signal: mobile signal can be weak in some deep forest and basin areas of Danamandıra Nature Park. Where there is no signal, runners should move towards the nearest open area or hilltop without straying from the route, and blow the emergency whistle from their mandatory gear at intervals to signal to the sweeper or rescue teams behind them."
         ]
       }
     ],
     "pdf": "/belgeler/genel-yaris-kurallari.pdf",
-    "footnote": "The Race Committee reserves the right to update these rules for reasons of runner safety or force majeure. Updates are announced on this page. The PDF is the Turkish original."
+    "footnote": "The rules above are binding on all Silivri Ultra Trail courses; every runner who registers is deemed to have read and accepted them. The Race Committee reserves the right to update these rules for reasons of runner safety or force majeure; updates are announced on this page. The PDF is the Turkish original."
   },
   "documents": {
     "title": "Documents",
@@ -877,10 +970,18 @@
     "intro": "The official documents every registered runner should read. All of them can be read on this site and downloaded as PDF.",
     "downloadLabel": "Download PDF",
     "items": [
-      { "page": "rules" },
-      { "page": "docWaiver" },
-      { "page": "docKvkk" },
-      { "page": "docConsent" }
+      {
+        "page": "rules"
+      },
+      {
+        "page": "docWaiver"
+      },
+      {
+        "page": "docKvkk"
+      },
+      {
+        "page": "docConsent"
+      }
     ],
     "footnote": "The provisions in these documents are binding. In case of any conflict, the Turkish PDF original prevails."
   },
@@ -1050,5 +1151,42 @@
     ],
     "pdf": "/belgeler/acik-riza-metni.pdf",
     "footnote": "The wet-signed copy of the document carries fields for the participant's name and surname, national ID/passport number, date and signature. The PDF is the Turkish original."
+  },
+  "countdown": {
+    "label": "Time to the race",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "finishedLabel": "Silivri Ultra Trail has started!",
+    "target": "2027-04-04T07:00:00+03:00"
+  },
+  "startList": {
+    "title": "Start List",
+    "description": "Silivri Ultra Trail start list — runners registered for the 8K Lake Trail, 18K Oak Trail and 38K Forest Trail.",
+    "intro": null,
+    "emptyNote": "Registration opens on 8 October 2026. Runners entered for this course will be listed here once entries are open.",
+    "countLabel": "registered runners",
+    "columns": {
+      "no": "No",
+      "name": "Name",
+      "club": "Club / Team",
+      "city": "City"
+    },
+    "groups": [
+      {
+        "courseId": "8k",
+        "entries": []
+      },
+      {
+        "courseId": "18k",
+        "entries": []
+      },
+      {
+        "courseId": "38k",
+        "entries": []
+      }
+    ],
+    "footnote": "The list is updated at regular intervals from the Turkish Athletics Federation registration system. If you spot an error in your details, send us an email."
   }
 }
