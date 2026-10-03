@@ -28,7 +28,7 @@ export function DocumentScreen({
             <a
               href={assetPath(doc.pdf)}
               download
-              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border border-ink-700 bg-ink-900 px-5 text-sm font-bold tracking-wide text-white uppercase transition-colors hover:border-sut-cyan hover:text-sut-cyan focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none sm:w-auto sm:self-start"
+              className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg border border-ink-700 bg-ink-900 px-5 text-sm font-bold tracking-wide text-white uppercase transition-colors hover:border-accent hover:text-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none sm:w-auto sm:self-start"
             >
               <Download className="h-4 w-4" strokeWidth={2.25} aria-hidden="true" />
               {dict.documents.downloadLabel}

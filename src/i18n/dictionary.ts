@@ -71,6 +71,14 @@ export interface Course {
   /** `public/gpx/` altındaki dosya adı. */
   gpx: string;
   gearNote: string;
+  /** Strava rota gömmesi — parkur detay sayfasında interaktif harita. */
+  strava: {
+    embedId: string;
+    token: string;
+    /** Başlangıç görünümü "zoom/lat/lon"; yoksa Strava kendi kadrajını seçer. */
+    mapHash: string | null;
+    fromEmbed: boolean;
+  };
 }
 
 export interface SocialLink {
@@ -216,6 +224,9 @@ export interface Dictionary {
     gpxTitle: string;
     gpxNote: string;
     gpxLabel: string;
+    stravaTitle: string;
+    stravaNote: string;
+    stravaLinkLabel: string;
     othersTitle: string;
     items: Course[];
   };
@@ -290,7 +301,16 @@ export interface Dictionary {
     disclaimer: string;
   };
   why: ContentPage;
-  transport: ContentPage;
+  transport: ContentPage & {
+    map: {
+      title: string;
+      name: string;
+      note: string;
+      directionsLabel: string;
+      lat: number;
+      lon: number;
+    };
+  };
   accommodation: ContentPage;
   volunteer: ContentPage & {
     formTitle: string;

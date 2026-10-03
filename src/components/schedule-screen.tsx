@@ -15,7 +15,7 @@ export function ScheduleScreen({ locale }: { locale: Locale }) {
           {schedule.days.map((day) => (
             <article key={day.date}>
               <header className="border-b border-white/12 pb-4">
-                <p className="text-[11px] font-bold tracking-[0.22em] text-sut-cyan uppercase">
+                <p className="text-[11px] font-bold tracking-[0.22em] text-accent uppercase">
                   {day.label}
                 </p>
                 <h2 className="mt-2 font-display text-2xl tracking-wide text-white uppercase sm:text-3xl">
@@ -30,7 +30,7 @@ export function ScheduleScreen({ locale }: { locale: Locale }) {
                     key={`${item.time} ${item.title}`}
                     className="flex flex-col gap-1.5 sm:grid sm:grid-cols-[9rem_1fr] sm:gap-4"
                   >
-                    <p className="font-display text-base tracking-wide text-sut-cyan-soft sm:text-lg">
+                    <p className="font-display text-base tracking-wide text-accent-soft sm:text-lg">
                       {item.time}
                     </p>
                     <div>

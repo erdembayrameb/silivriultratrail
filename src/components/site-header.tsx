@@ -126,7 +126,7 @@ export function SiteHeader({
         <div className="px-safe flex h-16 w-full items-center justify-between">
           <Link
             href={homeHref}
-            className="text-[13px] focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none"
+            className="text-[13px] focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
           >
             <Logo brand={brand} />
           </Link>
@@ -138,7 +138,7 @@ export function SiteHeader({
             aria-label={nav.openLabel}
             aria-expanded={open}
             aria-controls="site-menu"
-            className="-mr-2 inline-flex h-12 w-12 items-center justify-center rounded-lg text-white focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none"
+            className="-mr-2 inline-flex h-12 w-12 items-center justify-center rounded-lg text-white focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
           >
             <Menu className="h-7 w-7" strokeWidth={2.5} />
           </button>
@@ -162,7 +162,7 @@ export function SiteHeader({
               type="button"
               onClick={closeAndRestoreFocus}
               aria-label={nav.closeLabel}
-              className="-mr-2 inline-flex h-12 w-12 items-center justify-center rounded-lg text-white focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none"
+              className="-mr-2 inline-flex h-12 w-12 items-center justify-center rounded-lg text-white focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
             >
               <X className="h-7 w-7" strokeWidth={2.5} />
             </button>
@@ -181,8 +181,8 @@ export function SiteHeader({
                       className={
                         item.emphasis
                           ? // Vurgulu madde (Gönüllü Ol) listeden ayrışsın.
-                            "mt-6 flex min-h-13 items-center justify-center bg-sut-cyan px-5 font-display text-xl tracking-wide text-ink-950 uppercase transition-colors hover:bg-sut-cyan-soft focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
-                          : "block border-b border-ink-800 py-4 font-display text-2xl tracking-wide text-white uppercase transition-colors hover:text-sut-cyan focus-visible:text-sut-cyan focus-visible:outline-none"
+                            "mt-6 flex min-h-13 items-center justify-center bg-accent px-5 font-display text-xl tracking-wide text-ink-950 uppercase transition-colors hover:bg-accent-soft focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
+                          : "block border-b border-ink-800 py-4 font-display text-2xl tracking-wide text-white uppercase transition-colors hover:text-accent focus-visible:text-accent focus-visible:outline-none"
                       }
                     >
                       <CasedText>{item.label}</CasedText>
@@ -196,7 +196,7 @@ export function SiteHeader({
                     <span className="font-display text-2xl tracking-wide text-white/35 uppercase">
                       <CasedText>{item.label}</CasedText>
                     </span>
-                    <span className="rounded-full border border-sut-cyan/40 px-2.5 py-1 text-[11px] font-semibold tracking-wider text-sut-cyan uppercase">
+                    <span className="rounded-full border border-accent/40 px-2.5 py-1 text-[11px] font-semibold tracking-wider text-accent uppercase">
                       {nav.soonBadge}
                     </span>
                   </li>
@@ -216,7 +216,7 @@ export function SiteHeader({
                   aria-current={code === locale ? "page" : undefined}
                   className={
                     code === locale
-                      ? "rounded-md bg-sut-cyan px-3 py-1.5 text-sm font-bold text-ink-950"
+                      ? "rounded-md bg-accent px-3 py-1.5 text-sm font-bold text-ink-950"
                       : "rounded-md border border-ink-700 px-3 py-1.5 text-sm font-bold text-white/70 hover:text-white"
                   }
                 >

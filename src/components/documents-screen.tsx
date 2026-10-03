@@ -28,10 +28,10 @@ export function DocumentsScreen({ locale }: { locale: Locale }) {
                 >
                   <Link
                     href={routes[page]}
-                    className="flex items-start gap-4 px-4 py-5 focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none"
+                    className="flex items-start gap-4 px-4 py-5 focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
                   >
                     <FileText
-                      className="mt-0.5 h-5 w-5 shrink-0 text-sut-cyan"
+                      className="mt-0.5 h-5 w-5 shrink-0 text-accent"
                       strokeWidth={1.75}
                       aria-hidden="true"
                     />
@@ -54,7 +54,7 @@ export function DocumentsScreen({ locale }: { locale: Locale }) {
                     <a
                       href={assetPath(doc.pdf)}
                       download
-                      className="flex min-h-11 items-center gap-2 border-t border-ink-800 px-4 text-xs font-bold tracking-wide text-white/60 uppercase transition-colors hover:text-sut-cyan focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none"
+                      className="flex min-h-11 items-center gap-2 border-t border-ink-800 px-4 text-xs font-bold tracking-wide text-white/60 uppercase transition-colors hover:text-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
                     >
                       <Download
                         className="h-3.5 w-3.5"

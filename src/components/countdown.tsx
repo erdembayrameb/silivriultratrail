@@ -72,7 +72,7 @@ export function Countdown({
                 key={cell.label}
                 className="flex flex-col items-center rounded-lg border border-ink-700 bg-ink-950/60 px-1 py-3"
               >
-                <span className="font-display text-3xl leading-none text-sut-cyan tabular-nums sm:text-5xl">
+                <span className="font-display text-3xl leading-none text-accent tabular-nums sm:text-5xl">
                   {cell.value === null
                     ? "––"
                     : String(cell.value).padStart(2, "0")}

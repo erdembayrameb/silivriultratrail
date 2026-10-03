@@ -21,7 +21,7 @@ export function RegisterButton({
       {...(isExternal
         ? { target: "_blank", rel: "noopener noreferrer" }
         : undefined)}
-      className={`inline-flex min-h-13 items-center justify-center bg-sand px-10 text-base font-bold tracking-wider text-ink-950 uppercase transition-colors hover:bg-white focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950 focus-visible:outline-none ${className}`}
+      className={`inline-flex min-h-13 items-center justify-center bg-sand px-10 text-base font-bold tracking-wider text-ink-950 uppercase transition-colors hover:bg-white focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950 focus-visible:outline-none ${className}`}
     >
       {registration.ctaLabel}
     </a>

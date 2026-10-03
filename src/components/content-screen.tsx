@@ -1,6 +1,7 @@
 import { PageIntro } from "@/components/page-intro";
 import { PageShell } from "@/components/page-shell";
 import { ProseSections } from "@/components/prose-sections";
+import { VenueMap } from "@/components/venue-map";
 import type { Locale } from "@/i18n/config";
 import type { PageKey } from "@/i18n/dictionary";
 import { getContentPage, getDictionary } from "@/i18n/dictionary";
@@ -13,7 +14,8 @@ export function ContentScreen({
   locale: Locale;
   page: PageKey;
 }) {
-  const content = getContentPage(getDictionary(locale), page);
+  const dict = getDictionary(locale);
+  const content = getContentPage(dict, page);
 
   return (
     <PageShell locale={locale} page={page}>
@@ -37,6 +39,9 @@ export function ContentScreen({
           {content.sections.length > 0 ? (
             <ProseSections sections={content.sections} />
           ) : null}
+
+          {/* Harita yalnızca Ulaşım sayfasında anlamlı. */}
+          {page === "transport" ? <VenueMap map={dict.transport.map} /> : null}
 
           {content.footnote ? (
             <p className="border-t border-white/10 pt-6 text-xs leading-relaxed text-white/45">

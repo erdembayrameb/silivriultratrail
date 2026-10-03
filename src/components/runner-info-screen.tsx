@@ -47,7 +47,7 @@ export function RunnerInfoScreen({ locale }: { locale: Locale }) {
                       <th
                         scope="row"
                         lang="en"
-                        className="py-3 pr-4 font-bold tracking-wide text-sut-cyan uppercase"
+                        className="py-3 pr-4 font-bold tracking-wide text-accent uppercase"
                       >
                         {row.course}
                       </th>

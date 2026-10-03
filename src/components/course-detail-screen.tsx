@@ -2,6 +2,7 @@ import { ArrowRight, Clock, Download, MapPin, Timer, Triangle } from "lucide-rea
 import Link from "next/link";
 import { ElevationProfile } from "@/components/elevation-profile";
 import { PageShell } from "@/components/page-shell";
+import { StravaRoute } from "@/components/strava-route";
 import type { Locale } from "@/i18n/config";
 import type { CourseAccent, PageKey } from "@/i18n/dictionary";
 import { getCourse, getDictionary } from "@/i18n/dictionary";
@@ -190,6 +191,26 @@ export function CourseDetailScreen({
 
           <article>
             <h2 className="font-display text-2xl tracking-wide text-white uppercase sm:text-3xl">
+              {courses.stravaTitle}
+            </h2>
+
+            <StravaRoute strava={course.strava} />
+
+            <p className="mt-4 text-xs leading-relaxed text-white/50">
+              {courses.stravaNote}
+            </p>
+            <a
+              href={`https://www.strava.com/routes/${course.strava.embedId}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-accent underline underline-offset-4 hover:text-accent-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+              {courses.stravaLinkLabel}
+            </a>
+          </article>
+
+          <article>
+            <h2 className="font-display text-2xl tracking-wide text-white uppercase sm:text-3xl">
               {courses.gpxTitle}
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-white/70">
@@ -198,7 +219,7 @@ export function CourseDetailScreen({
             <a
               href={assetPath(`/gpx/${course.gpx}`)}
               download
-              className="mt-5 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-ink-700 bg-ink-900 px-5 text-sm font-bold tracking-wide text-white uppercase transition-colors hover:border-sut-cyan hover:text-sut-cyan focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none"
+              className="mt-5 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-ink-700 bg-ink-900 px-5 text-sm font-bold tracking-wide text-white uppercase transition-colors hover:border-accent hover:text-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
             >
               <Download className="h-4 w-4" strokeWidth={2.25} aria-hidden="true" />
               {courses.gpxLabel}
@@ -220,7 +241,7 @@ export function CourseDetailScreen({
                 <li key={item.id}>
                   <Link
                     href={item.href}
-                    className="flex items-center justify-between gap-3 rounded-lg border border-ink-700 bg-ink-900 px-4 py-4 transition-colors hover:border-white/30 focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none"
+                    className="flex items-center justify-between gap-3 rounded-lg border border-ink-700 bg-ink-900 px-4 py-4 transition-colors hover:border-white/30 focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
                   >
                     <span className="flex items-baseline gap-3">
                       <span

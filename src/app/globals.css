@@ -12,7 +12,15 @@
   --color-ink-800: #103040;
   --color-ink-700: #1a4254;
 
-  /* Vurgu renkleri */
+  /*
+   * Arayüz vurgusu. Mavi bilinçli olarak kullanılmıyor: o renk 8K Gölet
+   * Trail parkuruna ayrıldı. Sitede renk yalnızca parkur kimliğini taşır,
+   * genel vurgu beyaz.
+   */
+  --color-accent: #ffffff;
+  --color-accent-soft: #cfdbe2;
+
+  /* Parkur renkleri — her biri yalnızca kendi parkurunu temsil eder */
   --color-sut-cyan: #38b6e6;
   --color-sut-cyan-soft: #7fd0f0;
   --color-sut-green: #a9dd57;

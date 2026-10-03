@@ -34,7 +34,7 @@ export function Logo({
         />
       </svg>
 
-      <span className="font-brush mt-1 text-[2.1em] text-sut-cyan">
+      <span className="font-brush mt-1 text-[2.1em] text-accent">
         {brand.abbr}
       </span>
 

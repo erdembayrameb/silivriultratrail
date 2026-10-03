@@ -21,10 +21,10 @@ export function FaqScreen({ locale }: { locale: Locale }) {
             {faq.items.map((item) => (
               <li key={item.question}>
                 <details className="group rounded-lg border border-ink-700 bg-ink-900 open:bg-ink-850">
-                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-4 py-4 text-sm font-bold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sut-cyan sm:text-base [&::-webkit-details-marker]:hidden">
+                  <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-4 py-4 text-sm font-bold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:text-base [&::-webkit-details-marker]:hidden">
                     <span className="text-balance">{item.question}</span>
                     <ChevronDown
-                      className="h-5 w-5 shrink-0 text-sut-cyan transition-transform group-open:rotate-180"
+                      className="h-5 w-5 shrink-0 text-accent transition-transform group-open:rotate-180"
                       strokeWidth={2.25}
                       aria-hidden="true"
                     />
@@ -44,7 +44,7 @@ export function FaqScreen({ locale }: { locale: Locale }) {
             {faq.footnote}{" "}
             <a
               href={`mailto:${contact.email}`}
-              className="font-semibold text-sut-cyan underline underline-offset-4 hover:text-sut-cyan-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sut-cyan"
+              className="font-semibold text-accent underline underline-offset-4 hover:text-accent-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {contact.email}
             </a>

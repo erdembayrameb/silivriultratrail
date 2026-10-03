@@ -138,7 +138,7 @@
         "elevation": "55 m+",
         "trailShare": "%95 patika",
         "start": "10:00",
-        "cutOff": "3 saat",
+        "cutOff": "2 saat",
         "title": "8K Gölet Trail Parkuru",
         "tagline": "Hızlı, Akıcı ve Keyifli Bir Patika Deneyimi",
         "description": "8K Gölet Trail parkuru — 8 km, 55 m+ tırmanış, 3 saat zaman sınırı. Danamandıra Tabiat Parkı'nda yeni başlayanlara da uygun, akıcı bir patika rotası.",
@@ -170,7 +170,13 @@
           }
         ],
         "gpx": "silivri-ultra-trail-8k.gpx",
-        "gearNote": "8K parkurunda koşacak yarışmacılar için göğüs numarası ve zamanlama çipi haricinde herhangi bir zorunlu malzeme kontrolü yapılmayacaktır. Yine de istasyonlarda plastik bardak bulunmadığı için yanında bir su kabı taşıman gerekir."
+        "gearNote": "8K parkurunda koşacak yarışmacılar için göğüs numarası ve zamanlama çipi haricinde herhangi bir zorunlu malzeme kontrolü yapılmayacaktır. Yine de istasyonlarda plastik bardak bulunmadığı için yanında bir su kabı taşıman gerekir.",
+        "strava": {
+          "embedId": "3528357568846090446",
+          "token": "Q4bwxQbBTqTbTdXT-4B4BOVkYhwq8kcs5cSvV7qqOYY",
+          "mapHash": "12.08/41.30176/28.22818",
+          "fromEmbed": true
+        }
       },
       {
         "id": "18k",
@@ -181,7 +187,7 @@
         "elevation": "123 m+",
         "trailShare": "%93 patika",
         "start": "08:30",
-        "cutOff": "5 saat",
+        "cutOff": "4 saat",
         "title": "18K Meşe Trail Parkuru",
         "tagline": "Tempo ve Dayanıklılığın Meşe Ormanlarındaki Dengesi",
         "description": "18K Meşe Trail parkuru — 18 km, 123 m+ tırmanış, 5 saat zaman sınırı. Sayalar Göleti ve Gürgen Tepe üzerinden geçen dengeli bir patika rotası.",
@@ -221,7 +227,13 @@
           }
         ],
         "gpx": "silivri-ultra-trail-18k.gpx",
-        "gearNote": "18K parkurunda zorunlu ekipman listesi geçerlidir. Malzeme kontrolünün birincil aşaması kit dağıtımı esnasında yapılır; ekipmanı eksik olan yarışmacılara göğüs numarası teslim edilmez."
+        "gearNote": "18K parkurunda zorunlu ekipman listesi geçerlidir. Malzeme kontrolünün birincil aşaması kit dağıtımı esnasında yapılır; ekipmanı eksik olan yarışmacılara göğüs numarası teslim edilmez.",
+        "strava": {
+          "embedId": "3526935272977817906",
+          "token": "mNNRGOhLMxn8TT9chrQgHSlZCgwkS8gcZOw_J_odknc",
+          "mapHash": "11.18/41.3075/28.2068",
+          "fromEmbed": true
+        }
       },
       {
         "id": "38k",
@@ -286,9 +298,18 @@
           }
         ],
         "gpx": "silivri-ultra-trail-38k.gpx",
-        "gearNote": "38K parkurunda zorunlu ekipman listesi geçerlidir. Bu parkurda dışarıdan destek yalnızca resmi kontrol noktalarının 200 metre öncesi ve sonrası sınırları içinde alınabilir."
+        "gearNote": "38K parkurunda zorunlu ekipman listesi geçerlidir. Bu parkurda dışarıdan destek yalnızca resmi kontrol noktalarının 200 metre öncesi ve sonrası sınırları içinde alınabilir.",
+        "strava": {
+          "embedId": "3527695367981451720",
+          "token": "RJdIu7ZO5UpLJAoWIFz15MqUg7onNjxBpy4LadSgQVg",
+          "mapHash": null,
+          "fromEmbed": false
+        }
       }
-    ]
+    ],
+    "stravaTitle": "Strava rotası",
+    "stravaNote": "Rotayı Strava üzerinde inceleyebilir, kendi hesabına kaydedebilirsin. Harita Strava tarafından yüklenir.",
+    "stravaLinkLabel": "Strava'da aç"
   },
   "registration": {
     "title": "Kayıt",
@@ -328,10 +349,6 @@
       {
         "label": "Instagram",
         "href": "https://www.instagram.com/silivriultratrail/"
-      },
-      {
-        "label": "Strava",
-        "href": "https://strava.com/"
       }
     ]
   },
@@ -700,12 +717,20 @@
         "title": "Kit dağıtımı ve makarna partisi lokasyonu",
         "body": [
           "03 Nisan Cumartesi günü yapılacak kit dağıtımı ile makarna partisinin resmi lokasyonları ilerleyen günlerde web sitemiz ve sosyal medya hesaplarımız üzerinden yayımlanacaktır.",
-          "04 Nisan Pazar günü geç kit dağıtımı, start alanında — Danamandıra Tabiat Parkı'nda — kurulacak masalarda yapılacaktır."
+          "04 Nisan Pazar günü geç kit dağıtımı, etkinlik alanımız olan Danamandıra Tabiat Parkı'nda kurulacak masalarda yapılacaktır."
         ],
         "items": []
       }
     ],
-    "footnote": "Servis kalkış noktaları ve saatleri kesinleştiğinde bu sayfa ve resmi sosyal medya hesaplarımız üzerinden duyurulacaktır."
+    "footnote": "Servis kalkış noktaları ve saatleri kesinleştiğinde bu sayfa ve resmi sosyal medya hesaplarımız üzerinden duyurulacaktır.",
+    "map": {
+      "title": "Yarış alanı",
+      "name": "Danamandıra Tabiat Parkı",
+      "note": "Haritaya dokunduğunda telefonundaki harita uygulamasında yol tarifi açılır.",
+      "directionsLabel": "Yol tarifi al",
+      "lat": 41.30111,
+      "lon": 28.22133
+    }
   },
   "accommodation": {
     "title": "Konaklama",

@@ -38,7 +38,7 @@ export function StartListScreen({ locale }: { locale: Locale }) {
                 <header className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                   <Link
                     href={course.href}
-                    className={`font-brush text-3xl leading-none sm:text-4xl ${accentText[course.accent]} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sut-cyan`}
+                    className={`font-brush text-3xl leading-none sm:text-4xl ${accentText[course.accent]} focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent`}
                   >
                     {course.distance}
                   </Link>

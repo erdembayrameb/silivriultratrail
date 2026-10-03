@@ -11,7 +11,7 @@ export function Registration({ dict }: { dict: Dictionary }) {
       <div className="px-safe mx-auto flex w-full max-w-2xl flex-col items-center text-center">
         <SectionHeading>{registration.title}</SectionHeading>
 
-        <p className="mt-8 font-display text-2xl tracking-wide text-sut-cyan uppercase sm:text-3xl">
+        <p className="mt-8 font-display text-2xl tracking-wide text-accent uppercase sm:text-3xl">
           {registration.status}
         </p>
 
@@ -40,7 +40,7 @@ export function Registration({ dict }: { dict: Dictionary }) {
             href={registration.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex min-h-13 items-center justify-center bg-sand px-10 text-base font-bold tracking-wider text-ink-950 uppercase transition-colors hover:bg-white focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900 focus-visible:outline-none"
+            className="mt-8 inline-flex min-h-13 items-center justify-center bg-sand px-10 text-base font-bold tracking-wider text-ink-950 uppercase transition-colors hover:bg-white focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink-900 focus-visible:outline-none"
           >
             {registration.ctaLabel}
           </a>
@@ -48,7 +48,7 @@ export function Registration({ dict }: { dict: Dictionary }) {
 
         <Link
           href={routes.runnerInfo}
-          className="mt-8 inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-sut-cyan uppercase underline underline-offset-4 hover:text-sut-cyan-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sut-cyan"
+          className="mt-8 inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-accent uppercase underline underline-offset-4 hover:text-accent-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           {registration.detailsLabel}
           <ArrowRight className="h-4 w-4" strokeWidth={2.5} aria-hidden="true" />

@@ -39,7 +39,7 @@ export function Courses({ dict }: { dict: Dictionary }) {
             <li key={course.id} className="flex">
               <Link
                 href={course.href}
-                className={`flex flex-1 flex-col items-center rounded-lg border border-ink-700 bg-ink-850 px-1.5 py-5 text-center transition-colors focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:outline-none sm:px-4 ${accentHover[course.accent]}`}
+                className={`flex flex-1 flex-col items-center rounded-lg border border-ink-700 bg-ink-850 px-1.5 py-5 text-center transition-colors focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none sm:px-4 ${accentHover[course.accent]}`}
               >
                 <p
                   className={`font-brush text-4xl leading-none sm:text-6xl ${accentText[course.accent]}`}

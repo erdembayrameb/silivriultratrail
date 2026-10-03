@@ -23,7 +23,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
           </span>{" "}
           <span
             lang="en"
-            className="font-brush mt-1 text-6xl leading-[0.95] text-sut-cyan drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] sm:text-8xl"
+            className="font-brush mt-1 text-6xl leading-[0.95] text-accent drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] sm:text-8xl"
           >
             {hero.titleBottom}
           </span>
@@ -38,28 +38,28 @@ export function Hero({ dict }: { dict: Dictionary }) {
         <div className="mt-10 flex flex-col items-center gap-7">
           <p className="flex flex-col items-center">
             <CalendarDays
-              className="h-6 w-6 text-sut-cyan"
+              className="h-6 w-6 text-accent"
               strokeWidth={2}
               aria-hidden="true"
             />
             <span className="mt-3 text-lg font-bold tracking-wide text-white uppercase sm:text-xl">
               {hero.date}
             </span>
-            <span className="mt-1 text-base font-semibold text-sut-cyan-soft">
+            <span className="mt-1 text-base font-semibold text-accent-soft">
               {hero.weekday}
             </span>
           </p>
 
           <p className="flex flex-col items-center">
             <MapPin
-              className="h-6 w-6 text-sut-cyan"
+              className="h-6 w-6 text-accent"
               strokeWidth={2}
               aria-hidden="true"
             />
             <span className="mt-3 text-base font-bold tracking-wide text-balance text-white uppercase sm:text-lg">
               {hero.venue}
             </span>
-            <span className="mt-1 text-base font-semibold text-sut-cyan-soft">
+            <span className="mt-1 text-base font-semibold text-accent-soft">
               {hero.city}
             </span>
           </p>

@@ -79,7 +79,7 @@ export function VolunteerScreen({ locale }: { locale: Locale }) {
 
             <a
               href={mailto}
-              className="mt-6 inline-flex min-h-13 items-center justify-center gap-2 bg-sand px-8 text-sm font-bold tracking-wider text-ink-950 uppercase transition-colors hover:bg-white focus-visible:ring-2 focus-visible:ring-sut-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950 focus-visible:outline-none"
+              className="mt-6 inline-flex min-h-13 items-center justify-center gap-2 bg-sand px-8 text-sm font-bold tracking-wider text-ink-950 uppercase transition-colors hover:bg-white focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950 focus-visible:outline-none"
             >
               <Mail className="h-4 w-4" strokeWidth={2.25} aria-hidden="true" />
               {volunteer.ctaLabel}

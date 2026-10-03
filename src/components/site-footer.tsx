@@ -40,7 +40,7 @@ export function SiteFooter({
 
           <a
             href={`mailto:${contact.email}`}
-            className="mt-3 inline-flex items-center gap-2 text-sm font-semibold underline underline-offset-4 hover:text-sut-cyan focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sut-cyan"
+            className="mt-3 inline-flex items-center gap-2 text-sm font-semibold underline underline-offset-4 hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             <Mail className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
             {contact.email}
@@ -52,7 +52,7 @@ export function SiteFooter({
           </p>
           <a
             href={`tel:${contact.emergencyPhone.replace(/\s/g, "")}`}
-            className="mt-1 inline-flex items-center gap-2 text-sm font-bold tabular-nums hover:text-sut-cyan focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sut-cyan"
+            className="mt-1 inline-flex items-center gap-2 text-sm font-bold tabular-nums hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             <Phone className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
             {contact.emergencyPhone}
@@ -65,7 +65,7 @@ export function SiteFooter({
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-semibold tracking-wide uppercase hover:text-sut-cyan focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sut-cyan"
+                  className="text-sm font-semibold tracking-wide uppercase hover:text-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   {social.label}
                 </a>
@@ -81,7 +81,7 @@ export function SiteFooter({
               <li key={page}>
                 <Link
                   href={routes[page]}
-                  className="text-xs font-semibold text-ink-900/70 underline underline-offset-4 hover:text-ink-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sut-cyan"
+                  className="text-xs font-semibold text-ink-900/70 underline underline-offset-4 hover:text-ink-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   {getLegalDoc(dict, page).title}
                 </Link>
@@ -111,7 +111,7 @@ export function SiteFooter({
 
           <a
             href="#ust"
-            className="mt-8 inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-ink-900/60 uppercase hover:text-ink-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sut-cyan"
+            className="mt-8 inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-ink-900/60 uppercase hover:text-ink-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
             <ArrowUp className="h-4 w-4" strokeWidth={2.5} aria-hidden="true" />
             {footer.backToTop}

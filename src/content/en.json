@@ -138,7 +138,7 @@
         "elevation": "55 m+",
         "trailShare": "95% trail",
         "start": "10:00",
-        "cutOff": "3 hours",
+        "cutOff": "2 hours",
         "title": "8K Lake Trail Course",
         "tagline": "A Fast, Flowing and Enjoyable Trail Experience",
         "description": "8K Lake Trail course — 8 km, 55 m+ ascent, 3-hour cut-off. A flowing route in Danamandıra Nature Park, suitable for first-time trail runners.",
@@ -170,7 +170,13 @@
           }
         ],
         "gpx": "silivri-ultra-trail-8k.gpx",
-        "gearNote": "No mandatory gear check is carried out for 8K runners beyond the race bib and timing chip. Even so, you must carry a water container, as no plastic cups are provided at the stations."
+        "gearNote": "No mandatory gear check is carried out for 8K runners beyond the race bib and timing chip. Even so, you must carry a water container, as no plastic cups are provided at the stations.",
+        "strava": {
+          "embedId": "3528357568846090446",
+          "token": "Q4bwxQbBTqTbTdXT-4B4BOVkYhwq8kcs5cSvV7qqOYY",
+          "mapHash": "12.08/41.30176/28.22818",
+          "fromEmbed": true
+        }
       },
       {
         "id": "18k",
@@ -181,7 +187,7 @@
         "elevation": "123 m+",
         "trailShare": "93% trail",
         "start": "08:30",
-        "cutOff": "5 hours",
+        "cutOff": "4 hours",
         "title": "18K Oak Trail Course",
         "tagline": "The Balance of Pace and Endurance Through Oak Forests",
         "description": "18K Oak Trail course — 18 km, 123 m+ ascent, 5-hour cut-off. A balanced trail route via Sayalar Lake and Gürgen Hill.",
@@ -221,7 +227,13 @@
           }
         ],
         "gpx": "silivri-ultra-trail-18k.gpx",
-        "gearNote": "The mandatory gear list applies to the 18K course. The primary gear check takes place during kit collection; runners with missing equipment are not given a race bib."
+        "gearNote": "The mandatory gear list applies to the 18K course. The primary gear check takes place during kit collection; runners with missing equipment are not given a race bib.",
+        "strava": {
+          "embedId": "3526935272977817906",
+          "token": "mNNRGOhLMxn8TT9chrQgHSlZCgwkS8gcZOw_J_odknc",
+          "mapHash": "11.18/41.3075/28.2068",
+          "fromEmbed": true
+        }
       },
       {
         "id": "38k",
@@ -286,9 +298,18 @@
           }
         ],
         "gpx": "silivri-ultra-trail-38k.gpx",
-        "gearNote": "The mandatory gear list applies to the 38K course. On this course outside assistance may only be taken within 200 metres before and after an official checkpoint."
+        "gearNote": "The mandatory gear list applies to the 38K course. On this course outside assistance may only be taken within 200 metres before and after an official checkpoint.",
+        "strava": {
+          "embedId": "3527695367981451720",
+          "token": "RJdIu7ZO5UpLJAoWIFz15MqUg7onNjxBpy4LadSgQVg",
+          "mapHash": null,
+          "fromEmbed": false
+        }
       }
-    ]
+    ],
+    "stravaTitle": "Strava route",
+    "stravaNote": "You can explore the route on Strava and save it to your own account. The map is loaded by Strava.",
+    "stravaLinkLabel": "Open on Strava"
   },
   "registration": {
     "title": "Registration",
@@ -328,10 +349,6 @@
       {
         "label": "Instagram",
         "href": "https://www.instagram.com/silivriultratrail/"
-      },
-      {
-        "label": "Strava",
-        "href": "https://strava.com/"
       }
     ]
   },
@@ -700,12 +717,20 @@
         "title": "Kit collection and pasta party venue",
         "body": [
           "The official venues for kit collection and the pasta party on Saturday 3 April will be published on our website and social media accounts in the coming weeks.",
-          "Late kit collection on Sunday 4 April takes place at desks set up in the start area, at Danamandıra Nature Park."
+          "Late kit collection on Sunday 4 April takes place at desks set up at our venue, Danamandıra Nature Park."
         ],
         "items": []
       }
     ],
-    "footnote": "Shuttle departure points and times will be announced on this page and on our official social media accounts once confirmed."
+    "footnote": "Shuttle departure points and times will be announced on this page and on our official social media accounts once confirmed.",
+    "map": {
+      "title": "Race venue",
+      "name": "Danamandıra Nature Park",
+      "note": "Tapping the map opens directions in your phone's map app.",
+      "directionsLabel": "Get directions",
+      "lat": 41.30111,
+      "lon": 28.22133
+    }
   },
   "accommodation": {
     "title": "Accommodation",

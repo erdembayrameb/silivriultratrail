@@ -37,7 +37,7 @@ export function PageShell({
        */}
       <a
         href="#icerik"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:rounded-lg focus:bg-sut-cyan focus:px-4 focus:py-3 focus:text-sm focus:font-bold focus:text-ink-950"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-3 focus:text-sm focus:font-bold focus:text-ink-950"
       >
         {dict.nav.skipToContent}
       </a>
