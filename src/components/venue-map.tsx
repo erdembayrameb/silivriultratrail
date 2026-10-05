@@ -54,7 +54,9 @@ export function VenueMap({ map }: { map: Dictionary["transport"]["map"] }) {
         </span>
       </a>
 
-      <p className="mt-3 text-xs leading-relaxed text-white/50">{map.note}</p>
+      {map.note ? (
+        <p className="mt-3 text-xs leading-relaxed text-white/50">{map.note}</p>
+      ) : null}
     </article>
   );
 }

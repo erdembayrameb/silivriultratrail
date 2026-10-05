@@ -725,11 +725,11 @@
         "items": []
       }
     ],
-    "footnote": "Servis kalkış noktaları ve saatleri kesinleştiğinde bu sayfa ve resmi sosyal medya hesaplarımız üzerinden duyurulacaktır.",
+    "footnote": null,
     "map": {
       "title": "Yarış alanı",
       "name": "Danamandıra Tabiat Parkı",
-      "note": "Haritaya dokunduğunda telefonundaki harita uygulamasında yol tarifi açılır.",
+      "note": null,
       "directionsLabel": "Yol tarifi al",
       "lat": 41.30111,
       "lon": 28.22133

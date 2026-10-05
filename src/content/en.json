@@ -725,11 +725,11 @@
         "items": []
       }
     ],
-    "footnote": "Shuttle departure points and times will be announced on this page and on our official social media accounts once confirmed.",
+    "footnote": null,
     "map": {
       "title": "Race venue",
       "name": "Danamandıra Nature Park",
-      "note": "Tapping the map opens directions in your phone's map app.",
+      "note": null,
       "directionsLabel": "Get directions",
       "lat": 41.30111,
       "lon": 28.22133

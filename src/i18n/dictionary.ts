@@ -321,7 +321,8 @@ export interface Dictionary {
     map: {
       title: string;
       name: string;
-      note: string;
+      /** null ise harita altında açıklama basılmaz. */
+      note: string | null;
       directionsLabel: string;
       lat: number;
       lon: number;
