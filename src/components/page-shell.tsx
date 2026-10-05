@@ -45,15 +45,13 @@ export function PageShell({
       <SiteHeader
         brand={dict.brand}
         nav={dict.nav}
-        homeHref={dict.routes.home}
-        languageLabel={dict.footer.languageLabel}
         locale={locale}
         languageHrefs={languageHrefs}
       />
 
       <main id="icerik">{children}</main>
 
-      <SiteFooter dict={dict} locale={locale} languageHrefs={languageHrefs} />
+      <SiteFooter dict={dict} />
       <FloatingContact dict={dict} />
     </>
   );

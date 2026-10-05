@@ -2,21 +2,10 @@ import { ArrowUp, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
 import { Partners } from "@/components/partners";
-import type { Locale } from "@/i18n/config";
-import { localeLabels, locales } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionary";
 import { getLegalDoc } from "@/i18n/dictionary";
 
-export function SiteFooter({
-  dict,
-  locale,
-  languageHrefs,
-}: {
-  dict: Dictionary;
-  locale: Locale;
-  /** Bulunulan sayfanın her dildeki adresi — PageShell hesaplıyor. */
-  languageHrefs: Record<Locale, string>;
-}) {
+export function SiteFooter({ dict }: { dict: Dictionary }) {
   const { brand, contact, documents, footer, hero, routes } = dict;
 
   return (
@@ -88,26 +77,6 @@ export function SiteFooter({
               </li>
             ))}
           </ul>
-
-          <div className="mt-10 flex items-center gap-3">
-            <span className="text-xs font-semibold tracking-widest text-ink-900/50 uppercase">
-              {footer.languageLabel}
-            </span>
-            {locales.map((code) => (
-              <Link
-                key={code}
-                href={languageHrefs[code]}
-                aria-current={code === locale ? "page" : undefined}
-                className={
-                  code === locale
-                    ? "rounded-md bg-ink-900 px-3 py-1.5 text-sm font-bold text-sand"
-                    : "rounded-md border border-ink-900/25 px-3 py-1.5 text-sm font-bold text-ink-900/70 hover:text-ink-900"
-                }
-              >
-                {localeLabels[code]}
-              </Link>
-            ))}
-          </div>
 
           <a
             href="#ust"

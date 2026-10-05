@@ -38,6 +38,9 @@ export function StravaRoute({ strava }: { strava: Course["strava"] }) {
       data-embed-id={strava.embedId}
       data-style="standard"
       data-from-embed={String(strava.fromEmbed)}
+      /* Strava'nın betiği `route` gömmelerinde bu seçeneği destekliyor:
+         iframe 554px sabit genişlik yerine kapsayıcının tamamını kaplıyor. */
+      data-full-width="true"
       data-token={strava.token}
       {...(strava.mapHash ? { "data-map-hash": strava.mapHash } : {})}
     />

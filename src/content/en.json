@@ -95,7 +95,7 @@
   "hero": {
     "titleTop": "Silivri",
     "titleBottom": "Ultra Trail",
-    "tagline": "Push your limits, reach the summit!",
+    "tagline": "A new adventure begins in the far west of Istanbul...",
     "date": "04 April 2027",
     "weekday": "Sunday",
     "venue": "Danamandıra Nature Park",
@@ -111,12 +111,13 @@
     "cutOffLabel": "Cut-off",
     "detailLabel": "Course details",
     "cpTitle": "Checkpoints",
-    "cpIntro": "Registering at every checkpoint (CP) — either on the electronic timing mats or at the marshal desks — is the runner's own responsibility. Runners missing a chip record at any CP are removed from the ranking even if they finish the race.",
     "cpHeaders": {
       "cp": "CP",
       "station": "Station",
-      "total": "Total distance",
-      "next": "To next station",
+      "total": "Total distance (km)",
+      "next": "To next station (km)",
+      "elevation": "Total ascent (m)",
+      "cutOff": "Cut-off",
       "services": "CP services"
     },
     "profileTitle": "Elevation profile",
@@ -124,8 +125,6 @@
     "highestLabel": "Highest point",
     "lowestLabel": "Lowest point",
     "profileNote": "The profile is drawn at build time from the course's official GPX track. Distance and elevation figures may differ slightly from on-site measurements.",
-    "gpxTitle": "GPX track",
-    "gpxNote": "Load the course GPX onto your watch or navigation app. The file will be refreshed whenever the route is updated.",
     "gpxLabel": "Download GPX file",
     "othersTitle": "Other courses",
     "items": [
@@ -135,48 +134,52 @@
         "name": "Lake Trail",
         "accent": "cyan",
         "href": "/en/courses/8k/",
-        "elevation": "55 m+",
+        "elevation": "72 m+",
         "trailShare": "95% trail",
         "start": "10:00",
         "cutOff": "2 hours",
         "title": "8K Lake Trail Course",
         "tagline": "A Fast, Flowing and Enjoyable Trail Experience",
         "description": "8K Lake Trail course — 8 km, 55 m+ ascent, 3-hour cut-off. A flowing route in Danamandıra Nature Park, suitable for first-time trail runners.",
-        "body": [
-          "The 8K Lake Trail has a thoroughly enjoyable flow that suits everyone, from newcomers taking their first steps into trail running to experienced athletes testing their speed limits over a short distance. The race starts from the main square at the centre of Silivri Danamandıra Nature Park, along a wide and level forest road. For the first 1.5 kilometres runners are met by soft ground on which they can settle into a rhythm. The route then slips between untouched dense trees and joins the bends of the lake.",
-          "The first 2.5 kilometres consist of forest soil that is gently downhill, easy on the legs and entirely runnable. From the point where the route leaves the lake basin, a gradual and gentle climb begins — the only ramp section of the course. Over roughly 3 kilometres of this mild ascent the ground carries tree roots here and there but keeps its width. Once the 5.5-kilometre mark is behind you, all the climbing is done. The final 2.8 kilometres to the finish consist entirely of wide, smooth and clean forest flats. This closing corridor lets runners reach their highest pace towards the finish line."
-        ],
+        "body": [],
         "checkpoints": [
           {
             "cp": "START",
             "station": "Danamandıra Nature Park",
             "totalKm": "—",
             "nextKm": "4",
-            "services": ""
+            "services": "—",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 1",
             "station": "Danamandıra",
             "totalKm": "4",
             "nextKm": "4",
-            "services": "Water + food"
+            "services": "Water + food",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "FINISH",
             "station": "Danamandıra Nature Park",
             "totalKm": "8",
             "nextKm": "—",
-            "services": "Finisher buffet"
+            "services": "Finisher buffet",
+            "elevation": "72",
+            "cutOff": "2 hours"
           }
         ],
         "gpx": "silivri-ultra-trail-8k.gpx",
-        "gearNote": "No mandatory gear check is carried out for 8K runners beyond the race bib and timing chip. Even so, you must carry a water container, as no plastic cups are provided at the stations.",
         "strava": {
           "embedId": "3528357568846090446",
           "token": "Q4bwxQbBTqTbTdXT-4B4BOVkYhwq8kcs5cSvV7qqOYY",
           "mapHash": "12.08/41.30176/28.22818",
           "fromEmbed": true
-        }
+        },
+        "kml": "silivri-ultra-trail-8k.kml",
+        "image": "hero"
       },
       {
         "id": "18k",
@@ -184,56 +187,61 @@
         "name": "Oak Trail",
         "accent": "green",
         "href": "/en/courses/18k/",
-        "elevation": "123 m+",
+        "elevation": "113 m+",
         "trailShare": "93% trail",
         "start": "08:30",
         "cutOff": "4 hours",
         "title": "18K Oak Trail Course",
         "tagline": "The Balance of Pace and Endurance Through Oak Forests",
         "description": "18K Oak Trail course — 18 km, 123 m+ ascent, 5-hour cut-off. A balanced trail route via Sayalar Lake and Gürgen Hill.",
-        "body": [
-          "Designed for intermediate runners and trail specialists, the 18K Oak Trail is a balanced race route that showcases Danamandıra's most characteristic vegetation and variety of terrain. Starting from the centre of Danamandıra Nature Park, the first 3 kilometres run on wide and very flowing forest roads where runners can break away from the pack and settle into their own pace. From kilometre 3 the route turns towards the Sayalar corridor, the terrain narrows and turns into single-track. Between kilometres 4 and 5.5, two short but steep sets of ramps load the leg muscles for the first time.",
-          "Once these ramps are cleared, the course drops into the relatively flat but technically demanding basin around Sayalar Lake. This lakeside section holds slippery ground with a high potential for mud and clay in the likely April rains. From kilometre 9 the toughest stage of the course begins: the Gürgen Hill climb. Made up of steep, stepped and narrow paths, this ramp brings runners to the highest summit of the course at kilometre 12 (233 metres of altitude). Once that summit is reached, all the hard parts of the race are behind you.",
-          "The final 6.2 kilometres to the finish consist of wide dirt roads, almost continuously downhill and free of technical obstacles. Runners reach the finish line at the start area with a flowing descent rhythm, without punishing their knees."
-        ],
+        "body": [],
         "checkpoints": [
           {
             "cp": "START",
             "station": "Danamandıra Nature Park",
             "totalKm": "—",
             "nextKm": "6",
-            "services": ""
+            "services": "—",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 1",
             "station": "Sayalar",
             "totalKm": "6",
             "nextKm": "6",
-            "services": "Water + food"
+            "services": "Water + food",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 2",
             "station": "Gürgen Hill",
             "totalKm": "12",
             "nextKm": "6",
-            "services": "Water + food"
+            "services": "Water + food",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "FINISH",
             "station": "Danamandıra Nature Park",
             "totalKm": "18",
             "nextKm": "—",
-            "services": "Finisher buffet"
+            "services": "Finisher buffet",
+            "elevation": "113",
+            "cutOff": "4 hours"
           }
         ],
         "gpx": "silivri-ultra-trail-18k.gpx",
-        "gearNote": "The mandatory gear list applies to the 18K course. The primary gear check takes place during kit collection; runners with missing equipment are not given a race bib.",
         "strava": {
           "embedId": "3526935272977817906",
           "token": "mNNRGOhLMxn8TT9chrQgHSlZCgwkS8gcZOw_J_odknc",
           "mapHash": "11.18/41.3075/28.2068",
           "fromEmbed": true
-        }
+        },
+        "kml": "silivri-ultra-trail-18k.kml",
+        "image": "hero"
       },
       {
         "id": "38k",
@@ -241,98 +249,94 @@
         "name": "Forest Trail",
         "accent": "orange",
         "href": "/en/courses/38k/",
-        "elevation": "328 m+",
+        "elevation": "332 m+",
         "trailShare": "92% trail",
         "start": "07:00",
         "cutOff": "7 hours",
         "title": "38K Forest Trail Course",
         "tagline": "A Giant Adventure That Pushes the Limits: From Danamandıra to Sayalar",
         "description": "38K Forest Trail course — 38.22 km, 328 m+ ascent, 7-hour cut-off. The ultra route via Sinekli Lake, Çayırdere, Sayalar and Gürgen Hill.",
-        "body": [
-          "The most prestigious, longest and hardest stage of the race, the 38K Forest Trail has the character of a true ultra marathon with its continuously rolling hills. The race starts from Danamandıra Nature Park on calm, wide forest roads. After a 4-kilometre warm-up phase the route breaks towards the Sinekli basin and enters a long, gradual descent corridor. On reaching the area around Sinekli Lake the ground turns entirely to soft, damp and deeply rooted trails. With the exit from the lake at kilometre 11 the course shows its real face: rolling sets of hills begin towards Çayırdere, rising continuously and loading the legs for roughly 8.5 kilometres. This section consists entirely of tractor roads and dense forest trails.",
-          "The most critical breaking point of the race comes between kilometres 19 and 27. Leaving the Çayırdere area, runners enter the steepest wall climbs of the course and reach the main summit of 248.7 metres over overlapping steep ramps between kilometres 22 and 25. After this technical summit the course merges with the 18K route and connects to the technical, slippery trails of Sayalar Lake. After that technical section at kilometre 27, runners must climb the last steep, narrow trail sets of Gürgen Hill at a point where fatigue peaks.",
-          "When the final summit of Gürgen Hill is behind you at kilometre 33.5, nothing but a victory run remains. The last 4.7 kilometres to the finish line consist entirely of wide, flat and downhill forest roads where runners can pour out whatever energy is left and pick up speed."
-        ],
+        "body": [],
         "checkpoints": [
           {
             "cp": "START",
             "station": "Danamandıra Nature Park",
             "totalKm": "—",
             "nextKm": "10.95",
-            "services": ""
+            "services": "—",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 1",
             "station": "Sinekli Lake",
             "totalKm": "10.95",
             "nextKm": "8.6",
-            "services": "Water + food"
+            "services": "Water + food",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 2",
             "station": "Çayırdere",
             "totalKm": "19.55",
             "nextKm": "8.23",
-            "services": "Water + food"
+            "services": "Water + food",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 3",
             "station": "Sayalar",
             "totalKm": "27.78",
             "nextKm": "5.68",
-            "services": "Water + food"
+            "services": "Water + food",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 4",
             "station": "Gürgen Hill",
             "totalKm": "33.46",
             "nextKm": "4.76",
-            "services": "Water + food"
+            "services": "Water + food",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "FINISH",
             "station": "Danamandıra Nature Park",
             "totalKm": "38.22",
             "nextKm": "—",
-            "services": "Finisher meal"
+            "services": "Finisher meal",
+            "elevation": "332",
+            "cutOff": "7 hours"
           }
         ],
         "gpx": "silivri-ultra-trail-38k.gpx",
-        "gearNote": "The mandatory gear list applies to the 38K course. On this course outside assistance may only be taken within 200 metres before and after an official checkpoint.",
         "strava": {
           "embedId": "3527695367981451720",
           "token": "RJdIu7ZO5UpLJAoWIFz15MqUg7onNjxBpy4LadSgQVg",
           "mapHash": null,
           "fromEmbed": false
-        }
+        },
+        "kml": "silivri-ultra-trail-38k.kml",
+        "image": "hero"
       }
     ],
     "stravaTitle": "Strava route",
-    "stravaNote": "You can explore the route on Strava and save it to your own account. The map is loaded by Strava.",
-    "stravaLinkLabel": "Open on Strava"
+    "kmlLabel": "Download KML file",
+    "downloadsTitle": "Course files"
   },
   "registration": {
     "title": "Registration",
     "ctaLabel": "Register now",
     "open": false,
     "href": null,
-    "status": "Early registration opens on 8 October 2026",
-    "note": "Entries are accepted online only through the official registration system of the Turkish Athletics Federation; no registration is taken at the venue on race day. The registration link will be announced in this section once it goes live.",
-    "highlights": [
-      {
-        "label": "Registration channel",
-        "value": "Turkish Athletics Federation (TAF)"
-      },
-      {
-        "label": "Quota",
-        "value": "1500 runners"
-      },
-      {
-        "label": "Entries close",
-        "value": "28 March 2027, 23:59"
-      }
-    ],
-    "detailsLabel": "Fees and entry requirements"
+    "status": "Registration opens on 8 October 2026",
+    "note": null,
+    "highlights": [],
+    "detailsLabel": null
   },
   "pastEdition": {
     "label": "2025 Edition",
@@ -377,7 +381,6 @@
   "footer": {
     "rights": "All rights reserved.",
     "backToTop": "Back to top",
-    "languageLabel": "Language",
     "legalLabel": "Official documents"
   },
   "schedule": {
@@ -689,7 +692,7 @@
   "transport": {
     "title": "Getting There",
     "description": "Silivri Ultra Trail travel information — shuttles to Danamandıra Nature Park, parking and return times.",
-    "intro": "The race centre is Silivri Danamandıra Nature Park. This page will be updated as the kit collection venue and shuttle departure points are confirmed.",
+    "intro": null,
     "body": [],
     "sections": [
       {
@@ -765,26 +768,36 @@
       }
     ],
     "formTitle": "Volunteer application form",
-    "formIntro": "Volunteer places are limited. Until the application form goes live, you can also send the details below by email.",
+    "formIntro": "Volunteer places are limited. When you submit the form, your answers open as a ready-made message in your email app — just send it.",
     "fields": [
       {
+        "id": "name",
         "label": "Full name",
+        "type": "text",
         "options": []
       },
       {
+        "id": "birthYear",
         "label": "Year of birth",
+        "type": "year",
         "options": []
       },
       {
-        "label": "Mobile number (for the race-day coordination WhatsApp group)",
+        "id": "phone",
+        "label": "Mobile number",
+        "type": "tel",
         "options": []
       },
       {
+        "id": "email",
         "label": "Email address",
+        "type": "email",
         "options": []
       },
       {
+        "id": "shirt",
         "label": "Shirt size",
+        "type": "select",
         "options": [
           "XS",
           "S",
@@ -795,14 +808,18 @@
         ]
       },
       {
+        "id": "travel",
         "label": "Travel preference",
+        "type": "radio",
         "options": [
           "I would like to use the volunteer shuttle from Silivri centre.",
           "I will make my own way to the race venue."
         ]
       },
       {
+        "id": "days",
         "label": "Days you can work",
+        "type": "radio",
         "options": [
           "Saturday 3 April only (kit collection & preparation)",
           "Sunday 4 April only (race-day operations)",
@@ -810,22 +827,30 @@
         ]
       },
       {
-        "label": "Preferred role (up to 2)",
+        "id": "roles",
+        "label": "Preferred role",
+        "type": "checkbox",
         "options": [
           "Kit collection desk",
           "Aid stations (CP)",
           "Finish & medal area",
           "Logistics & bag drop"
-        ]
+        ],
+        "maxSelect": 2
       },
       {
-        "label": "Any note or chronic health condition you would like to add",
+        "id": "note",
+        "label": "Any note or chronic health condition",
+        "type": "textarea",
         "options": []
       }
     ],
-    "ctaLabel": "Send your application by email",
+    "ctaLabel": "Submit application",
     "kvkkNote": "The personal data you share on the form is processed under Turkish Law no. 6698 (KVKK) solely for the purpose of running the Silivri Ultra Trail 2027 operation and is never shared with third parties.",
-    "footnote": null
+    "footnote": null,
+    "requiredLabel": "required",
+    "maxSelectLabel": "up to 2 options",
+    "selectPlaceholder": "Select"
   },
   "rules": {
     "title": "General Race Rules",

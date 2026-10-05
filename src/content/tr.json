@@ -95,7 +95,7 @@
   "hero": {
     "titleTop": "Silivri",
     "titleBottom": "Ultra Trail",
-    "tagline": "Sınırlarını zorla, zirveye ulaş!",
+    "tagline": "İstanbul'un en batısında yeni bir macera başlıyor...",
     "date": "04 Nisan 2027",
     "weekday": "Pazar",
     "venue": "Danamandıra Tabiat Parkı",
@@ -111,12 +111,13 @@
     "cutOffLabel": "Zaman sınırı",
     "detailLabel": "Parkur detayı",
     "cpTitle": "Kontrol noktaları",
-    "cpIntro": "Parkur üzerindeki her kontrol noktasında (CP) elektronik zamanlama halılarından veya hakem masalarından geçiş kaydı yaptırmak sporcunun sorumluluğundadır. Eksik çip geçiş kaydı bulunan sporcular yarışı tamamlasalar dahi sıralama dışı bırakılır.",
     "cpHeaders": {
       "cp": "CP",
       "station": "İstasyon adı",
-      "total": "Toplam mesafe",
-      "next": "Sonraki istasyona",
+      "total": "Toplam mesafe (km)",
+      "next": "Sonraki istasyona mesafe (km)",
+      "elevation": "Toplam irtifa (m)",
+      "cutOff": "Zaman sınırı",
       "services": "CP olanakları"
     },
     "profileTitle": "Yükseklik profili",
@@ -124,8 +125,6 @@
     "highestLabel": "En yüksek nokta",
     "lowestLabel": "En alçak nokta",
     "profileNote": "Profil, parkurun resmi GPX kaydından derleme anında çizilmiştir. Mesafe ve irtifa değerleri arazi ölçümüne göre küçük sapmalar gösterebilir.",
-    "gpxTitle": "GPX haritası",
-    "gpxNote": "Parkurun GPX dosyasını saat veya navigasyon uygulamana yükleyebilirsin. Harita güncellendiğinde dosya da yenilenecektir.",
     "gpxLabel": "GPX dosyasını indir",
     "othersTitle": "Diğer parkurlar",
     "items": [
@@ -135,48 +134,52 @@
         "name": "Gölet Trail",
         "accent": "cyan",
         "href": "/parkurlar/8k/",
-        "elevation": "55 m+",
+        "elevation": "72 m+",
         "trailShare": "%95 patika",
         "start": "10:00",
         "cutOff": "2 saat",
         "title": "8K Gölet Trail Parkuru",
         "tagline": "Hızlı, Akıcı ve Keyifli Bir Patika Deneyimi",
         "description": "8K Gölet Trail parkuru — 8 km, 55 m+ tırmanış, 3 saat zaman sınırı. Danamandıra Tabiat Parkı'nda yeni başlayanlara da uygun, akıcı bir patika rotası.",
-        "body": [
-          "8K Gölet Trail parkuru, patika koşusu dünyasına adım atmak isteyen yeni başlayanlardan, kısa mesafede hız limitlerini test etmek isteyen tecrübeli atletlere kadar herkese hitap eden, son derece keyifli bir akışa sahiptir. Yarış, Silivri Danamandıra Tabiat Parkı merkezindeki ana meydandan, geniş ve düz bir orman yoluyla başlar. İlk 1.5 kilometre boyunca sporcuları ritim bulabilecekleri yumuşak bir zemin karşılar. Rota daha sonra el değmemiş sık ağaçların arasına süzülerek gölet kıvrımlarına bağlanır.",
-          "Parkurun ilk 2.5 kilometresi, adımları yormayan, hafif aşağı eğimli ve tamamen koşmaya müsait orman toprağından oluşur. Gölet havzasından uzaklaşılmaya başlanan bu noktadan itibaren, parkurun tek rampa bölümünü oluşturan kademeli ve tatlı bir yokuş başlar. Yaklaşık 3 kilometre süren bu hafif tırmanış boyunca zemin yer yer ağaç kökleri barındırsa da genişliğini korur. Parkurun 5.5. kilometresi geride kaldığında tüm tırmanış geride kalır. Yarışın finişe giden son 2.8 kilometresi ise tamamen geniş, pürüzsüz ve temiz orman düzlüklerinden oluşur. Bu son düzlük koridoru, sporcuların bitiş çizgisine doğru en yüksek tempolarına ulaşmalarına olanak tanır."
-        ],
+        "body": [],
         "checkpoints": [
           {
             "cp": "START",
             "station": "Danamandıra Tabiat Parkı",
             "totalKm": "—",
             "nextKm": "4",
-            "services": ""
+            "services": "—",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 1",
             "station": "Danamandıra",
             "totalKm": "4",
             "nextKm": "4",
-            "services": "Su + Yiyecek"
+            "services": "Su + Yiyecek",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "FINISH",
             "station": "Danamandıra Tabiat Parkı",
             "totalKm": "8",
             "nextKm": "—",
-            "services": "Bitiren Büfesi"
+            "services": "Bitiren Büfesi",
+            "elevation": "72",
+            "cutOff": "2 saat"
           }
         ],
         "gpx": "silivri-ultra-trail-8k.gpx",
-        "gearNote": "8K parkurunda koşacak yarışmacılar için göğüs numarası ve zamanlama çipi haricinde herhangi bir zorunlu malzeme kontrolü yapılmayacaktır. Yine de istasyonlarda plastik bardak bulunmadığı için yanında bir su kabı taşıman gerekir.",
         "strava": {
           "embedId": "3528357568846090446",
           "token": "Q4bwxQbBTqTbTdXT-4B4BOVkYhwq8kcs5cSvV7qqOYY",
           "mapHash": "12.08/41.30176/28.22818",
           "fromEmbed": true
-        }
+        },
+        "kml": "silivri-ultra-trail-8k.kml",
+        "image": "hero"
       },
       {
         "id": "18k",
@@ -184,56 +187,61 @@
         "name": "Meşe Trail",
         "accent": "green",
         "href": "/parkurlar/18k/",
-        "elevation": "123 m+",
+        "elevation": "113 m+",
         "trailShare": "%93 patika",
         "start": "08:30",
         "cutOff": "4 saat",
         "title": "18K Meşe Trail Parkuru",
         "tagline": "Tempo ve Dayanıklılığın Meşe Ormanlarındaki Dengesi",
         "description": "18K Meşe Trail parkuru — 18 km, 123 m+ tırmanış, 5 saat zaman sınırı. Sayalar Göleti ve Gürgen Tepe üzerinden geçen dengeli bir patika rotası.",
-        "body": [
-          "Orta seviye koşucular ve patika uzmanları için tasarlanan 18K Meşe Trail, Danamandıra'nın en karakteristik bitki örtüsünü ve zemin çeşitliliğini sunan dengeli bir yarış rotasıdır. Danamandıra Tabiat Parkı merkezinden start alan yarışın ilk 3 kilometresi, sporcuların kalabalık gruptan sıyrılıp kendi tempolarını oturtabilecekleri geniş ve oldukça akıcı orman yollarında geçer. 3. kilometreden itibaren rota yönünü Sayalar koridoruna çevirir ve arazi daralarak tekli patika (single-track) hatlarına dönüşür. 4. ve 5.5. kilometreler arasında, bacak kaslarını ilk kez dolduracak olan kısa ama dik iki adet rampa seti sporcuları karşılar.",
-          "Bu rampalar aşıldıktan sonra parkur, Sayalar Göleti çevresindeki görece düz ama teknik olarak dikkat gerektiren havzaya iner. Gölet çevresindeki bu hat, olası nisan yağmurlarında balçık ve çamur olma potansiyeli yüksek, kaygan zeminler barındırır. Yarışın 9. kilometresinden itibaren parkurun en zorlu etabını oluşturan Gürgen Tepe tırmanışı başlar. Dik, basamaklı ve dar patikalardan oluşan bu rampa, sporcuları 12. kilometrede parkurun en yüksek zirvesine (233 metre irtifaya) ulaştırır. Bu zirve noktasına varıldığında yarışın tüm zorlu kısımları tamamlanmış olur.",
-          "Finişe giden son 6.2 kilometre, neredeyse kesintisiz bir şekilde yokuş aşağı (iniş) uzanan, teknik engellerden arındırılmış geniş toprak yollardan oluşur. Sporcular dizlerini fazla yıpratmadan, akıcı bir iniş ritmi yakalayarak başlangıç noktasındaki finiş çizgisine ulaşırlar."
-        ],
+        "body": [],
         "checkpoints": [
           {
             "cp": "START",
             "station": "Danamandıra Tabiat Parkı",
             "totalKm": "—",
             "nextKm": "6",
-            "services": ""
+            "services": "—",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 1",
             "station": "Sayalar",
             "totalKm": "6",
             "nextKm": "6",
-            "services": "Su + Yiyecek"
+            "services": "Su + Yiyecek",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 2",
             "station": "Gürgen Tepe",
             "totalKm": "12",
             "nextKm": "6",
-            "services": "Su + Yiyecek"
+            "services": "Su + Yiyecek",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "FINISH",
             "station": "Danamandıra Tabiat Parkı",
             "totalKm": "18",
             "nextKm": "—",
-            "services": "Bitiren Büfesi"
+            "services": "Bitiren Büfesi",
+            "elevation": "113",
+            "cutOff": "4 saat"
           }
         ],
         "gpx": "silivri-ultra-trail-18k.gpx",
-        "gearNote": "18K parkurunda zorunlu ekipman listesi geçerlidir. Malzeme kontrolünün birincil aşaması kit dağıtımı esnasında yapılır; ekipmanı eksik olan yarışmacılara göğüs numarası teslim edilmez.",
         "strava": {
           "embedId": "3526935272977817906",
           "token": "mNNRGOhLMxn8TT9chrQgHSlZCgwkS8gcZOw_J_odknc",
           "mapHash": "11.18/41.3075/28.2068",
           "fromEmbed": true
-        }
+        },
+        "kml": "silivri-ultra-trail-18k.kml",
+        "image": "hero"
       },
       {
         "id": "38k",
@@ -241,98 +249,94 @@
         "name": "Orman Trail",
         "accent": "orange",
         "href": "/parkurlar/38k/",
-        "elevation": "328 m+",
+        "elevation": "332 m+",
         "trailShare": "%92 patika",
         "start": "07:00",
         "cutOff": "7 saat",
         "title": "38K Orman Trail Parkuru",
         "tagline": "Sınırları Zorlayan Dev Macera: Danamandıra'dan Sayalar'a Zirve Koşusu",
         "description": "38K Orman Trail parkuru — 38,22 km, 328 m+ tırmanış, 7 saat zaman sınırı. Sinekli Göleti, Çayırdere, Sayalar ve Gürgen Tepe üzerinden geçen ultra rota.",
-        "body": [
-          "Yarışın en prestijli, en uzun ve en zorlu etabını oluşturan 38K Orman Trail, kesintisiz dalgalanan yapısıyla (rolling hills) tam bir ultra maraton karakterine sahiptir. Yarış, Danamandıra Tabiat Parkı'ndan sakin ve geniş orman yollarıyla başlar. İlk 4 kilometrelik ısınma safhasının ardından rota Sinekli havzasına doğru kırılır ve uzun, kademeli bir iniş koridoruna girer. Sinekli Göleti çevresine ulaşıldığında zemin tamamen yumuşak, nemli ve köklü derin patikalara dönüşür. 11. kilometredeki gölet çıkışıyla birlikte parkur gerçek sert yüzünü gösterir; Çayırdere yönüne doğru yaklaşık 8.5 kilometre süren, sürekli yükselen ve bacakları dolduran dalgalı tepe setleri başlar. Bu hat tamamen traktör yolları ve yoğun orman içi patikalardan oluşur.",
-          "Yarışın en kritik kırılma noktası 19. ve 27. kilometreler arasında yaşanır. Çayırdere bölgesinden çıkan sporcular, parkurun en dik duvar tırmanışlarına girerek 22. ve 25. kilometreler arasında üst üste binen dik rampalarla 248.7 metrelik ana zirveye ulaşırlar. Bu teknik zirve aşıldıktan sonra parkur, 18K rotası ile birleşerek Sayalar Göleti'nin teknik ve kaygan patikalarına bağlanır. 27. kilometredeki bu teknik bölgeden sonra sporcular, yorgunluğun en üst seviyeye çıktığı bir evrede Gürgen Tepe'nin son dik dar patika setlerini tırmanmak zorundadır.",
-          "Parkurun 33.5. kilometresinde Gürgen Tepe'nin son zirvesi de geride kaldığında, geriye sadece tamamen zafer koşusu kalır. Finiş çizgisine giden son 4.7 kilometre, sporcuların geriye kalan tüm enerjilerini sahaya yansıtıp hızlanabilecekleri, tamamen geniş, düz ve yokuş aşağı uzanan konforlu orman yollarından oluşur."
-        ],
+        "body": [],
         "checkpoints": [
           {
             "cp": "START",
             "station": "Danamandıra Tabiat Parkı",
             "totalKm": "—",
             "nextKm": "10,95",
-            "services": ""
+            "services": "—",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 1",
             "station": "Sinekli Göleti",
             "totalKm": "10,95",
             "nextKm": "8,6",
-            "services": "Su + Yiyecek"
+            "services": "Su + Yiyecek",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 2",
             "station": "Çayırdere",
             "totalKm": "19,55",
             "nextKm": "8,23",
-            "services": "Su + Yiyecek"
+            "services": "Su + Yiyecek",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 3",
             "station": "Sayalar",
             "totalKm": "27,78",
             "nextKm": "5,68",
-            "services": "Su + Yiyecek"
+            "services": "Su + Yiyecek",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "CP 4",
             "station": "Gürgen Tepe",
             "totalKm": "33,46",
             "nextKm": "4,76",
-            "services": "Su + Yiyecek"
+            "services": "Su + Yiyecek",
+            "elevation": "—",
+            "cutOff": "—"
           },
           {
             "cp": "FINISH",
             "station": "Danamandıra Tabiat Parkı",
             "totalKm": "38,22",
             "nextKm": "—",
-            "services": "Bitiren Yemeği"
+            "services": "Bitiren Yemeği",
+            "elevation": "332",
+            "cutOff": "7 saat"
           }
         ],
         "gpx": "silivri-ultra-trail-38k.gpx",
-        "gearNote": "38K parkurunda zorunlu ekipman listesi geçerlidir. Bu parkurda dışarıdan destek yalnızca resmi kontrol noktalarının 200 metre öncesi ve sonrası sınırları içinde alınabilir.",
         "strava": {
           "embedId": "3527695367981451720",
           "token": "RJdIu7ZO5UpLJAoWIFz15MqUg7onNjxBpy4LadSgQVg",
           "mapHash": null,
           "fromEmbed": false
-        }
+        },
+        "kml": "silivri-ultra-trail-38k.kml",
+        "image": "hero"
       }
     ],
     "stravaTitle": "Strava rotası",
-    "stravaNote": "Rotayı Strava üzerinde inceleyebilir, kendi hesabına kaydedebilirsin. Harita Strava tarafından yüklenir.",
-    "stravaLinkLabel": "Strava'da aç"
+    "kmlLabel": "KML dosyasını indir",
+    "downloadsTitle": "Parkur dosyaları"
   },
   "registration": {
     "title": "Kayıt",
     "ctaLabel": "Hemen kayıt ol",
     "open": false,
     "href": null,
-    "status": "Erken kayıt 08 Ekim 2026'da açılıyor",
-    "note": "Kayıtlar yalnızca Türkiye Atletizm Federasyonu'nun resmi kayıt sistemi üzerinden online alınır; yarış günü etkinlik alanında kayıt yapılmaz. Kayıt bağlantısı yayına alındığında bu bölümde duyurulacak.",
-    "highlights": [
-      {
-        "label": "Kayıt kanalı",
-        "value": "Türkiye Atletizm Federasyonu (TAF)"
-      },
-      {
-        "label": "Kontenjan",
-        "value": "1500 sporcu"
-      },
-      {
-        "label": "Son kayıt",
-        "value": "28 Mart 2027, 23:59"
-      }
-    ],
-    "detailsLabel": "Ücretler ve katılım şartları"
+    "status": "Kayıtlar 08 Ekim 2026 tarihinde açılıyor",
+    "note": null,
+    "highlights": [],
+    "detailsLabel": null
   },
   "pastEdition": {
     "label": "2025 Sayfası",
@@ -377,7 +381,6 @@
   "footer": {
     "rights": "Tüm hakları saklıdır.",
     "backToTop": "Başa dön",
-    "languageLabel": "Dil",
     "legalLabel": "Resmi belgeler"
   },
   "schedule": {
@@ -689,7 +692,7 @@
   "transport": {
     "title": "Ulaşım",
     "description": "Silivri Ultra Trail ulaşım bilgileri — Danamandıra Tabiat Parkı'na servis, otopark ve dönüş saatleri.",
-    "intro": "Yarış merkezi Silivri Danamandıra Tabiat Parkı. Kit dağıtımı ve makarna partisinin yapılacağı lokasyon ile servis kalkış noktaları netleştikçe bu sayfa güncellenecek.",
+    "intro": null,
     "body": [],
     "sections": [
       {
@@ -765,26 +768,36 @@
       }
     ],
     "formTitle": "Gönüllü başvuru formu",
-    "formIntro": "Gönüllü kontenjanımız sınırlıdır. Başvuru formu yayına alınana kadar aşağıdaki bilgileri e-posta ile de iletebilirsin.",
+    "formIntro": "Gönüllü kontenjanımız sınırlı. Formu doldurup gönderdiğinde bilgiler e-posta uygulamanda hazır bir mesaja dönüşür; göndermen yeterli.",
     "fields": [
       {
+        "id": "name",
         "label": "Adınız Soyadınız",
+        "type": "text",
         "options": []
       },
       {
-        "label": "Doğum Tarihiniz (Yıl)",
+        "id": "birthYear",
+        "label": "Doğum Yılınız",
+        "type": "year",
         "options": []
       },
       {
-        "label": "Cep Telefonu Numaranız (yarış günü koordinasyon WhatsApp grubu için)",
+        "id": "phone",
+        "label": "Cep Telefonu Numaranız",
+        "type": "tel",
         "options": []
       },
       {
+        "id": "email",
         "label": "E-Posta Adresiniz",
+        "type": "email",
         "options": []
       },
       {
+        "id": "shirt",
         "label": "Tişört Bedeniniz",
+        "type": "select",
         "options": [
           "XS",
           "S",
@@ -795,14 +808,18 @@
         ]
       },
       {
+        "id": "travel",
         "label": "Ulaşım Tercihiniz",
+        "type": "radio",
         "options": [
           "Silivri merkezden kalkacak gönüllü servisini kullanmak istiyorum.",
           "Yarış alanına kendi imkanlarımla geleceğim."
         ]
       },
       {
+        "id": "days",
         "label": "Görev Alabileceğiniz Günler",
+        "type": "radio",
         "options": [
           "Sadece 3 Nisan Cumartesi (Kit Dağıtımı & Hazırlık)",
           "Sadece 4 Nisan Pazar (Yarış Günü Operasyonu)",
@@ -810,22 +827,30 @@
         ]
       },
       {
-        "label": "Görev Almak İstediğiniz Alan (en fazla 2 seçenek)",
+        "id": "roles",
+        "label": "Görev Almak İstediğiniz Alan",
+        "type": "checkbox",
         "options": [
           "Kit Dağıtım Masası",
           "Beslenme İstasyonları (CP)",
           "Finiş & Madalya Alanı",
           "Lojistik & Emanet Çadırı"
-        ]
+        ],
+        "maxSelect": 2
       },
       {
+        "id": "note",
         "label": "Varsa Eklemek İstediğiniz Not veya Kronik Sağlık Durumunuz",
+        "type": "textarea",
         "options": []
       }
     ],
-    "ctaLabel": "Başvuruyu e-posta ile gönder",
+    "ctaLabel": "Başvuruyu gönder",
     "kvkkNote": "Formda paylaştığınız kişisel veriler, 6698 sayılı KVKK kapsamında sadece Silivri Ultra Trail 2027 organizasyon operasyonunun yürütülmesi amacıyla işlenecek ve üçüncü taraflarla kesinlikle paylaşılmayacaktır.",
-    "footnote": null
+    "footnote": null,
+    "requiredLabel": "zorunlu",
+    "maxSelectLabel": "en fazla 2 seçenek",
+    "selectPlaceholder": "Seçiniz"
   },
   "rules": {
     "title": "Genel Yarış Kuralları",

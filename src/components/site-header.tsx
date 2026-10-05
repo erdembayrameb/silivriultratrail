@@ -4,9 +4,10 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { CasedText } from "@/components/cased-text";
+import { Flag } from "@/components/flag";
 import { Logo } from "@/components/logo";
 import type { Locale } from "@/i18n/config";
-import { localeLabels, locales } from "@/i18n/config";
+import { localeNames, locales } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionary";
 
 const FOCUSABLE =
@@ -21,15 +22,11 @@ const FOCUSABLE =
 export function SiteHeader({
   brand,
   nav,
-  homeHref,
-  languageLabel,
   locale,
   languageHrefs,
 }: {
   brand: Dictionary["brand"];
   nav: Dictionary["nav"];
-  homeHref: string;
-  languageLabel: string;
   locale: Locale;
   /** Bulunulan sayfanın her dildeki adresi — PageShell hesaplıyor. */
   languageHrefs: Record<Locale, string>;
@@ -124,24 +121,49 @@ export function SiteHeader({
         {/* İçerik bölümleri max-w ile ortalanıyor; başlık çubuğu bilinçli
             olarak kenardan kenara — logo solda, menü butonu sağda durur. */}
         <div className="px-safe flex h-16 w-full items-center justify-between">
-          <Link
-            href={homeHref}
-            className="text-[13px] focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
-          >
-            <Logo brand={brand} />
-          </Link>
-
+          {/* Logo da menüyü açıyor; ana sayfaya gitmek için menüdeki
+              "Ana Sayfa" maddesi var. */}
           <button
-            ref={toggleRef}
             type="button"
             onClick={() => setOpen(true)}
             aria-label={nav.openLabel}
             aria-expanded={open}
             aria-controls="site-menu"
-            className="-mr-2 inline-flex h-12 w-12 items-center justify-center rounded-lg text-white focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
+            className="rounded-lg text-[13px] focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
           >
-            <Menu className="h-7 w-7" strokeWidth={2.5} />
+            <Logo brand={brand} />
           </button>
+
+          <div className="flex items-center gap-1.5">
+            {/* Dil seçimi: yalnızca bayrak, etiket yok. */}
+            {locales.map((code) => (
+              <Link
+                key={code}
+                href={languageHrefs[code]}
+                aria-label={localeNames[code]}
+                aria-current={code === locale ? "page" : undefined}
+                className={`inline-flex h-7 w-10 items-center justify-center overflow-hidden rounded-sm ring-1 transition-opacity focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none ${
+                  code === locale
+                    ? "opacity-100 ring-white/70"
+                    : "opacity-45 ring-white/20 hover:opacity-80"
+                }`}
+              >
+                <Flag locale={code} />
+              </Link>
+            ))}
+
+            <button
+              ref={toggleRef}
+              type="button"
+              onClick={() => setOpen(true)}
+              aria-label={nav.openLabel}
+              aria-expanded={open}
+              aria-controls="site-menu"
+              className="-mr-2 ml-1 inline-flex h-12 w-12 items-center justify-center rounded-lg text-white focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
+            >
+              <Menu className="h-7 w-7" strokeWidth={2.5} />
+            </button>
+          </div>
         </div>
       </header>
 
@@ -204,26 +226,6 @@ export function SiteHeader({
               )}
             </ul>
 
-            <div className="mt-8 flex items-center gap-3">
-              <span className="text-xs font-semibold tracking-widest text-white/40 uppercase">
-                {languageLabel}
-              </span>
-              {locales.map((code) => (
-                <Link
-                  key={code}
-                  href={languageHrefs[code]}
-                  onClick={closeForNavigation}
-                  aria-current={code === locale ? "page" : undefined}
-                  className={
-                    code === locale
-                      ? "rounded-md bg-accent px-3 py-1.5 text-sm font-bold text-ink-950"
-                      : "rounded-md border border-ink-700 px-3 py-1.5 text-sm font-bold text-white/70 hover:text-white"
-                  }
-                >
-                  {localeLabels[code]}
-                </Link>
-              ))}
-            </div>
           </nav>
         </div>
       ) : null}

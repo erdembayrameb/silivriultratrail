@@ -45,7 +45,11 @@ export interface Checkpoint {
   totalKm: string;
   /** Sonraki istasyona mesafe; finişte "—". */
   nextKm: string;
-  /** İstasyondaki ikram/hizmet; yoksa boş dize. */
+  /** Toplam irtifa; kaynak çizelgede yalnızca finiş satırında dolu. */
+  elevation: string;
+  /** Zaman sınırı; kaynak çizelgede yalnızca finiş satırında dolu. */
+  cutOff: string;
+  /** İstasyondaki ikram/hizmet. */
   services: string;
 }
 
@@ -65,12 +69,15 @@ export interface Course {
   /** Parkurun tek cümlelik karakteri. */
   tagline: string;
   description: string;
-  /** Parkur anlatımı; her eleman ayrı paragraf. */
+  /** Parkur anlatımı; şu an boş — içerik Instagram üzerinden paylaşılıyor. */
   body: string[];
   checkpoints: Checkpoint[];
   /** `public/gpx/` altındaki dosya adı. */
   gpx: string;
-  gearNote: string;
+  /** `public/kml/` altındaki dosya adı. */
+  kml: string;
+  /** `src/assets/courses/` altındaki arka plan görselinin anahtarı. */
+  image: string;
   /** Strava rota gömmesi — parkur detay sayfasında interaktif harita. */
   strava: {
     embedId: string;
@@ -125,6 +132,16 @@ export interface StartListEntry {
   name: string;
   club: string;
   city: string;
+}
+
+/** Gönüllü başvuru formundaki bir alan. */
+export interface VolunteerField {
+  id: string;
+  label: string;
+  type: "text" | "year" | "tel" | "email" | "select" | "radio" | "checkbox" | "textarea";
+  options: string[];
+  /** checkbox alanlarında seçilebilecek en fazla seçenek sayısı. */
+  maxSelect?: number;
 }
 
 export interface FeeRow {
@@ -208,12 +225,13 @@ export interface Dictionary {
     cutOffLabel: string;
     detailLabel: string;
     cpTitle: string;
-    cpIntro: string;
     cpHeaders: {
       cp: string;
       station: string;
       total: string;
       next: string;
+      elevation: string;
+      cutOff: string;
       services: string;
     };
     profileTitle: string;
@@ -221,12 +239,10 @@ export interface Dictionary {
     highestLabel: string;
     lowestLabel: string;
     profileNote: string;
-    gpxTitle: string;
-    gpxNote: string;
+    downloadsTitle: string;
     gpxLabel: string;
+    kmlLabel: string;
     stravaTitle: string;
-    stravaNote: string;
-    stravaLinkLabel: string;
     othersTitle: string;
     items: Course[];
   };
@@ -237,9 +253,10 @@ export interface Dictionary {
     open: boolean;
     href: string | null;
     status: string;
-    note: string;
+    /** null ise kayıt bölümünde yalnızca durum metni görünür. */
+    note: string | null;
     highlights: Highlight[];
-    detailsLabel: string;
+    detailsLabel: string | null;
   };
   pastEdition: {
     label: string;
@@ -262,7 +279,6 @@ export interface Dictionary {
   footer: {
     rights: string;
     backToTop: string;
-    languageLabel: string;
     legalLabel: string;
   };
   schedule: {
@@ -315,8 +331,11 @@ export interface Dictionary {
   volunteer: ContentPage & {
     formTitle: string;
     formIntro: string;
-    fields: { label: string; options: string[] }[];
+    fields: VolunteerField[];
     ctaLabel: string;
+    requiredLabel: string;
+    maxSelectLabel: string;
+    selectPlaceholder: string;
     kvkkNote: string;
   };
   rules: LegalDoc;

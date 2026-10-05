@@ -10,12 +10,6 @@ export const localeNames: Record<Locale, string> = {
   en: "English",
 };
 
-/** Kısa etiket — dil değiştirici butonunda kullanılır. */
-export const localeLabels: Record<Locale, string> = {
-  tr: "TR",
-  en: "EN",
-};
-
 /**
  * Bir dilin ana sayfa adresi. `trailingSlash: true` ile üretildiğimiz için
  * sonda eğik çizgi var — canonical adresle gerçek adres birebir eşleşsin.

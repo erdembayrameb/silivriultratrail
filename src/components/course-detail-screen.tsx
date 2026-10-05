@@ -1,19 +1,26 @@
 import { ArrowRight, Clock, Download, MapPin, Timer, Triangle } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
-import { ElevationProfile } from "@/components/elevation-profile";
 import { PageShell } from "@/components/page-shell";
 import { StravaRoute } from "@/components/strava-route";
 import type { Locale } from "@/i18n/config";
 import type { CourseAccent, PageKey } from "@/i18n/dictionary";
 import { getCourse, getDictionary } from "@/i18n/dictionary";
-import { readCourseProfile } from "@/lib/gpx";
 import { assetPath } from "@/lib/asset-path";
+import { courseImage } from "@/lib/course-images";
 
 // Tailwind sınıfları derleme sırasında taranabilmesi için tam yazılıyor.
 const accentText: Record<CourseAccent, string> = {
   cyan: "text-sut-cyan",
   green: "text-sut-green",
   orange: "text-sut-orange",
+};
+
+/** Künye şeridi ve CP tablosu başlığı parkurun rengiyle doluyor. */
+const accentFill: Record<CourseAccent, string> = {
+  cyan: "bg-sut-cyan",
+  green: "bg-sut-green",
+  orange: "bg-sut-orange",
 };
 
 const accentRule: Record<CourseAccent, string> = {
@@ -32,8 +39,6 @@ export function CourseDetailScreen({
   const dict = getDictionary(locale);
   const { courses } = dict;
   const course = getCourse(dict, page);
-  // GPX derleme anında okunuyor; tarayıcıya yalnızca çizilmiş profil iniyor.
-  const profile = readCourseProfile(course.gpx);
 
   const stats = [
     { icon: MapPin, label: courses.distanceLabel, value: course.distance },
@@ -45,18 +50,42 @@ export function CourseDetailScreen({
 
   const others = courses.items.filter((item) => item.id !== course.id);
 
+  const headers = [
+    courses.cpHeaders.cp,
+    courses.cpHeaders.station,
+    courses.cpHeaders.total,
+    courses.cpHeaders.next,
+    courses.cpHeaders.elevation,
+    courses.cpHeaders.cutOff,
+    courses.cpHeaders.services,
+  ];
+
   return (
     <PageShell locale={locale} page={page}>
-      <section id="ust" className="bg-ink-900 pt-12 pb-10 sm:pt-16 sm:pb-14">
-        <div className="px-safe mx-auto flex w-full max-w-3xl flex-col items-center text-center">
+      {/* Başlık: parkurun kendi fotoğrafı üzerinde */}
+      <section id="ust" className="relative isolate overflow-hidden">
+        <div className="absolute inset-0 -z-10">
+          <Image
+            src={courseImage(course.image)}
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-ink-950/60" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink-950/70 via-ink-950/40 to-ink-950/95" />
+        </div>
+
+        <div className="px-safe mx-auto flex w-full max-w-3xl flex-col items-center py-14 text-center sm:py-20">
           <p
-            className={`font-brush text-6xl leading-none sm:text-8xl ${accentText[course.accent]}`}
+            className={`font-brush text-6xl leading-none drop-shadow-[0_4px_16px_rgba(0,0,0,0.6)] sm:text-8xl ${accentText[course.accent]}`}
           >
             {course.distance}
           </p>
           <h1
             lang="en"
-            className="mt-3 font-display text-2xl tracking-wide text-white uppercase sm:text-4xl"
+            className="mt-3 font-display text-2xl tracking-wide text-white uppercase drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)] sm:text-4xl"
           >
             {course.name}
           </h1>
@@ -64,67 +93,41 @@ export function CourseDetailScreen({
             className={`mt-4 h-0.5 w-12 ${accentRule[course.accent]}`}
             aria-hidden="true"
           />
-          <p className="mt-5 max-w-prose text-sm leading-relaxed text-balance text-white/70 italic sm:text-base">
+          <p className="mt-5 max-w-prose text-sm leading-relaxed text-balance text-white/85 italic sm:text-base">
             “{course.tagline}”
           </p>
         </div>
       </section>
 
-      <section className="bg-ink-950 py-12 sm:py-16">
-        <div className="px-safe mx-auto flex w-full max-w-3xl flex-col gap-12">
-          {/* Künye: mesafe, tırmanış, patika oranı, start, cut-off */}
-          <dl className="grid grid-cols-2 gap-px overflow-hidden rounded-lg bg-white/10 sm:grid-cols-5">
-            {stats.map(({ icon: Icon, label, value }) => (
-              <div
-                key={label}
-                className="flex flex-col items-center gap-1.5 bg-ink-900 px-2 py-4 text-center"
-              >
-                <Icon
-                  className="h-4 w-4 text-white/45"
-                  strokeWidth={1.75}
-                  aria-hidden="true"
-                />
-                <dt className="text-[10px] leading-tight font-bold tracking-[0.12em] text-white/45 uppercase">
-                  {label}
-                </dt>
-                <dd className="text-sm font-bold text-white sm:text-base">
-                  {value}
-                </dd>
-              </div>
-            ))}
-          </dl>
+      <section className="bg-ink-950 pb-12 sm:pb-16">
+        {/* Künye şeridi — kenardan kenara, parkurun renginde */}
+        <dl
+          className={`grid grid-cols-2 gap-px sm:grid-cols-5 ${accentFill[course.accent]}`}
+        >
+          {stats.map(({ icon: Icon, label, value }) => (
+            <div
+              key={label}
+              className={`flex flex-col items-center gap-1.5 px-2 py-4 text-center text-ink-950 ${accentFill[course.accent]}`}
+            >
+              <Icon className="h-4 w-4 opacity-70" strokeWidth={2} aria-hidden="true" />
+              <dt className="text-[10px] leading-tight font-bold tracking-[0.12em] uppercase opacity-80">
+                {label}
+              </dt>
+              <dd className="text-sm font-bold sm:text-base">{value}</dd>
+            </div>
+          ))}
+        </dl>
 
-          <article>
-            {course.body.map((paragraph) => (
-              <p
-                key={paragraph}
-                className="mt-4 text-sm leading-relaxed text-white/75 first:mt-0 sm:text-base"
-              >
-                {paragraph}
-              </p>
-            ))}
-          </article>
-
+        {/*
+         * Strava haritası ve CP çizelgesi bilinçli olarak geniş: ikisi de
+         * sayfanın asıl içeriği, dar bir sütuna sıkıştırılınca okunmuyor.
+         */}
+        <div className="px-safe mx-auto mt-12 flex w-full max-w-6xl flex-col gap-12">
           <article>
             <h2 className="font-display text-2xl tracking-wide text-white uppercase sm:text-3xl">
-              {courses.profileTitle}
+              {courses.stravaTitle}
             </h2>
-
-            <ElevationProfile
-              profile={profile}
-              accent={course.accent}
-              labels={{
-                caption: courses.profileHint,
-                distance: courses.distanceLabel,
-                elevation: courses.elevationLabel,
-                highest: courses.highestLabel,
-                lowest: courses.lowestLabel,
-              }}
-            />
-
-            <p className="mt-4 text-xs leading-relaxed text-white/50">
-              {courses.profileNote}
-            </p>
+            <StravaRoute strava={course.strava} />
           </article>
 
           <article>
@@ -133,21 +136,15 @@ export function CourseDetailScreen({
             </h2>
 
             {/* Dar ekranda tablo kendi içinde kaysın; sayfa yatayda kaymasın. */}
-            <div className="mt-5 -mx-1 overflow-x-auto">
-              <table className="w-full min-w-[38rem] border-collapse text-left text-sm">
+            <div className="mt-5 overflow-x-auto">
+              <table className="w-full min-w-[48rem] border-collapse text-left text-sm">
                 <thead>
-                  <tr className="border-b border-white/20">
-                    {[
-                      courses.cpHeaders.cp,
-                      courses.cpHeaders.station,
-                      courses.cpHeaders.total,
-                      courses.cpHeaders.next,
-                      courses.cpHeaders.services,
-                    ].map((header) => (
+                  <tr className={`${accentFill[course.accent]} text-ink-950`}>
+                    {headers.map((header) => (
                       <th
                         key={header}
                         scope="col"
-                        className="py-3 pr-4 text-[11px] font-bold tracking-[0.14em] text-white/55 uppercase"
+                        className="px-3 py-3 text-[11px] leading-tight font-bold tracking-[0.1em] uppercase"
                       >
                         {header}
                       </th>
@@ -162,75 +159,54 @@ export function CourseDetailScreen({
                     >
                       <th
                         scope="row"
-                        className={`py-3 pr-4 font-bold tracking-wide uppercase ${accentText[course.accent]}`}
+                        className={`px-3 py-3 font-bold tracking-wide uppercase ${accentText[course.accent]}`}
                       >
                         {cp.cp}
                       </th>
-                      <td className="py-3 pr-4 font-semibold text-white/90">
+                      <td className="px-3 py-3 font-semibold text-white/90">
                         {cp.station}
                       </td>
-                      <td className="py-3 pr-4 text-white/75 tabular-nums">
+                      <td className="px-3 py-3 text-white/75 tabular-nums">
                         {cp.totalKm}
                       </td>
-                      <td className="py-3 pr-4 text-white/75 tabular-nums">
+                      <td className="px-3 py-3 text-white/75 tabular-nums">
                         {cp.nextKm}
                       </td>
-                      <td className="py-3 pr-4 text-white/75">
-                        {cp.services || "—"}
+                      <td className="px-3 py-3 text-white/75 tabular-nums">
+                        {cp.elevation}
                       </td>
+                      <td className="px-3 py-3 text-white/75">{cp.cutOff}</td>
+                      <td className="px-3 py-3 text-white/75">{cp.services}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-
-            <p className="mt-4 text-xs leading-relaxed text-white/50">
-              {courses.cpIntro}
-            </p>
           </article>
 
           <article>
             <h2 className="font-display text-2xl tracking-wide text-white uppercase sm:text-3xl">
-              {courses.stravaTitle}
+              {courses.downloadsTitle}
             </h2>
 
-            <StravaRoute strava={course.strava} />
-
-            <p className="mt-4 text-xs leading-relaxed text-white/50">
-              {courses.stravaNote}
-            </p>
-            <a
-              href={`https://www.strava.com/routes/${course.strava.embedId}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-accent underline underline-offset-4 hover:text-accent-soft focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-            >
-              {courses.stravaLinkLabel}
-            </a>
+            <div className="mt-5 flex flex-wrap gap-3">
+              {[
+                { href: `/gpx/${course.gpx}`, label: courses.gpxLabel },
+                { href: `/kml/${course.kml}`, label: courses.kmlLabel },
+              ].map((file) => (
+                <a
+                  key={file.href}
+                  href={assetPath(file.href)}
+                  download
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-ink-700 bg-ink-900 px-5 text-sm font-bold tracking-wide text-white uppercase transition-colors hover:border-accent hover:text-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
+                >
+                  <Download className="h-4 w-4" strokeWidth={2.25} aria-hidden="true" />
+                  {file.label}
+                </a>
+              ))}
+            </div>
           </article>
 
-          <article>
-            <h2 className="font-display text-2xl tracking-wide text-white uppercase sm:text-3xl">
-              {courses.gpxTitle}
-            </h2>
-            <p className="mt-4 text-sm leading-relaxed text-white/70">
-              {courses.gpxNote}
-            </p>
-            <a
-              href={assetPath(`/gpx/${course.gpx}`)}
-              download
-              className="mt-5 inline-flex min-h-12 items-center justify-center gap-2 rounded-lg border border-ink-700 bg-ink-900 px-5 text-sm font-bold tracking-wide text-white uppercase transition-colors hover:border-accent hover:text-accent focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
-            >
-              <Download className="h-4 w-4" strokeWidth={2.25} aria-hidden="true" />
-              {courses.gpxLabel}
-            </a>
-          </article>
-
-          <p className="rounded-lg border border-sut-orange/40 bg-sut-orange/10 px-4 py-3 text-sm leading-relaxed text-white/85">
-            {course.gearNote}
-          </p>
-
-          {/* Diğer parkurlara geçiş */}
           <article>
             <h2 className="font-display text-2xl tracking-wide text-white uppercase sm:text-3xl">
               {courses.othersTitle}
