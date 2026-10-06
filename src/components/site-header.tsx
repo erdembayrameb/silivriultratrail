@@ -142,13 +142,18 @@ export function SiteHeader({
                 href={languageHrefs[code]}
                 aria-label={localeNames[code]}
                 aria-current={code === locale ? "page" : undefined}
-                className={`inline-flex h-7 w-10 items-center justify-center overflow-hidden rounded-sm ring-1 transition-opacity focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none ${
-                  code === locale
-                    ? "opacity-100 ring-white/70"
-                    : "opacity-45 ring-white/20 hover:opacity-80"
-                }`}
+                /* Dokunma hedefi 44px'e yakın; bayrak içeride 3:2 kutuda. */
+                className="inline-flex h-10 w-11 items-center justify-center rounded-lg focus-visible:ring-2 focus-visible:ring-accent focus-visible:outline-none"
               >
-                <Flag locale={code} />
+                <span
+                  className={`block h-6 w-9 overflow-hidden rounded-[3px] ring-1 transition-opacity ${
+                    code === locale
+                      ? "opacity-100 ring-white/80"
+                      : "opacity-40 ring-white/25 hover:opacity-75"
+                  }`}
+                >
+                  <Flag locale={code} />
+                </span>
               </Link>
             ))}
 
