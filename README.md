@@ -105,8 +105,14 @@ domain bağlıyken boş kalır. Elle test etmek için:
 $env:NEXT_PUBLIC_BASE_PATH = "/depo-adi"; npm run build; $env:NEXT_PUBLIC_BASE_PATH = $null
 ```
 
-Özel domain (`www.silivriultratrail.com`) bağlanırken `public/CNAME` dosyası
-eklenecek; içinde tek satır olarak domain yazar.
+Site `https://www.silivriultratrail.com` adresinde yayında. Özel domain
+`public/CNAME` dosyasıyla sabitlenmiş; dosya her derlemede çıktıya kopyalanıyor
+ki Pages ayarı deploy'lar arasında korunsun. Kök adres (`silivriultratrail.com`)
+GitHub tarafından `www`ye yönlendiriliyor.
+
+DNS Cloudflare'de: kök adres için 4 A + 4 AAAA kaydı GitHub Pages adreslerine,
+`www` için CNAME `erdembayrameb.github.io`'ya işaret ediyor. Hepsi **DNS only**
+(gri bulut) — proxy açılırsa GitHub sertifika yenileyemez.
 
 `npm run build` çıktısı olan `out/` klasörü ayrıca herhangi bir statik hostinge
 elle de yüklenebilir.
