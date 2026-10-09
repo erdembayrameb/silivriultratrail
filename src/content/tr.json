@@ -333,7 +333,7 @@
     "ctaLabel": "Hemen kayıt ol",
     "open": false,
     "href": null,
-    "status": "Kayıtlar 08 Ekim 2026 tarihinde açılıyor",
+    "status": "Kayıtlar yakında açılıyor",
     "note": null,
     "highlights": [],
     "detailsLabel": null
@@ -1216,7 +1216,7 @@
     "title": "Yarışmacı Listesi",
     "description": "Silivri Ultra Trail yarışmacı listesi — 8K Gölet Trail, 18K Meşe Trail ve 38K Orman Trail parkurlarına kayıt yaptıran sporcular.",
     "intro": null,
-    "emptyNote": "Kayıtlar 08 Ekim 2026'da açılıyor. Bu parkura kayıt yaptıran sporcular, kayıtlar başladıktan sonra burada listelenecek.",
+    "emptyNote": "Kayıtlar yakında açılıyor. Bu parkura kayıt yaptıran sporcular, kayıtlar başladıktan sonra burada listelenecek.",
     "countLabel": "kayıtlı sporcu",
     "columns": {
       "no": "No",

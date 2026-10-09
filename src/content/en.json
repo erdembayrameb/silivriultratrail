@@ -333,7 +333,7 @@
     "ctaLabel": "Register now",
     "open": false,
     "href": null,
-    "status": "Registration opens on 8 October 2026",
+    "status": "Registration opens soon",
     "note": null,
     "highlights": [],
     "detailsLabel": null
@@ -1216,7 +1216,7 @@
     "title": "Start List",
     "description": "Silivri Ultra Trail start list — runners registered for the 8K Lake Trail, 18K Oak Trail and 38K Forest Trail.",
     "intro": null,
-    "emptyNote": "Registration opens on 8 October 2026. Runners entered for this course will be listed here once entries are open.",
+    "emptyNote": "Registration opens soon. Runners entered for this course will be listed here once entries are open.",
     "countLabel": "registered runners",
     "columns": {
       "no": "No",

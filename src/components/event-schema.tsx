@@ -51,11 +51,11 @@ export function EventSchema({ locale }: { locale: Locale }) {
     maximumAttendeeCapacity: 1500,
     offers: {
       "@type": "Offer",
-      // Kayıtlar henüz açılmadı; tarih gelince `availabilityStarts` geçerli olur.
+      // Kayıtlar henüz açılmadı. Açılış tarihi belli olduğunda buraya
+      // `availabilityStarts` eklenebilir.
       availability: registration.open
         ? "https://schema.org/InStock"
         : "https://schema.org/PreOrder",
-      availabilityStarts: "2026-10-08T00:00:00+03:00",
       validThrough: "2027-03-28T23:59:00+03:00",
       priceCurrency: "TRY",
       url: registration.href ?? absoluteUrl(dict.routes.runnerInfo),
