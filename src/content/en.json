@@ -563,9 +563,9 @@
       "title": "Entry fees",
       "courseLabel": "Course",
       "periods": [
-        "Early entry (8 Oct – 30 Nov)",
-        "Standard entry (1 Dec – 31 Jan)",
-        "Late entry (1 Feb – 28 Mar)"
+        "Early entry",
+        "Standard entry",
+        "Late entry"
       ],
       "rows": [
         {

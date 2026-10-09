@@ -563,9 +563,9 @@
       "title": "Kayıt ücretleri",
       "courseLabel": "Parkur",
       "periods": [
-        "Erken Kayıt (08 Ekim – 30 Kasım)",
-        "Normal Kayıt (01 Aralık – 31 Ocak)",
-        "Geç Kayıt (01 Şubat – 28 Mart)"
+        "Erken Kayıt",
+        "Normal Kayıt",
+        "Geç Kayıt"
       ],
       "rows": [
         {
