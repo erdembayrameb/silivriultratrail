@@ -2,10 +2,15 @@ import { CalendarDays, MapPin } from "lucide-react";
 import heroImage from "@/assets/hero.jpg";
 import { HeroBackdrop } from "@/components/hero-backdrop";
 import { RegisterButton } from "@/components/register-button";
+import { registrationOpenAtBuild } from "@/lib/registration-open";
 import type { Dictionary } from "@/i18n/dictionary";
 
 export function Hero({ dict }: { dict: Dictionary }) {
   const { hero, registration } = dict;
+  const defaultOpen = registrationOpenAtBuild(
+    registration.opensAt,
+    registration.open,
+  );
 
   return (
     <section
@@ -65,7 +70,11 @@ export function Hero({ dict }: { dict: Dictionary }) {
           </p>
         </div>
 
-        <RegisterButton registration={registration} className="mt-10" />
+        <RegisterButton
+          registration={registration}
+          defaultOpen={defaultOpen}
+          className="mt-10"
+        />
       </div>
 
       {/* Fotoğraf telifi gerekiyorsa içerik dosyasına yazılması yeterli. */}

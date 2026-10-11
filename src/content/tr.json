@@ -179,7 +179,9 @@
           "fromEmbed": true
         },
         "kml": "silivri-ultra-trail-8k.kml",
-        "image": "hero"
+        "image": "hero",
+        "registerUrl": "https://www.hermesentry.com/r/silivri-ultra-trail/sut-8k-golet-trail/kayit",
+        "quota": "850"
       },
       {
         "id": "18k",
@@ -241,7 +243,9 @@
           "fromEmbed": true
         },
         "kml": "silivri-ultra-trail-18k.kml",
-        "image": "hero"
+        "image": "hero",
+        "registerUrl": "https://www.hermesentry.com/r/silivri-ultra-trail/sut-18k-mese-trail/kayit",
+        "quota": "450"
       },
       {
         "id": "38k",
@@ -321,22 +325,28 @@
           "fromEmbed": false
         },
         "kml": "silivri-ultra-trail-38k.kml",
-        "image": "hero"
+        "image": "hero",
+        "registerUrl": "https://www.hermesentry.com/r/silivri-ultra-trail/sut-38k-orman-trail/kayit",
+        "quota": "200"
       }
     ],
     "stravaTitle": "Strava rotası",
     "kmlLabel": "KML dosyasını indir",
-    "downloadsTitle": "Parkur dosyaları"
+    "downloadsTitle": "Parkur dosyaları",
+    "registerLabel": "Bu parkura kayıt ol",
+    "quotaLabel": "Kontenjan"
   },
   "registration": {
     "title": "Kayıt",
     "ctaLabel": "Hemen kayıt ol",
-    "open": false,
-    "href": null,
-    "status": "Kayıtlar yakında açılıyor",
+    "open": true,
+    "href": "https://www.hermesentry.com/r/silivri-ultra-trail/",
     "note": null,
     "highlights": [],
-    "detailsLabel": null
+    "detailsLabel": null,
+    "opensAt": "2026-10-11T12:00:00+03:00",
+    "statusBefore": "Kayıtlar 11 Ekim 2026 saat 12.00'de açılıyor",
+    "statusOpen": "Kayıtlar açık"
   },
   "pastEdition": {
     "label": "2025 Sayfası",
@@ -563,9 +573,9 @@
       "title": "Kayıt ücretleri",
       "courseLabel": "Parkur",
       "periods": [
-        "Erken Kayıt",
-        "Normal Kayıt",
-        "Geç Kayıt"
+        "Erken Kayıt (11 Ekim – 30 Kasım)",
+        "Normal Kayıt (01 Aralık – 31 Ocak)",
+        "Geç Kayıt (01 Şubat – 28 Mart)"
       ],
       "rows": [
         {

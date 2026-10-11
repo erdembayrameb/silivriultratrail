@@ -76,6 +76,9 @@ export interface Course {
   gpx: string;
   /** `public/kml/` altındaki dosya adı. */
   kml: string;
+  /** Kayıt platformundaki bu parkura ait başvuru adresi. */
+  registerUrl: string;
+  quota: string;
   /** `src/assets/courses/` altındaki arka plan görselinin anahtarı. */
   image: string;
   /** Strava rota gömmesi — parkur detay sayfasında interaktif harita. */
@@ -243,16 +246,25 @@ export interface Dictionary {
     gpxLabel: string;
     kmlLabel: string;
     stravaTitle: string;
+    registerLabel: string;
+    quotaLabel: string;
     othersTitle: string;
     items: Course[];
   };
   registration: {
     title: string;
     ctaLabel: string;
-    /** false iken CTA kayıt bölümüne kaydırır, true iken href'e gider. */
+    /** false iken kayıt hiç duyurulmaz; true iken `opensAt` belirleyicidir. */
     open: boolean;
     href: string | null;
-    status: string;
+    /**
+     * Kayıtların açıldığı an (ISO 8601, saat dilimi dahil). Site statik
+     * olduğu için anahtar tarayıcıda çevriliyor: bu andan önce "ne zaman
+     * açılacağı", sonra "açık" durumu ve kayıt butonu gösteriliyor.
+     */
+    opensAt: string;
+    statusBefore: string;
+    statusOpen: string;
     /** null ise kayıt bölümünde yalnızca durum metni görünür. */
     note: string | null;
     highlights: Highlight[];

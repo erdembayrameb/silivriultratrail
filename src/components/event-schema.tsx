@@ -50,14 +50,16 @@ export function EventSchema({ locale }: { locale: Locale }) {
     organizer,
     maximumAttendeeCapacity: 1500,
     offers: {
-      "@type": "Offer",
-      // Kayıtlar henüz açılmadı. Açılış tarihi belli olduğunda buraya
-      // `availabilityStarts` eklenebilir.
-      availability: registration.open
-        ? "https://schema.org/InStock"
-        : "https://schema.org/PreOrder",
-      validThrough: "2027-03-28T23:59:00+03:00",
+      // Parkura göre değiştiği için tekil fiyat yerine aralık veriliyor;
+      // değerler yürürlükteki erken kayıt dönemine ait.
+      "@type": "AggregateOffer",
+      lowPrice: "2000",
+      highPrice: "2700",
       priceCurrency: "TRY",
+      offerCount: courses.items.length,
+      availability: "https://schema.org/InStock",
+      availabilityStarts: registration.opensAt,
+      validThrough: "2027-03-28T23:59:00+03:00",
       url: registration.href ?? absoluteUrl(dict.routes.runnerInfo),
     },
     subEvent: courses.items.map((course) => ({
@@ -69,6 +71,13 @@ export function EventSchema({ locale }: { locale: Locale }) {
       sport: "Trail running",
       location,
       organizer,
+      maximumAttendeeCapacity: Number(course.quota),
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "TRY",
+        availability: "https://schema.org/InStock",
+        url: course.registerUrl,
+      },
     })),
   };
 

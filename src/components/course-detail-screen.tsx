@@ -1,4 +1,4 @@
-import { ArrowRight, Clock, Download, MapPin, Timer, Triangle } from "lucide-react";
+import { ArrowRight, Clock, Download, MapPin, Timer, Triangle, Users } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { PageShell } from "@/components/page-shell";
@@ -46,6 +46,7 @@ export function CourseDetailScreen({
     { icon: MapPin, label: courses.trailLabel, value: course.trailShare },
     { icon: Clock, label: courses.startLabel, value: course.start },
     { icon: Timer, label: courses.cutOffLabel, value: course.cutOff },
+    { icon: Users, label: courses.quotaLabel, value: course.quota },
   ];
 
   const others = courses.items.filter((item) => item.id !== course.id);
@@ -102,7 +103,7 @@ export function CourseDetailScreen({
       <section className="bg-ink-950 pb-12 sm:pb-16">
         {/* Künye şeridi — kenardan kenara, parkurun renginde */}
         <dl
-          className={`grid grid-cols-2 gap-px sm:grid-cols-5 ${accentFill[course.accent]}`}
+          className={`grid grid-cols-2 gap-px sm:grid-cols-6 ${accentFill[course.accent]}`}
         >
           {stats.map(({ icon: Icon, label, value }) => (
             <div
@@ -123,6 +124,15 @@ export function CourseDetailScreen({
          * sayfanın asıl içeriği, dar bir sütuna sıkıştırılınca okunmuyor.
          */}
         <div className="px-safe mx-auto mt-12 flex w-full max-w-6xl flex-col gap-12">
+          <a
+            href={course.registerUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-13 items-center justify-center self-start bg-sand px-8 text-sm font-bold tracking-wider text-ink-950 uppercase transition-colors hover:bg-white focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-ink-950 focus-visible:outline-none"
+          >
+            {courses.registerLabel}
+          </a>
+
           <article>
             <h2 className="font-display text-2xl tracking-wide text-white uppercase sm:text-3xl">
               {courses.stravaTitle}

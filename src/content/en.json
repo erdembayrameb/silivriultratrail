@@ -179,7 +179,9 @@
           "fromEmbed": true
         },
         "kml": "silivri-ultra-trail-8k.kml",
-        "image": "hero"
+        "image": "hero",
+        "registerUrl": "https://www.hermesentry.com/r/silivri-ultra-trail/sut-8k-golet-trail/kayit",
+        "quota": "850"
       },
       {
         "id": "18k",
@@ -241,7 +243,9 @@
           "fromEmbed": true
         },
         "kml": "silivri-ultra-trail-18k.kml",
-        "image": "hero"
+        "image": "hero",
+        "registerUrl": "https://www.hermesentry.com/r/silivri-ultra-trail/sut-18k-mese-trail/kayit",
+        "quota": "450"
       },
       {
         "id": "38k",
@@ -321,22 +325,28 @@
           "fromEmbed": false
         },
         "kml": "silivri-ultra-trail-38k.kml",
-        "image": "hero"
+        "image": "hero",
+        "registerUrl": "https://www.hermesentry.com/r/silivri-ultra-trail/sut-38k-orman-trail/kayit",
+        "quota": "200"
       }
     ],
     "stravaTitle": "Strava route",
     "kmlLabel": "Download KML file",
-    "downloadsTitle": "Course files"
+    "downloadsTitle": "Course files",
+    "registerLabel": "Register for this course",
+    "quotaLabel": "Quota"
   },
   "registration": {
     "title": "Registration",
     "ctaLabel": "Register now",
-    "open": false,
-    "href": null,
-    "status": "Registration opens soon",
+    "open": true,
+    "href": "https://www.hermesentry.com/r/silivri-ultra-trail/",
     "note": null,
     "highlights": [],
-    "detailsLabel": null
+    "detailsLabel": null,
+    "opensAt": "2026-10-11T12:00:00+03:00",
+    "statusBefore": "Registration opens on 11 October 2026 at 12.00 (TRT)",
+    "statusOpen": "Registration is open"
   },
   "pastEdition": {
     "label": "2025 Edition",
@@ -563,9 +573,9 @@
       "title": "Entry fees",
       "courseLabel": "Course",
       "periods": [
-        "Early entry",
-        "Standard entry",
-        "Late entry"
+        "Early entry (11 Oct – 30 Nov)",
+        "Standard entry (1 Dec – 31 Jan)",
+        "Late entry (1 Feb – 28 Mar)"
       ],
       "rows": [
         {
