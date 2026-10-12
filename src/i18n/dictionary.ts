@@ -78,6 +78,8 @@ export interface Course {
   kml: string;
   /** Kayıt platformundaki bu parkura ait başvuru adresi. */
   registerUrl: string;
+  /** Katılımcı API'sindeki sayısal kurs kimliği (slug kabul edilmiyor). */
+  participantsId: string;
   quota: string;
   /** `src/assets/courses/` altındaki arka plan görselinin anahtarı. */
   image: string;
@@ -127,14 +129,6 @@ export interface InfoSection {
   title: string | null;
   body: string[];
   items: string[];
-}
-
-/** Yarışmacı listesindeki tek satır. */
-export interface StartListEntry {
-  no: string;
-  name: string;
-  club: string;
-  city: string;
 }
 
 /** Gönüllü başvuru formundaki bir alan. */
@@ -381,9 +375,13 @@ export interface Dictionary {
     /** Kayıtlar açılana kadar her parkurun altında görünen not. */
     emptyNote: string;
     countLabel: string;
-    columns: { no: string; name: string; club: string; city: string };
-    /** Parkur kimliğine göre kayıtlı sporcular; kayıtlar açıldıkça dolar. */
-    groups: { courseId: string; entries: StartListEntry[] }[];
+    columns: {
+      no: string;
+      name: string;
+      team: string;
+      city: string;
+      category: string;
+    };
     footnote: string;
   };
 }

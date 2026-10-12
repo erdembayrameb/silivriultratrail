@@ -3,6 +3,14 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+
+  # Yarışmacı listesi derleme anında kayıt sisteminden çekiliyor; listenin
+  # tazelenmesi için her gece yeniden yayınlanıyor.
+  # 00:00 UTC = 03:00 TSİ (Türkiye yıl boyu UTC+3, yaz saati uygulanmıyor).
+  # GitHub yoğun saatlerde zamanlanmış işleri birkaç dakika geciktirebilir.
+  schedule:
+    - cron: "0 0 * * *"
+
   # Actions sekmesinden elle de çalıştırılabilsin.
   workflow_dispatch:
 

@@ -181,7 +181,8 @@
         "kml": "silivri-ultra-trail-8k.kml",
         "image": "hero",
         "registerUrl": "https://www.hermesentry.com/r/silivri-ultra-trail/sut-8k-golet-trail/kayit",
-        "quota": "850"
+        "quota": "850",
+        "participantsId": "81"
       },
       {
         "id": "18k",
@@ -245,7 +246,8 @@
         "kml": "silivri-ultra-trail-18k.kml",
         "image": "hero",
         "registerUrl": "https://www.hermesentry.com/r/silivri-ultra-trail/sut-18k-mese-trail/kayit",
-        "quota": "450"
+        "quota": "450",
+        "participantsId": "80"
       },
       {
         "id": "38k",
@@ -327,7 +329,8 @@
         "kml": "silivri-ultra-trail-38k.kml",
         "image": "hero",
         "registerUrl": "https://www.hermesentry.com/r/silivri-ultra-trail/sut-38k-orman-trail/kayit",
-        "quota": "200"
+        "quota": "200",
+        "participantsId": "79"
       }
     ],
     "stravaTitle": "Strava rotası",
@@ -1226,28 +1229,15 @@
     "title": "Yarışmacı Listesi",
     "description": "Silivri Ultra Trail yarışmacı listesi — 8K Gölet Trail, 18K Meşe Trail ve 38K Orman Trail parkurlarına kayıt yaptıran sporcular.",
     "intro": null,
-    "emptyNote": "Kayıtlar yakında açılıyor. Bu parkura kayıt yaptıran sporcular, kayıtlar başladıktan sonra burada listelenecek.",
+    "emptyNote": "Bu parkura henüz kayıt yapılmadı. Kayıt yaptıran sporcular burada listelenecek.",
     "countLabel": "kayıtlı sporcu",
     "columns": {
-      "no": "No",
+      "no": "#",
       "name": "Ad Soyad",
-      "club": "Kulüp / Takım",
-      "city": "Şehir"
+      "team": "Kulüp / Takım",
+      "city": "Şehir",
+      "category": "Kategori"
     },
-    "groups": [
-      {
-        "courseId": "8k",
-        "entries": []
-      },
-      {
-        "courseId": "18k",
-        "entries": []
-      },
-      {
-        "courseId": "38k",
-        "entries": []
-      }
-    ],
-    "footnote": ""
+    "footnote": "Liste, kayıt sisteminden her gece saat 03.00'te otomatik olarak güncellenir; gün içinde yaptığın kayıt ertesi sabah görünür. Bilgilerinde hata görürsen bize e-posta gönder."
   }
 }

@@ -181,7 +181,8 @@
         "kml": "silivri-ultra-trail-8k.kml",
         "image": "hero",
         "registerUrl": "https://www.hermesentry.com/r/silivri-ultra-trail/sut-8k-golet-trail/kayit",
-        "quota": "850"
+        "quota": "850",
+        "participantsId": "81"
       },
       {
         "id": "18k",
@@ -245,7 +246,8 @@
         "kml": "silivri-ultra-trail-18k.kml",
         "image": "hero",
         "registerUrl": "https://www.hermesentry.com/r/silivri-ultra-trail/sut-18k-mese-trail/kayit",
-        "quota": "450"
+        "quota": "450",
+        "participantsId": "80"
       },
       {
         "id": "38k",
@@ -327,7 +329,8 @@
         "kml": "silivri-ultra-trail-38k.kml",
         "image": "hero",
         "registerUrl": "https://www.hermesentry.com/r/silivri-ultra-trail/sut-38k-orman-trail/kayit",
-        "quota": "200"
+        "quota": "200",
+        "participantsId": "79"
       }
     ],
     "stravaTitle": "Strava route",
@@ -1226,28 +1229,15 @@
     "title": "Start List",
     "description": "Silivri Ultra Trail start list — runners registered for the 8K Lake Trail, 18K Oak Trail and 38K Forest Trail.",
     "intro": null,
-    "emptyNote": "Registration opens soon. Runners entered for this course will be listed here once entries are open.",
+    "emptyNote": "No entries for this course yet. Registered runners will be listed here.",
     "countLabel": "registered runners",
     "columns": {
-      "no": "No",
+      "no": "#",
       "name": "Name",
-      "club": "Club / Team",
-      "city": "City"
+      "team": "Club / Team",
+      "city": "City",
+      "category": "Category"
     },
-    "groups": [
-      {
-        "courseId": "8k",
-        "entries": []
-      },
-      {
-        "courseId": "18k",
-        "entries": []
-      },
-      {
-        "courseId": "38k",
-        "entries": []
-      }
-    ],
-    "footnote": ""
+    "footnote": "The list is updated automatically from the registration system every night at 03.00 (TRT); an entry made during the day appears the next morning. If you spot an error in your details, send us an email."
   }
 }

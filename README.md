@@ -87,6 +87,33 @@ Her dilin kendi kök layout'u var (`src/app/(tr)`, `src/app/(en)`) — bu sayede
 içinde; sayfa başlıkları ve canonical/hreflang adresleri de oradaki
 `buildMetadata` / `buildPageMetadata` ile üretilir.
 
+## Yarışmacı listesi
+
+`/yarismaci-listesi` sayfasındaki liste elle girilmiyor; kayıt sisteminden
+(hermesentry) **derleme anında** çekilip HTML'e gömülüyor. Ziyaretçiye hiç
+istek attırmıyoruz: sayfa anında açılıyor ve arama motorları listeyi görüyor.
+
+Karşılığında liste ancak yeniden derlendiğinde tazeleniyor. Bu yüzden deploy
+workflow'u **her gece 03.00'te (TSİ)** kendiliğinden çalışıyor —
+`.github/workflows/deploy.yml` içindeki `schedule` tetikleyicisi. Gün içinde
+yapılan bir kayıt ertesi sabah görünür hale gelir. Hemen yansıması gerekirse
+Actions sekmesinden workflow elle çalıştırılabilir.
+
+API, parkur **slug'ını değil sayısal kurs kimliğini** istiyor; kimlikler
+içerik dosyasında `courses.items[].participantsId` alanında duruyor
+(8K `81`, 18K `80`, 38K `79`). Kayıt platformu parkurları yeniden
+oluşturursa bu numaralar değişir.
+
+API hata verirse derleme **bilerek durur** (`src/lib/participants.ts`).
+Sessizce boş liste yayınlamak, kayıtlı sporcuların adını siteden silmek
+olurdu; derleme durunca son başarılı yayın ayakta kalır. API çökükken acil
+bir içerik düzeltmesi yayınlamak gerekirse `SKIP_PARTICIPANTS=1` ile
+derleme listesiz tamamlanır.
+
+> GitHub, 60 gün boyunca hiç hareket görmeyen depolarda zamanlanmış
+> workflow'ları devre dışı bırakır. Siteye uzun süre dokunulmazsa gece
+> yenilemesinin hâlâ çalıştığını Actions sekmesinden kontrol et.
+
 ## Yayın
 
 `main` dalına her push'ta `.github/workflows/deploy.yml` siteyi derleyip GitHub
