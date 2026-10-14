@@ -370,26 +370,39 @@
     ]
   },
   "partners": {
-    "title": "Destekleyen kurumlar",
-    "sponsorNote": "Sponsorluk iş birlikleri için bizimle iletişime geçebilirsiniz.",
-    "items": [
+    "groups": [
       {
-        "name": "T.C. Gençlik ve Spor Bakanlığı",
-        "logo": "gsb"
+        "title": "Destekleyen kurumlar",
+        "items": [
+          {
+            "name": "T.C. Gençlik ve Spor Bakanlığı",
+            "logo": "gsb"
+          },
+          {
+            "name": "Türkiye Atletizm Federasyonu",
+            "logo": "taf"
+          },
+          {
+            "name": "T.C. İstanbul Valiliği",
+            "logo": "valilik"
+          },
+          {
+            "name": "T.C. Silivri Belediyesi",
+            "logo": "silivri"
+          }
+        ]
       },
       {
-        "name": "Türkiye Atletizm Federasyonu",
-        "logo": "taf"
-      },
-      {
-        "name": "T.C. İstanbul Valiliği",
-        "logo": "valilik"
-      },
-      {
-        "name": "T.C. Silivri Belediyesi",
-        "logo": "silivri"
+        "title": "Medya sponsoru",
+        "items": [
+          {
+            "name": "Küpe FM",
+            "logo": "kupefm"
+          }
+        ]
       }
-    ]
+    ],
+    "sponsorNote": "Sponsorluk iş birlikleri için bizimle iletişime geçebilirsiniz."
   },
   "footer": {
     "rights": "Tüm hakları saklıdır.",

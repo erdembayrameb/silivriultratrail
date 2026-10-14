@@ -370,26 +370,39 @@
     ]
   },
   "partners": {
-    "title": "Supporting institutions",
-    "sponsorNote": "Get in touch with us for sponsorship partnerships.",
-    "items": [
+    "groups": [
       {
-        "name": "Ministry of Youth and Sports",
-        "logo": "gsb"
+        "title": "Supporting institutions",
+        "items": [
+          {
+            "name": "Ministry of Youth and Sports",
+            "logo": "gsb"
+          },
+          {
+            "name": "Turkish Athletics Federation",
+            "logo": "taf"
+          },
+          {
+            "name": "Governorship of Istanbul",
+            "logo": "valilik"
+          },
+          {
+            "name": "Silivri Municipality",
+            "logo": "silivri"
+          }
+        ]
       },
       {
-        "name": "Turkish Athletics Federation",
-        "logo": "taf"
-      },
-      {
-        "name": "Governorship of Istanbul",
-        "logo": "valilik"
-      },
-      {
-        "name": "Silivri Municipality",
-        "logo": "silivri"
+        "title": "Media partner",
+        "items": [
+          {
+            "name": "Küpe FM",
+            "logo": "kupefm"
+          }
+        ]
       }
-    ]
+    ],
+    "sponsorNote": "Get in touch with us for sponsorship partnerships."
   },
   "footer": {
     "rights": "All rights reserved.",

@@ -278,9 +278,12 @@ export interface Dictionary {
     socials: SocialLink[];
   };
   partners: {
-    title: string;
+    /** Destekleyen kurumlar ve sponsorlar ayrı başlıklar altında. */
+    groups: {
+      title: string;
+      items: { name: string; logo: string }[];
+    }[];
     sponsorNote: string;
-    items: { name: string; logo: string }[];
   };
   footer: {
     rights: string;
