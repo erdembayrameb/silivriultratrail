@@ -393,11 +393,15 @@
         ]
       },
       {
-        "title": "Media partner",
+        "title": "Media partners",
         "items": [
           {
             "name": "Küpe FM",
             "logo": "kupefm"
+          },
+          {
+            "name": "gudslip",
+            "logo": "gudslip"
           }
         ]
       }

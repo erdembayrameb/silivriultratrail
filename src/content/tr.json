@@ -393,11 +393,15 @@
         ]
       },
       {
-        "title": "Medya sponsoru",
+        "title": "Medya sponsorları",
         "items": [
           {
             "name": "Küpe FM",
             "logo": "kupefm"
+          },
+          {
+            "name": "gudslip",
+            "logo": "gudslip"
           }
         ]
       }

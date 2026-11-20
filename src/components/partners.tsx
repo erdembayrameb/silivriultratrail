@@ -1,5 +1,6 @@
 import Image, { type StaticImageData } from "next/image";
 import gsb from "@/assets/kurumlar/genclik-ve-spor-bakanligi.jpeg";
+import gudslip from "@/assets/kurumlar/gudslip.jpeg";
 import valilik from "@/assets/kurumlar/istanbul-valiligi.jpeg";
 import kupefm from "@/assets/kurumlar/kupe-fm.jpeg";
 import silivri from "@/assets/kurumlar/silivri-belediyesi.jpeg";
@@ -17,6 +18,7 @@ const logos: Record<string, StaticImageData> = {
   valilik,
   silivri,
   kupefm,
+  gudslip,
 };
 
 export function Partners({ dict }: { dict: Dictionary }) {
